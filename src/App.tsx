@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Home from './pages/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import Login from './pages/login/Login';
+import Sobre from './pages/sobrenos/Sobre';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/sobre" element={<Sobre />} />
           {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
         </Routes>
       </div>
@@ -25,3 +27,4 @@ function App() {
 }
 
 export default App;
+
