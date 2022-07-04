@@ -3,11 +3,11 @@
 }
 
 .retangulo1{
-   margin-left: 27%;
    margin-top:2%;
-   width: 440px;
-   height: 620px;
+   width: 18.75rem;
+   height: 28.125rem;
    background: #AEF202;
+   background-size:cover ;
    border-radius: 0px 119px;
 }
 
@@ -17,86 +17,78 @@
 } */
 
 .texto{
-   padding: 60px 0;
    font-family: 'Aleo';
    font-style: italic;
    font-weight: 400;
-   font-size: 45px;
-   line-height: 66px;
+   font-size: 1.313rem;
+   line-height: 3.063rem;
    display: flex;
    text-align: center;
    color: #000000;
 }
 
-.comeia1{
-   
-   width: 200px;
-   height: 200px;
-   background: url(/src/assets/img/comeia.png);
+.hexagonos{
+  margin-left: 3px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+   width:17.063rem;
+   mix-blend-mode: soft-light;
+   direction: rtl;
+ }
+ .hexagonosBot{
+   margin-left: 1rem;
+   padding-top: 0.5rem;
+   width:17.063rem;
    mix-blend-mode: soft-light;
    direction: rtl;
  }
 
- .comeia2{
-   
-   width: 200px;
-   height: 200px;
-   background: url(/src/assets/img/comeia.png);
-   justify-items: start;
-   mix-blend-mode: soft-light;
- }
-
- .comeia3{
-   
-   width: 200px;
-   height: 133px;
-   background: url(/src/assets/img/comeia.png);
-   mix-blend-mode: soft-light;
- }
-
-
- .comeia4{
-   
-   width: 200px;
-   height: 200px;
-   background: url(/src/assets/img/comeia.png);
-   mix-blend-mode: soft-light;
-   align-content:flex-end;
+ .gridLogin{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
  }
 
 .text-decorator-none{
     text-decoration: none;
 }
-
-.logo{
-   margin-top: 4%;
-   background-image: url(/src/assets/img/sustentamaispng.png) ;
-   background-repeat: no-repeat;
-   width: 483px;
-   height: 185px;
-   background-size: cover; 
-   background-position: center;
+.centraliza{
+  display: block;
+  padding-right: 10%;
+  padding-left: 10%
 }
+.logo{
+  margin-left: 25%;
+  display: block;
+   margin-top: 4%;
+   width: 12.625rem;
+  }
 
 .retangulo2{
    background:rgba(87, 232, 2, 0.19);
-   height: 285px;
-   width: 295px;
+   width: 18.75rem;
+   height: 22.125rem;
    border-radius: 52px 0px;
    margin-bottom: 2%;
    margin-top:1%;
 }
-
+.forms{
+  padding-left: 2.9rem;
+  padding-top: 2rem;
+  text-align: center;
+  width: 13rem;
+}
 #usuario{
     border-radius: 10px;
     background: rgba(255, 255, 255, 1);
     font-family: 'Alef';
+    height: 0.7rem;
 }
 
  #senha{
     border-radius: 10px;
     background: rgba(255, 255, 255, 1);
     font-family: 'Alef';
+    height: 0.7rem;
  }
 
 .button{
@@ -104,28 +96,33 @@
     background: rgba(46, 128, 3, 0.7);
     text-align:center;   
     font-family: 'Alatsi';
+    width: 13rem;
  }
 
  #ou{
    color: #81857D;
    font-family: Anaheim;
-   padding: 3%;
+   padding: 8px;
+   margin: 0;
+ }
+ hr{
+  margin: 0;
  }
  
  
  #google{
    border-radius: 40px;
-   width: 300px;
+   width: 13rem;
    background: rgba(255, 255, 255, 1);
    text-align:center;
-   margin-bottom: 30px;
    font-family: 'Alef';
+   font-size: 0.8rem ;
 
  }
 
  .googleIcon{
-  width: 28px;
-  height: 28px;
+  width: 1rem;
+  height: 1rem;
   margin-right: 3%;
   margin-bottom: 1%;
  }
@@ -137,20 +134,20 @@
    font-weight: bold;
    align-items:center;
    justify-content: center;
+   font-size: x-small;
  }
 
  #novaSenha{
    color:#319F43;
    text-decoration-line: underline;
    font-family: 'Alef';
+   font-size: x-small;
  }
 
  .box1{
   display: flex;
   align-items:center;
   justify-content: center;
- }
- .box2{
-   display: flex;
-   flex-direction: column;
+  background-color: transparent;
+  height: fit-content;
  }

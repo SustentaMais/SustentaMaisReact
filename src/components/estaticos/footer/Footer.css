@@ -1,20 +1,25 @@
 .box1{
-    background-color: #eeeeee;
-    height: 120px;
+    margin-top: 2rem;
+    background-color: #dddddd;
+    height: 8rem;
+    display: block;
 }
 
 .box2{
     background-color:#dddddd;
-    height: 60px;
+    height: 8rem;
+    display: block;
+    margin: 0;
 }
 
 .redes{
-    font-size: 60px !important;
+    font-size: 1.5rem !important;
     color: rgb(0, 0, 0);
 }
 
 .textos{
    color: rgb(0, 0, 0);
+   font-size: x-small;
 }
 
 .textoCor {

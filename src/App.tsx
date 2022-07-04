@@ -12,7 +12,7 @@ import Login from './pages/login/Login';
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <div style={{ minHeight: '100vh' }}>
         <Routes> // Antigo Switch
           <Route path="/" element={<Visitante />} />
@@ -28,6 +28,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
