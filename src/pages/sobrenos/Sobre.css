@@ -8,9 +8,9 @@
     margin: 10px;
     background-image: linear-gradient(to bottom right, #f7f7f78c,#ffffff);
 
-    border-radius: 5px;
+    /* border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; */
 }
 
 .containerE2{
@@ -24,9 +24,9 @@
     padding-top: 100px;
     background-image: linear-gradient(to bottom right, #f7f7f78c,#ffffff);
 
-    border-radius: 5px;
+    /* border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; */
 }
 
 .containerD{
@@ -38,13 +38,13 @@
     margin: 10px;
 
     background-image: linear-gradient(to bottom right,#ffffff, #f7f7f78c);
-    border-radius: 5px;
+    /* border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out; */ 
 
 }   
 
-.containerD:hover{
+/* .containerD:hover{
     transform: translateY(-5px);
     cursor: pointer;
 }
@@ -52,11 +52,11 @@
 .containerE:hover{
     transform: translateY(-5px);
     cursor: pointer;
-}
+} */
 
 .img{
     width: 300px;
-    border-radius: 50%;
+    border-radius: 10%; 
 }
 
 .titulos{
@@ -64,6 +64,8 @@
     font-weight: bold;
     margin: 5px;
 }
+
+
 
 /* body{
     background-image: linear-gradient(to bottom right,#ffffff, #53ff508c);

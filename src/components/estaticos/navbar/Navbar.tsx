@@ -14,7 +14,10 @@ import ArticleIcon from '@mui/icons-material/Article';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
+import PublicIcon from '@mui/icons-material/Public';
 import './Navbar.css'
+import { Link } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -127,24 +130,28 @@ export default function Navbar() {
         </IconButton>
         <p>Home</p>
       </MenuItem>
+
       <MenuItem>
         <IconButton size="large" color="inherit">
             <DynamicFeedIcon />
         </IconButton>
         <p>Postagens</p>
       </MenuItem>
+
       <MenuItem>
         <IconButton size="large" color="inherit">
             <ArticleIcon />
         </IconButton>
         <p>Tema</p>
       </MenuItem>
+
       <MenuItem>
         <IconButton size="large" color="inherit">
             <PostAddIcon />
         </IconButton>
         <p>Criar Postagem</p>
       </MenuItem>
+      
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -176,22 +183,41 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Link to='/home' className='text-decorator-none'>
             <IconButton size="large" color="inherit">
                 <HomeIcon />
                 <p className="menu-text">Home</p>
             </IconButton>
+            </Link>
             <IconButton size="large" color="inherit">
                 <DynamicFeedIcon />
                 <p className="menu-text">Postagens</p>
             </IconButton>
+
             <IconButton size="large" color="inherit">
                 <ArticleIcon />
                 <p className="menu-text">Tema</p>
             </IconButton>
+
             <IconButton size="large" color="inherit">
                 <PostAddIcon />
                 <p className="menu-text">Criar Postagem</p>
             </IconButton>
+
+          <Link to='/visitante'>
+            <IconButton size="large" color="inherit">
+                <DirectionsRunOutlinedIcon />
+                <p className="menu-text">Visitante</p>
+            </IconButton>
+          </Link>
+
+          <Link to='/sobre'>
+            <IconButton size="large" color="inherit">
+                <PublicIcon />
+                <p className="menu-text">Sobre nós</p>
+            </IconButton>
+          </Link>
+
             <IconButton
               size="large"
               edge="end"
