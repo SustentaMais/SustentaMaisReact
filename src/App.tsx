@@ -15,11 +15,11 @@ function App() {
       <Navbar />
       <div style={{ minHeight: '100vh' }}>
         <Routes> // Antigo Switch
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Visitante />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
-          <Route path="/visitante" element={<Visitante />} />
+          {/* <Route path="/visitante" element={<Visitante />} /> */}
          
 
 
