@@ -7,6 +7,7 @@ import Sobre from './pages/sobrenos/Sobre';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visitante from './pages/visitante/Visitante';
 import Login from './pages/login/Login';
+import '../src/App.css';
 
 
 function App() {

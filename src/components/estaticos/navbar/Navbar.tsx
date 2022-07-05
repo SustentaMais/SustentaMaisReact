@@ -16,8 +16,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
 import PublicIcon from '@mui/icons-material/Public';
-import './Navbar.css'
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -27,7 +27,7 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: 'rgba(174, 242, 2, 0.30)',
   },
   marginRight: theme.spacing(2),
-  marginLeft: '300px!important',
+  marginLeft: '40px!important',
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
@@ -130,27 +130,40 @@ export default function Navbar() {
         </IconButton>
         <p>Home</p>
       </MenuItem>
-
       <MenuItem>
         <IconButton size="large" color="inherit">
             <DynamicFeedIcon />
         </IconButton>
         <p>Postagens</p>
       </MenuItem>
-
       <MenuItem>
         <IconButton size="large" color="inherit">
             <ArticleIcon />
         </IconButton>
         <p>Tema</p>
       </MenuItem>
-
       <MenuItem>
         <IconButton size="large" color="inherit">
             <PostAddIcon />
         </IconButton>
         <p>Criar Postagem</p>
       </MenuItem>
+      <Link to='/visitante'>
+        <MenuItem>
+          <IconButton size="large" color="inherit">
+            <DirectionsRunOutlinedIcon />
+          </IconButton>
+          <p>Visitante</p>
+        </MenuItem>
+      </Link>
+      <Link to='/sobre'>
+        <MenuItem>
+          <IconButton size="large" color="inherit">
+            <PublicIcon />
+          </IconButton>
+          <p>Sobre Nós</p>
+        </MenuItem>
+      </Link>
       
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -183,28 +196,23 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Link to='/home' className='text-decorator-none'>
             <IconButton size="large" color="inherit">
                 <HomeIcon />
                 <p className="menu-text">Home</p>
             </IconButton>
-            </Link>
             <IconButton size="large" color="inherit">
                 <DynamicFeedIcon />
                 <p className="menu-text">Postagens</p>
             </IconButton>
-
             <IconButton size="large" color="inherit">
                 <ArticleIcon />
                 <p className="menu-text">Tema</p>
             </IconButton>
-
             <IconButton size="large" color="inherit">
                 <PostAddIcon />
                 <p className="menu-text">Criar Postagem</p>
             </IconButton>
-
-          <Link to='/visitante'>
+            <Link to='/visitante'>
             <IconButton size="large" color="inherit">
                 <DirectionsRunOutlinedIcon />
                 <p className="menu-text">Visitante</p>
@@ -214,10 +222,9 @@ export default function Navbar() {
           <Link to='/sobre'>
             <IconButton size="large" color="inherit">
                 <PublicIcon />
-                <p className="menu-text">Sobre nós</p>
+                <p className="menu-text">Sobre Nós</p>
             </IconButton>
           </Link>
-
             <IconButton
               size="large"
               edge="end"
