@@ -7,6 +7,7 @@ import Sobre from './pages/sobrenos/Sobre';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visitante from './pages/visitante/Visitante';
 import Login from './pages/login/Login';
+import '../src/App.css';
 
 
 function App() {
@@ -20,12 +21,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/visitante" element={<Visitante />} />
-          {/* <Route path="/visitante" element={<Visitante />} /> */}
-         
-
-
-
-          {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
+         {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
         </Routes>
       </div>
       <Footer />

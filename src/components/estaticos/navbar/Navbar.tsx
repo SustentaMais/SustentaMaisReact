@@ -16,8 +16,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
 import PublicIcon from '@mui/icons-material/Public';
-import './Navbar.css'
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -130,28 +130,24 @@ export default function Navbar() {
         </IconButton>
         <p>Home</p>
       </MenuItem>
-
       <MenuItem>
         <IconButton size="small" color="inherit">
           <DynamicFeedIcon />
         </IconButton>
         <p>Postagens</p>
       </MenuItem>
-
       <MenuItem>
         <IconButton size="small" color="inherit">
           <ArticleIcon />
         </IconButton>
         <p>Tema</p>
       </MenuItem>
-
       <MenuItem>
         <IconButton size="small" color="inherit">
           <PostAddIcon />
         </IconButton>
         <p>Criar Postagem</p>
       </MenuItem>
-
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="small"
