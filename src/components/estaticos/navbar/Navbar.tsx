@@ -212,13 +212,6 @@ export default function Navbar() {
                 <PostAddIcon />
                 <p className="menu-text">Criar Postagem</p>
             </IconButton>
-            <Link to='/visitante'>
-            <IconButton size="large" color="inherit">
-                <DirectionsRunOutlinedIcon />
-                <p className="menu-text">Visitante</p>
-            </IconButton>
-          </Link>
-
           <Link to='/sobre'>
             <IconButton size="large" color="inherit">
                 <PublicIcon />
