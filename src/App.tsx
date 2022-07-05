@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Home from './pages/home/Home';
 import Footer from './components/estaticos/footer/Footer';
+import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Sobre from './pages/sobrenos/Sobre';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,7 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
-          {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
+          <Route path="/cadastro" element={<CadastroUsuario />} />
         </Routes>
       </div>
       <Footer />

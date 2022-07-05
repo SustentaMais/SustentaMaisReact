@@ -1,0 +1,107 @@
+.gridLogin{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    direction: row ;
+    justify-content: center;
+    align-items: center;
+   }
+  
+.retangulo4{
+    margin-top:2%;
+    width: 18.75rem;
+    height: 28.125rem;
+    background: #AEF202;
+    background-size:cover ;
+    border-radius: 0px 119px;
+ }
+
+ .texto{
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.313rem;
+    line-height: 3.063rem;
+    display: flex;
+    text-align: center;
+    color: #000000;
+ }
+ 
+ .hexagonos{
+   margin-left: 3px;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+    width:17.063rem;
+    mix-blend-mode: soft-light;
+    direction: rtl;
+  }
+  .hexagonosBot{
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+    width:17.063rem;
+    mix-blend-mode: soft-light;
+    direction: rtl;
+  }
+
+  .retangulo3{
+    background:rgba(87, 232, 2, 0.19);
+    width: 18.75rem;
+    height: 22.125rem;
+    border-radius: 52px 0px;
+    margin-bottom: 2%;
+    margin-top:1%;
+ }
+
+.centraliza{
+    display: block;
+    padding-right: 10%;
+    padding-left: 10%
+  }
+  
+.forms{
+    padding-left: 2.9rem;
+    padding-top: 2rem;
+    text-align: center;
+    width: 13rem;
+  }
+  
+.logo{
+    margin-left: 25%;
+    display: block;
+     margin-top: 4%;
+     width: 12.625rem;
+    }
+
+#usuario{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Alef';
+    height: 0.7rem;
+}
+
+ #senha{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Alef';
+    height: 0.7rem;
+ }
+
+ #confirmarSenha{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Alef';
+    height: 0.7rem;
+ }
+
+ #foto{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Alef';
+    height: 0.7rem;
+ }
+
+ #localidade{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 1);
+    font-family: 'Alef';
+    height: 0.7rem;
+ }

@@ -47,7 +47,9 @@ function Login() {
                                 Entrar com o Google
                             </Button>
                             <Box>
-                                <Button id='conta'> Criar conta</Button>
+                                <Link to='/cadastro'>
+                                    <Button id='conta'> Criar conta</Button>
+                                </Link>
                                 <Button id='novaSenha'>Esqueci minha senha</Button>
                             </Box>
                         </Box>
