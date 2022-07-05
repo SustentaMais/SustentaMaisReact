@@ -19,6 +19,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/visitante" element={<Visitante />} />
           {/* <Route path="/visitante" element={<Visitante />} /> */}
          
 

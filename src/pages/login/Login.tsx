@@ -46,8 +46,10 @@ function Login() {
                                 <img className='googleIcon' src={require("../../assets/img/Google.png")} />
                                 Entrar com o Google
                             </Button>
-                            <Box>
-                                <Button id='conta'> Criar conta</Button>
+                            <Box id='esqueci'>
+                                <Box>
+                                    <Button id='conta'> Criar conta</Button>
+                                </Box>
                                 <Button id='novaSenha'>Esqueci minha senha</Button>
                             </Box>
                         </Box>

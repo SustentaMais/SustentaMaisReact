@@ -14,3 +14,38 @@ li::before{
     background-size: 27px;
     margin-right: 3px;
 }
+.CTA{
+    text-align: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: darkgreen;
+}
+.css-mkazzp-MuiButtonBase-root-MuiButton-root{
+    border-radius: 119px 0px !important;
+    height: 2.8rem !important;
+}
+.heroContainer{
+    padding-top: 7rem !important;
+}
+.heroContainer-left{
+    padding-left: 3rem;
+}
+.heroContainer-right{
+    padding-right: 3rem;
+}
+.section2Title{
+    padding-top: 3rem;
+    margin-bottom:50px;
+    text-align:center;
+    padding-right:8rem;
+    padding-left:8rem;
+}
+hr{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.section2Content{
+    padding-bottom: 4rem;
+}

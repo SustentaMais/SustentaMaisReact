@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
@@ -27,7 +27,7 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: 'rgba(174, 242, 2, 0.30)',
   },
   marginRight: theme.spacing(2),
-  marginLeft: '300px!important',
+  marginLeft: '40px!important',
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
@@ -125,36 +125,36 @@ export default function Navbar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton size="large" color="inherit">
-            <HomeIcon />
+        <IconButton size="small" color="inherit">
+          <HomeIcon />
         </IconButton>
         <p>Home</p>
       </MenuItem>
 
       <MenuItem>
-        <IconButton size="large" color="inherit">
-            <DynamicFeedIcon />
+        <IconButton size="small" color="inherit">
+          <DynamicFeedIcon />
         </IconButton>
         <p>Postagens</p>
       </MenuItem>
 
       <MenuItem>
-        <IconButton size="large" color="inherit">
-            <ArticleIcon />
+        <IconButton size="small" color="inherit">
+          <ArticleIcon />
         </IconButton>
         <p>Tema</p>
       </MenuItem>
 
       <MenuItem>
-        <IconButton size="large" color="inherit">
-            <PostAddIcon />
+        <IconButton size="small" color="inherit">
+          <PostAddIcon />
         </IconButton>
         <p>Criar Postagem</p>
       </MenuItem>
-      
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
-          size="large"
+          size="small"
           aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
@@ -171,8 +171,8 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-        <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png?width=898&height=422' alt="Logo SustentaMais" />
-        <Search className='input-search'>
+          <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png?width=898&height=422' alt="Logo SustentaMais" />
+          <Search className='input-search'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -184,39 +184,45 @@ export default function Navbar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Link to='/home' className='text-decorator-none'>
-            <IconButton size="large" color="inherit">
+              <IconButton size="large" color="inherit">
                 <HomeIcon />
                 <p className="menu-text">Home</p>
-            </IconButton>
+              </IconButton>
             </Link>
-            <IconButton size="large" color="inherit">
+            <Link to={'#'}>
+              <IconButton size="large" color="inherit">
                 <DynamicFeedIcon />
                 <p className="menu-text">Postagens</p>
-            </IconButton>
-
-            <IconButton size="large" color="inherit">
+              </IconButton>
+            </Link>
+            <Link to={'#'}>
+              <IconButton size="large" color="inherit">
                 <ArticleIcon />
                 <p className="menu-text">Tema</p>
-            </IconButton>
+              </IconButton>
+            </Link>
 
-            <IconButton size="large" color="inherit">
+            <Link to={'#'}>
+              <IconButton size="large" color="inherit">
                 <PostAddIcon />
                 <p className="menu-text">Criar Postagem</p>
-            </IconButton>
+              </IconButton>
+            </Link>
 
-          <Link to='/visitante'>
-            <IconButton size="large" color="inherit">
+
+            <Link to='/visitante'>
+              <IconButton size="large" color="inherit">
                 <DirectionsRunOutlinedIcon />
                 <p className="menu-text">Visitante</p>
-            </IconButton>
-          </Link>
+              </IconButton>
+            </Link>
 
-          <Link to='/sobre'>
-            <IconButton size="large" color="inherit">
+            <Link to='/sobre'>
+              <IconButton size="large" color="inherit">
                 <PublicIcon />
                 <p className="menu-text">Sobre nós</p>
-            </IconButton>
-          </Link>
+              </IconButton>
+            </Link>
 
             <IconButton
               size="large"
@@ -227,25 +233,27 @@ export default function Navbar() {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle className="profile-icon"/>
+              <AccountCircle className="profile-icon" />
             </IconButton>
+            
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
+              >
+                <MoreIcon />
+              </IconButton>
+            </Box>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
+          {renderMobileMenu}
+          {renderMenu}
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
+
     </Box>
   );
 }

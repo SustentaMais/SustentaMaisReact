@@ -12,11 +12,11 @@ function Visitante() {
                 className='heroContainer'
                 height='100vh'
                 paddingTop='5rem'>
-                <Grid item alignItems="center" md={6}>
+                <Grid item alignItems="center" md={6} className='heroContainer-left'>
                     <img src="https://imgur.com/gaVGNPl.png" height='300px' alt="Maos segurando o planeta-terra" />
                 </Grid>
-                <Grid item alignItems="center" md={6}>
-                    <Box>
+                <Grid item alignItems="center" md={6} className='heroContainer-right'>
+                    <Box className='CTA'>
                         <Typography variant='h4'>Textinho chamativo aqui</Typography>
                         <Box marginTop='1rem' textAlign='center'>
                             <Button type='submit' size='large' variant='contained' color='success'>
@@ -29,7 +29,7 @@ function Visitante() {
 
                                 </Box>
                                 <Link to='/login'>
-                                    <Typography gutterBottom>Faça o login</Typography>
+                                    <Typography gutterBottom id='facaLogin'>Faça o login</Typography>
                                 </Link>
                             </Box>
                         </Box>
@@ -37,10 +37,10 @@ function Visitante() {
                 </Grid>
             </Grid>
             <hr />
-            <Box marginBottom='50px' textAlign='center' paddingRight='8rem' paddingLeft='8rem'>
-                <Typography variant='h6'>Mais de 100.000 pessoas foram beneficiadas por iniciativas que surgiram na SustentaMais!</Typography>
+            <Box className='section2Title'>
+                <Typography variant='h4'>Mais de 100.000 pessoas foram beneficiadas por iniciativas que surgiram na <strong>SustentaMais!</strong></Typography>
             </Box>
-            <Grid container justifyContent='center' alignItems='center' paddingRight='4rem' paddingLeft='4rem' >
+            <Grid container justifyContent='center' alignItems='center' paddingRight='4rem' paddingLeft='4rem' className='section2Content' >
                 <Grid item sm={7}>
                     <Box textAlign='left' width='20rem'>
                         <Typography>
