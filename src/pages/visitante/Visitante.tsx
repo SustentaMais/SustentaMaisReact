@@ -24,9 +24,9 @@ function Visitante() {
                             </Button>
                             <Box marginTop='4px' justifyContent='center' display='flex'>
                                 <Box marginRight={1} >
-                            
-                                        <Typography>Já tem uma conta?</Typography>
-                                    
+
+                                    <Typography>Já tem uma conta?</Typography>
+
                                 </Box>
                                 <Link to='/login'>
                                     <Typography gutterBottom>Faça o login</Typography>
@@ -36,7 +36,7 @@ function Visitante() {
                     </Box>
                 </Grid>
             </Grid>
-            <hr/>
+            <hr />
             <Box marginBottom='50px' textAlign='center' paddingRight='8rem' paddingLeft='8rem'>
                 <Typography variant='h6'>Mais de 100.000 pessoas foram beneficiadas por iniciativas que surgiram na SustentaMais!</Typography>
             </Box>
@@ -55,7 +55,7 @@ function Visitante() {
                     <img src="https://imgur.com/CG1yhTy.png" height='250px' alt="Pessoas levantando planeta" />
                 </Grid>
             </Grid>
-            <hr style={{width:"100px"}}/>
+            <hr style={{ width: "100px" }} />
             <Box margin='auto' paddingTop='9rem' paddingBottom='9rem' width='40rem'>
                 <ul>
                     <li>Garantindo habitação segura a mais de 100 famílias por dia;</li>
