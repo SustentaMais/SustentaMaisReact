@@ -14,7 +14,7 @@ import '../src/App.css';
 function App() {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <div style={{ minHeight: '100vh' }}>
         <Routes> // Antigo Switch
           <Route path="/" element={<Visitante />} />
@@ -22,11 +22,11 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/cadastro" element={<CadastroUsuario />} />
-        </Routes>
-      </div>
-      <Footer />
-      {/* <Footer /> */}
-    </Router>
+          <Route path="/visitante" element={<Visitante />} />
+        </Routes >
+      </div >
+    <Footer />
+    </Router >
   );
 }
 

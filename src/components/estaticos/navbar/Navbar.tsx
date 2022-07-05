@@ -14,8 +14,8 @@ import ArticleIcon from '@mui/icons-material/Article';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
 import PublicIcon from '@mui/icons-material/Public';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -101,9 +101,15 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Configurações</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Sair</MenuItem>
+      <Link to='/perfil'>
+        <MenuItem onClick={handleMenuClose}>Perfil</MenuItem>
+      </Link>
+      <Link to='configuracoes'>
+        <MenuItem onClick={handleMenuClose}>Configurações</MenuItem>
+      </Link>
+      <Link to='/login'>
+        <MenuItem onClick={handleMenuClose}>Sair</MenuItem>
+      </Link>
     </Menu>
   );
 
@@ -124,36 +130,36 @@ export default function Navbar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+      <Link to='/home'>
       <MenuItem>
         <IconButton size="large" color="inherit">
             <HomeIcon />
         </IconButton>
         <p>Home</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton size="large" color="inherit">
-            <DynamicFeedIcon />
-        </IconButton>
-        <p>Postagens</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton size="large" color="inherit">
-            <ArticleIcon />
-        </IconButton>
-        <p>Tema</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton size="large" color="inherit">
-            <PostAddIcon />
-        </IconButton>
-        <p>Criar Postagem</p>
-      </MenuItem>
-      <Link to='/visitante'>
+      </Link>
+      <Link to='/postagens'>
         <MenuItem>
           <IconButton size="large" color="inherit">
-            <DirectionsRunOutlinedIcon />
+              <DynamicFeedIcon />
           </IconButton>
-          <p>Visitante</p>
+          <p>Postagens</p>
+        </MenuItem>
+      </Link>
+      <Link to='/tema'>
+        <MenuItem>
+          <IconButton size="large" color="inherit">
+              <ArticleIcon />
+          </IconButton>
+          <p>Tema</p>
+        </MenuItem>
+      </Link>
+      <Link to='/criarpostagem'>
+        <MenuItem>
+          <IconButton size="large" color="inherit">
+              <PostAddIcon />
+          </IconButton>
+          <p>Criar Postagem</p>
         </MenuItem>
       </Link>
       <Link to='/sobre'>
@@ -164,7 +170,12 @@ export default function Navbar() {
           <p>Sobre Nós</p>
         </MenuItem>
       </Link>
-      
+      <MenuItem>
+          <IconButton size="large" color="inherit">
+            <Brightness4Icon />
+          </IconButton>
+          <p>Dark Mode</p>
+      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -184,7 +195,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-        <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png?width=898&height=422' alt="Logo SustentaMais" />
+        <img className="logo-sustenta" src={require('../../../assets/img/Logopng.png')} alt="Logo SustentaMais" />
         <Search className='input-search'>
             <SearchIconWrapper>
               <SearchIcon />
@@ -196,28 +207,40 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" color="inherit">
+            <Link to='/home'>
+              <IconButton size="large" color="inherit">
                 <HomeIcon />
                 <p className="menu-text">Home</p>
-            </IconButton>
-            <IconButton size="large" color="inherit">
+              </IconButton>
+            </Link>
+            <Link to='/postagens'>
+              <IconButton size="large" color="inherit">
                 <DynamicFeedIcon />
                 <p className="menu-text">Postagens</p>
-            </IconButton>
-            <IconButton size="large" color="inherit">
+              </IconButton>
+            </Link>
+            <Link to='/tema'>
+              <IconButton size="large" color="inherit">
                 <ArticleIcon />
                 <p className="menu-text">Tema</p>
             </IconButton>
-            <IconButton size="large" color="inherit">
-                <PostAddIcon />
-                <p className="menu-text">Criar Postagem</p>
-            </IconButton>
+            </Link>
+            <Link to='/criarpostagem'>
+              <IconButton size="large" color="inherit">
+                  <PostAddIcon />
+                  <p className="menu-text">Criar Postagem</p>
+              </IconButton>
+            </Link> 
           <Link to='/sobre'>
             <IconButton size="large" color="inherit">
                 <PublicIcon />
                 <p className="menu-text">Sobre Nós</p>
             </IconButton>
           </Link>
+          <IconButton size="large" color="inherit">
+              <Brightness4Icon />
+              <p className="menu-text">Dark Mode</p>
+          </IconButton>
             <IconButton
               size="large"
               edge="end"
@@ -226,6 +249,7 @@ export default function Navbar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
+              style={{textAlign: 'center', width: '65px'}}
             >
               <AccountCircle className="profile-icon"/>
             </IconButton>

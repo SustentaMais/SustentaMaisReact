@@ -120,7 +120,9 @@
    font-size: 0.8rem ;
 
  }
-
+#esqueci{
+  display: block;
+}
  .googleIcon{
   width: 1rem;
   height: 1rem;
@@ -151,4 +153,5 @@
   justify-content: center;
   background-color: transparent;
   height: fit-content;
+  margin: 0;
  }
