@@ -195,8 +195,7 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-        <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png
-' alt="Logo SustentaMais" />
+        <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png' alt="Logo SustentaMais" />
         <Search className='input-search'>
             <SearchIconWrapper>
               <SearchIcon />

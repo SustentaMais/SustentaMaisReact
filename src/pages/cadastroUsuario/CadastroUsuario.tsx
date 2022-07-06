@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
-import { Grid, Button, TextField, } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Grid, TextField, } from '@material-ui/core';
+import { Box, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import Usuario from '../../models/UsuarioModel';
 import { cadastroUsuario } from '../../services/Service';
@@ -27,13 +27,13 @@ function CadastrarUsuario() {
             usuario: "",
             senha: "",
             foto: "",
-            localidade: "",
+            localidade: ""
 
         })
 
     useEffect(() => {
-        if (usuarioResult.id != 0) {
-            navigate("/login", { replace: true })
+        if (usuarioResult.id !== 0) {
+            navigate("/login")
         }
     }, [usuarioResult])
 
@@ -54,7 +54,7 @@ function CadastrarUsuario() {
          e.preventDefault()
          if (confirmarSenha === usuario.senha) {
              cadastroUsuario(`/usuario/cadastrar`, usuario, setUsuarioResult)
-            alert('Usuário Cadastrado Com Sucesso!!!')
+             alert('Usuário Cadastrado Com Sucesso!!!')
          } else {
               alert('Dados Inconsistentes. Favor verificar as informações de cadastro!')
         }
@@ -83,11 +83,11 @@ function CadastrarUsuario() {
                                         Cancelar
                                     </Button>
                                 </Link>
-                                <Link to='/login' className='text-decorator-none'>
+                                {/* <Link to='/login' className='text-decorator-none'> */}
                                     <Button type='submit' className='button'>
                                         Cadastrar
                                     </Button>
-                                </Link>
+                                {/* </Link> */}
                             </Box>
                         </form>
                     </Box>

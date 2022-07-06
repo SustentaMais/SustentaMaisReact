@@ -18,6 +18,7 @@ function Visitante() {
                 <Grid item alignItems="center" md={6} className='heroContainer-right'>
                     <Box className='CTA'>
                         <Typography variant='h4'>Textinho chamativo aqui</Typography>
+<<<<<<< HEAD
                         
                             <Box marginTop='1rem' textAlign='center'>
                             <Link to='/cadastro'>
@@ -25,6 +26,14 @@ function Visitante() {
                                 Faça parte dessa rede!
                             </Button>
                         </Link>
+=======
+                        <Box marginTop='1rem' textAlign='center'>
+                            <Link to='/cadastro'>
+                                <Button type='submit' size='large' variant='contained' color='success'>
+                                    Faça parte dessa rede!
+                                </Button>
+                            </Link>
+>>>>>>> e9cf0ac9680d5a650dba571f6df9e8bca977e52e
                             <Box marginTop='4px' justifyContent='center' display='flex'>
                                 <Box marginRight={1} >
 
