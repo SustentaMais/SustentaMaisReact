@@ -19,9 +19,11 @@ function Visitante() {
                     <Box className='CTA'>
                         <Typography variant='h4'>Textinho chamativo aqui</Typography>
                         <Box marginTop='1rem' textAlign='center'>
-                            <Button type='submit' size='large' variant='contained' color='success'>
-                                Faça parte dessa rede!
-                            </Button>
+                            <Link to='/cadastro'>
+                                <Button type='submit' size='large' variant='contained' color='success'>
+                                    Faça parte dessa rede!
+                                </Button>
+                            </Link>
                             <Box marginTop='4px' justifyContent='center' display='flex'>
                                 <Box marginRight={1} >
 
