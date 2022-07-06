@@ -32,8 +32,8 @@ function CadastrarUsuario() {
         })
 
     useEffect(() => {
-        if (usuarioResult.id !== 0) {
-            navigate("/login")
+        if (usuarioResult.id != 0) {
+            navigate("/login", { replace: true })
         }
     }, [usuarioResult])
 
@@ -52,9 +52,9 @@ function CadastrarUsuario() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
          e.preventDefault()
-         if (confirmarSenha === usuario.senha) {
+         if (confirmarSenha == usuario.senha) {
              cadastroUsuario(`/usuario/cadastrar`, usuario, setUsuarioResult)
-             alert('Usuário Cadastrado Com Sucesso!!!')
+            alert('Usuário Cadastrado Com Sucesso!!!')
          } else {
               alert('Dados Inconsistentes. Favor verificar as informações de cadastro!')
         }
