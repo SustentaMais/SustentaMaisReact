@@ -2,7 +2,6 @@ import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button } from "@material-ui/core"
 import './CadastroTema.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { buscaId, post, put } from '../../../services/Service';
 import TemaModel from '../../../models/TemaModel';

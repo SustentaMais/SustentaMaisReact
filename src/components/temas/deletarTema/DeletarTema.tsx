@@ -4,8 +4,6 @@ import './DeletarTema.css';
 import { buscaId, deleteId } from '../../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
 import TemaModel from '../../../models/TemaModel';
 import { Box } from '@mui/material';
 

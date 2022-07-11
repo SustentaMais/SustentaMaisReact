@@ -3,8 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaTema.css';
 import {busca} from '../../../services/Service'
-import { useSelector } from 'react-redux';
-import { TokenState } from '../../../store/tokens/tokensReducer';
+// import { useSelector } from 'react-redux';
+// import { TokenState } from '../../../store/tokens/tokensReducer';
 import TemaModel from '../../../models/TemaModel';
 import useLocalStorage from 'react-use-localstorage';
 
@@ -52,14 +52,14 @@ function ListaTema() {
           <CardActions>
             <Box display="flex" justifyContent="center" mb={1.5} >
 
-              <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
+              <Link to={`/cadastrotema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="marginLeft btn-update" size='small' color="primary" >
                     atualizar
                   </Button>
                 </Box>
               </Link>
-              <Link to={`/DeletarTema/${tema.id}`} className="text-decorator-none">
+              <Link to={`/deletartema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="btn-delete" size='small' color="secondary">
                     deletar
