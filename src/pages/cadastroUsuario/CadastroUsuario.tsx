@@ -2,7 +2,7 @@ import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Grid, TextField, } from '@material-ui/core';
 import { Box, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import Usuario from '../../models/Usuario';
+import Usuario from '../../models/UsuarioModel';
 import { cadastroUsuario } from '../../services/Service';
 import './CadastroUsuario.css';
 
@@ -94,7 +94,7 @@ function CadastrarUsuario() {
                 </Box>
             </Grid>
 
-            {/* <Grid item sm={6} className='centraliza'>
+            <Grid item sm={6} className='centraliza'>
                 <Box className='retangulo4'>
                     <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos' />
                     <Box className='texto'>
@@ -102,7 +102,7 @@ function CadastrarUsuario() {
                     </Box>
                     <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot' />
                 </Box>
-            </Grid>  */}
+            </Grid> 
 
         </Grid>
     );

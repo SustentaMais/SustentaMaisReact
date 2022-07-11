@@ -170,12 +170,14 @@ export default function Navbar() {
           <p>Sobre Nós</p>
         </MenuItem>
       </Link>
+      {/*colocar o dark mode na página de configurações
       <MenuItem>
           <IconButton size="large" color="inherit">
             <Brightness4Icon />
           </IconButton>
           <p>Dark Mode</p>
       </MenuItem>
+      */}
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -237,10 +239,12 @@ export default function Navbar() {
                 <p className="menu-text">Sobre Nós</p>
             </IconButton>
           </Link>
+          {/*
           <IconButton size="large" color="inherit">
               <Brightness4Icon />
               <p className="menu-text">Dark Mode</p>
           </IconButton>
+          */}
             <IconButton
               size="large"
               edge="end"

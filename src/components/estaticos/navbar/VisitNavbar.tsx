@@ -100,7 +100,8 @@ export default function VisitNavbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{}}>
         <Toolbar>
-        <img className="logo-sustenta" src={require('../../../assets/img/Logopng.png')} alt="Logo SustentaMais" />
+        <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png
+' alt="Logo SustentaMais" />
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Link to='/visitante'>
