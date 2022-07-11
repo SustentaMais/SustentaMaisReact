@@ -59,7 +59,7 @@ function ListaTema() {
                   </Button>
                 </Box>
               </Link>
-              <Link to={`/deletarTema/${tema.id}`} className="text-decorator-none">
+              <Link to={`/DeletarTema/${tema.id}`} className="text-decorator-none">
                 <Box mx={1}>
                   <Button variant="contained" className="btn-delete" size='small' color="secondary">
                     deletar
