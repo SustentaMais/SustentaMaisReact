@@ -10,10 +10,10 @@ import Visitante from './pages/visitante/Visitante';
 import Login from './pages/login/Login';
 import '../src/App.css';
 import CadastroTema from './components/temas/cadastroTema/CadastroTema';
-
 import store from './store/store';
 import { Provider } from 'react-redux';
 import ListaTema from './components/temas/listaTema/ListaTema';
+import CadastroPost from './components/postagens/CadastroPost';
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
                 <Route path="/visitante" element={<Visitante />} />
                 <Route path="/cadastrotema" element={<CadastroTema />} />
                 <Route path="/tema" element={<ListaTema />} />
+                <Route path="/formularioPostagem" element={<CadastroPost />} />
               </Routes >
             </div >
           <Footer />
