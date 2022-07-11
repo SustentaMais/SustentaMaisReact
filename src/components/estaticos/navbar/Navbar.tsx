@@ -138,7 +138,7 @@ export default function Navbar() {
         <p>Home</p>
       </MenuItem>
       </Link>
-      <Link to='/postagens'>
+      <Link to='/postagem'>
         <MenuItem>
           <IconButton size="large" color="inherit">
               <DynamicFeedIcon />
@@ -215,7 +215,7 @@ export default function Navbar() {
                 <p className="menu-text">Home</p>
               </IconButton>
             </Link>
-            <Link to='/postagens'>
+            <Link to='/postagem'>
               <IconButton size="large" color="inherit">
                 <DynamicFeedIcon />
                 <p className="menu-text">Postagens</p>
