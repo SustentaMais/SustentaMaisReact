@@ -9,36 +9,35 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visitante from './pages/visitante/Visitante';
 import Login from './pages/login/Login';
 import '../src/App.css';
+import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 
 import store from './store/store';
 import { Provider } from 'react-redux';
-import CadastroTema from './components/temas/cadastroTema/CadastroTema';
+import ListaTema from './components/temas/listaTema/ListaTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 
 
 function App() {
   return (
-     
-        <Router>
-          <Navbar />
-          <div style={{ minHeight: '100vh' }}>
-            <Routes> // Antigo Switch
-              <Route path="/" element={<Visitante />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/sobre" element={<Sobre />} />
-              <Route path="/cadastro" element={<CadastroUsuario />} />
-              <Route path="/visitante" element={<Visitante />} />
-              {/* <Route path="/listartema" element={<ListarTema />} /> */}
-              <Route path="/cadastrotema" element={<CadastroTema />} />
-              <Route path="/deletartema" element={<DeletarTema />} />
-
-            </Routes >
-          </div >
-        <Footer />
-
-        </Router >
-
+        <Provider store={store}>
+          <Router>
+            <Navbar />
+            <div style={{ minHeight: '100vh' }}>
+              <Routes> 
+                <Route path="/" element={<Visitante />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/cadastro" element={<CadastroUsuario />} />
+                <Route path="/visitante" element={<Visitante />} />
+                <Route path="/cadastrotema" element={<CadastroTema />} />
+                <Route path="/tema" element={<ListaTema />} />
+                <Route path="/deletartema" element={<DeletarTema />} />
+              </Routes >
+            </div >
+          <Footer />
+          </Router >
+        </Provider>
   );
 }
 
