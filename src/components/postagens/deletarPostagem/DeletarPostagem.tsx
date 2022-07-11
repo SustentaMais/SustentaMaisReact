@@ -31,7 +31,7 @@ function DeletarPostagem() {
 
 
     async function findById(id: string) {
-        buscaId(`/postagens/${id}`, setPosts, {
+        buscaId(`/postagem/${id}`, setPosts, {
             headers: {
                 'Authorization': token
             }
@@ -39,8 +39,8 @@ function DeletarPostagem() {
     }
 
     function sim() {
-        navigate('/posts')
-        deleteId(`/postagens/${id}`, {
+        navigate('/postagem')
+        deleteId(`/postagem/${id}`, {
             headers: {
                 'Authorization': token
             }
@@ -49,7 +49,7 @@ function DeletarPostagem() {
     }
 
     function nao() {
-        navigate('/posts')
+        navigate('/postagem')
     }
 
     return (
@@ -62,7 +62,7 @@ function DeletarPostagem() {
                                 Deseja deletar a Postagem:
                             </Typography>
                             <Typography color="textSecondary">
-                                Tema
+                            {post?.titulo}
                             </Typography>
                         </Box>
                     </CardContent>
