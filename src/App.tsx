@@ -13,8 +13,8 @@ import store from './store/store';
 import { Provider } from 'react-redux';
 import ListaTema from './components/temas/listaTema/ListaTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
-import CadastroPost from './components/postagens/CadastroPost';
-
+import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
+import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 
 
 function App() {
@@ -33,8 +33,10 @@ function App() {
                 <Route path="/cadastrotema" element={<CadastroTema />} />
                 <Route path="/cadastrotema/:id" element={<CadastroTema />} />
                 <Route path="/tema" element={<ListaTema />} />
-                <Route path="/formularioPostagem" element={<CadastroPost />} />
+                <Route path="/criarpostagem" element={<CadastroPost />} />
+                <Route path="/criarpostagem/:id" element={<CadastroPost />} />
                 <Route path="/deletartema/:id" element={<DeletarTema />} />
+                <Route path="/postagem" element={<ListaPostagem />} />
               </Routes >
             </div >
           <Footer />
