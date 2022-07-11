@@ -9,15 +9,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visitante from './pages/visitante/Visitante';
 import Login from './pages/login/Login';
 import '../src/App.css';
-import CadastroTema from './components/estaticos/temas/cadastroTema/CadastroTema';
 
 import store from './store/store';
 import { Provider } from 'react-redux';
+import CadastroTema from './components/temas/cadastroTema/CadastroTema';
+import DeletarTema from './components/temas/deletarTema/DeletarTema';
 
 
 function App() {
   return (
-
+     
         <Router>
           <Navbar />
           <div style={{ minHeight: '100vh' }}>
@@ -28,7 +29,10 @@ function App() {
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/cadastro" element={<CadastroUsuario />} />
               <Route path="/visitante" element={<Visitante />} />
+              {/* <Route path="/listartema" element={<ListarTema />} /> */}
               <Route path="/cadastrotema" element={<CadastroTema />} />
+              <Route path="/deletartema" element={<DeletarTema />} />
+
             </Routes >
           </div >
         <Footer />
