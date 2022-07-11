@@ -12,11 +12,11 @@ function Sobre() {
             
             <section className='containerE2'  >
                 <Typography >
-                <p className='titulos'>Quem somos</p>
+                <p className='titulos'>Quem somos?</p>
                 Somos uma rede social sem fins lucrativos, nosso projeto Sustenta+ tem como medida apresentar soluções para a falta de moradia segura e sustentável para moradores em situação vulnerável. Com o principal objetivo de tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis. Seguindo as metas da ODS 11 da ONU.
                 </Typography>
 
-                <img className='img' src="https://media.discordapp.net/attachments/992082604792750240/992082726075256963/Sustentamaiscfundo.png?width=385&height=385"
+                <img className='img1' src="https://media.discordapp.net/attachments/992082604792750240/992082726075256963/Sustentamaiscfundo.png?width=385&height=385"
                 alt=""/>
             </section>
 
@@ -27,7 +27,7 @@ function Sobre() {
             
             <section className='containerD'>
 
-            <img className='img' src="https://media.discordapp.net/attachments/992082604792750240/992082726075256963/Sustentamaiscfundo.png?width=385&height=385"alt=""/>
+            <img className='img2' src="http://sgssustentabilidade.com.br/wp-content/uploads/2018/08/maos-unidas-grupo.jpg"alt=""/>
                 <Typography  >
                 <p className='titulos'>Porque fazer parte do Sustenta+?</p>
                 O grupo enxerga como resolução desse problema, a possibilidade de poder ajudar as pessoas, além de permitir que as mesmas se ajudem dentro da rede social visando a participação de pessoas e empresas em prol de um objetivo em comum. 
@@ -49,7 +49,7 @@ function Sobre() {
 
                 </Typography>
 
-                <img className='img' src="https://media.discordapp.net/attachments/992082604792750240/992082726075256963/Sustentamaiscfundo.png?width=385&height=385"
+                <img className='img3' src="https://omnibees.com/wp-content/uploads/2020/08/sustentabilidade-na-hotelaria-tudo-o-que-voce-precisa-saber-sobre-essa-tendencia-1.jpg"
                 alt=""/>
             </section>
 

@@ -9,24 +9,32 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Visitante from './pages/visitante/Visitante';
 import Login from './pages/login/Login';
 import '../src/App.css';
+import CadastroTema from './components/estaticos/temas/cadastroTema/CadastroTema';
+
+import store from './store/store';
+import { Provider } from 'react-redux';
 
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div style={{ minHeight: '100vh' }}>
-        <Routes> // Antigo Switch
-          <Route path="/" element={<Visitante />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/cadastro" element={<CadastroUsuario />} />
-          <Route path="/visitante" element={<Visitante />} />
-        </Routes >
-      </div >
-    <Footer />
-    </Router >
+
+        <Router>
+          <Navbar />
+          <div style={{ minHeight: '100vh' }}>
+            <Routes> // Antigo Switch
+              <Route path="/" element={<Visitante />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/sobre" element={<Sobre />} />
+              <Route path="/cadastro" element={<CadastroUsuario />} />
+              <Route path="/visitante" element={<Visitante />} />
+              <Route path="/cadastrotema" element={<CadastroTema />} />
+            </Routes >
+          </div >
+        <Footer />
+
+        </Router >
+
   );
 }
 

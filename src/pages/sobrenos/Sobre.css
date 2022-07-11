@@ -38,10 +38,10 @@
     text-align: end;
     margin: 10px;
 
-    background-image: linear-gradient(to bottom right,#ffffff, #f7f7f78c);
-    /* border-radius: 5px;
+    /* background-image: linear-gradient(to bottom right,#ffffff, #f7f7f78c);
+    border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
-    transition: all 0.3s ease-out; */ 
+    transition: all 0.3s ease-out;  */
 
 }   
 
@@ -55,8 +55,21 @@
     cursor: pointer;
 } */
 
-.img{
+.img1{
     width: 300px;
+    height: 300px;
+    border-radius: 10%; 
+}
+
+.img2{
+    width: 300px;
+    height: 300px;
+    border-radius: 10%; 
+}
+
+.img3{
+    width: 300px;
+    height: 300px;
     border-radius: 10%; 
 }
 

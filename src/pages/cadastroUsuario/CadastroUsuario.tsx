@@ -94,7 +94,7 @@ function CadastrarUsuario() {
                 </Box>
             </Grid>
 
-            {/* <Grid item sm={6} className='centraliza'>
+            <Grid item sm={6} className='centraliza'>
                 <Box className='retangulo4'>
                     <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos' />
                     <Box className='texto'>
@@ -102,7 +102,7 @@ function CadastrarUsuario() {
                     </Box>
                     <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot' />
                 </Box>
-            </Grid>  */}
+            </Grid> 
 
         </Grid>
     );
