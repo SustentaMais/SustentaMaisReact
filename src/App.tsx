@@ -31,8 +31,9 @@ function App() {
                 <Route path="/cadastro" element={<CadastroUsuario />} />
                 <Route path="/visitante" element={<Visitante />} />
                 <Route path="/cadastrotema" element={<CadastroTema />} />
+                <Route path="/cadastrotema/:id" element={<CadastroTema />} />
                 <Route path="/tema" element={<ListaTema />} />
-                <Route path="/deletartema" element={<DeletarTema />} />
+                <Route path="/deletartema/:id" element={<DeletarTema />} />
               </Routes >
             </div >
           <Footer />
