@@ -92,13 +92,14 @@
     height: 0.7rem;
  }
 
-.button{
+/* .button{
     border-radius: 5px;
-    background: rgba(46, 128, 3, 0.7);
+    background: darkgreen;
+    rgba(46, 128, 3, 0.7) 
     text-align:center;   
     font-family: 'Alatsi';
     width: 13rem;
- }
+ } */
 
  #ou{
    color: #81857D;
@@ -114,11 +115,12 @@
  #google{
    border-radius: 40px;
    width: 13rem;
-   background: rgba(255, 255, 255, 1);
+   background: rgba(255, 255, 255, 1) !important;
    text-align:center;
    font-family: 'Alef';
    font-size: 0.8rem ;
-
+   margin-bottom: 1rem;
+   margin-top: 0.6rem;
  }
 #esqueci{
   display: block;
@@ -137,16 +139,21 @@
    font-weight: bold;
    align-items:center;
    justify-content: center;
-   font-size: x-small;
+   font-size: small;
  }
 
  #novaSenha{
    color:#319F43;
    text-decoration-line: underline;
    font-family: 'Alef';
-   font-size: x-small;
+   font-size: small;
  }
-
+ #entrarButton{
+  width: 13rem;
+  font-weight: 300;
+  background-color:darkgreen;
+  margin-bottom: 0.7rem;
+ }
  .box1{
   display: flex;
   align-items:center;

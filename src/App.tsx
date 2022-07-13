@@ -17,11 +17,14 @@ import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
 import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import AddPost from './components/estaticos/addPost/AddPost';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
   return (
         <Provider store={store}>
+          <ToastContainer />
           <Router>
             <Navbar />
             <div style={{ minHeight: '100vh' }}>
