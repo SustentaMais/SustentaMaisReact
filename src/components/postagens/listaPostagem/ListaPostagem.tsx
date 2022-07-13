@@ -1,16 +1,17 @@
 import React, {useState, useEffect} from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaPostagem.css';
 import { busca } from '../../../services/Service';
 import PostagemModel from '../../../models/PostagemModel';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
+import ModalDeletePost from '../modaldeletepost/ModalDeletePost'
 
 function ListaPostagem() {
 
   const [posts, setPosts] = useState<PostagemModel[]>([])
-  
+  const {id} = useParams();
   let navigate = useNavigate();
 
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -34,12 +35,17 @@ function ListaPostagem() {
 
   useEffect(() => {
     getPost()
+    
   }, [posts.length])
 
+  
+    var IdPost;
   return (
     <>
+    
     {
       posts.map(post => (
+      
       <Box m={2} >
         <Card variant="outlined">
           <CardContent>
@@ -75,13 +81,14 @@ function ListaPostagem() {
                   </Button>
                 </Box>
               </Link>
-              <Link to={`/deletarpostagem/${post.id}`} className="text-decorator-none">
-                <Box mx={1}>
-                  <Button className='btn-delete' variant="contained" size='small' color="secondary">
+              {/* <Link to={`/deletarpostagem/${post.id}`} className="text-decorator-none"> */}
+                <Box mx={1} >
+                  <ModalDeletePost  />
+                  {/* <Button className='btn-delete' variant="contained" size='small' color="secondary">
                     deletar
-                  </Button>
+                  </Button> */}
                 </Box>
-              </Link>
+              {/* </Link> */}
             </Box>
           </CardActions>
         </Card>
