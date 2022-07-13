@@ -4,7 +4,8 @@ import { Box, Card, CardActions, CardContent, Button, Typography } from '@materi
 import './ListaPostagem.css';
 import { busca } from '../../../services/Service';
 import PostagemModel from '../../../models/PostagemModel';
-import useLocalStorage from 'react-use-localstorage';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
 
 function ListaPostagem() {
 
@@ -12,7 +13,9 @@ function ListaPostagem() {
   
   let navigate = useNavigate();
 
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
 
   useEffect(() => {
     if(token == ''){

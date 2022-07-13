@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
 import './DeletarTema.css';
 import { buscaId, deleteId } from '../../../services/Service';
-import useLocalStorage from 'react-use-localstorage';
 import { useNavigate, useParams } from 'react-router-dom';
 import TemaModel from '../../../models/TemaModel';
 import { Box } from '@mui/material';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 
@@ -14,7 +15,10 @@ function DeletarTema() {
   let navigate = useNavigate();
   const { id } = useParams<{id: string}>();
   const [tema, setTema] = useState<TemaModel>();
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
   useEffect(() => {
       if (token == "") {
           alert("Você precisa estar logado")

@@ -3,16 +3,18 @@ import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
 // import GoogleIcon from '@mui/icons-material/Google';
 import { Link, useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage'
 import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 
 import './Login.css';
+import { addToken } from '../../store/tokens/actions';
+import { useDispatch } from 'react-redux';
 
 function Login() {
 
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    const dispatch = useDispatch();
+    const [token, setToken] = useState('')
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id:0,
@@ -35,6 +37,7 @@ function Login() {
 
             useEffect(()=>{
                 if(token != ''){
+                    dispatch(addToken(token));
                     navigate('/home', {replace: true});
                 }
             }, [token])

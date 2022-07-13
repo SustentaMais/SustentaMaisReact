@@ -3,10 +3,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaTema.css';
 import {busca} from '../../../services/Service'
-// import { useSelector } from 'react-redux';
-// import { TokenState } from '../../../store/tokens/tokensReducer';
 import TemaModel from '../../../models/TemaModel';
-import useLocalStorage from 'react-use-localstorage';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
 
 function ListaTema() {
 
@@ -14,7 +13,10 @@ function ListaTema() {
   
   let navigate = useNavigate();
 
-  const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
 
   useEffect(() => {
     if(token == ''){
