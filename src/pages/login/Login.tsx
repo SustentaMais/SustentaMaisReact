@@ -73,7 +73,7 @@ function Login() {
                         <form onSubmit={onSubmit}>
                             <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail ou nome de usuário' variant='outlined' name='usuario'  />
                             <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password'/>
-                            <Box marginTop={2} className='button'>
+                            <Box marginTop={2}>
                                     <Button type='submit' id='entrarButton'>
                                         Entrar
                                     </Button>
@@ -92,10 +92,11 @@ function Login() {
                                 Entrar com o Google
                             </Button>
                             <Box id='esqueci'>
-                                <Box>
-                                    <Button id='conta'> Criar conta</Button>
+                                <Box display='flex' gap='1.5rem' justifyContent={'center'}>
+                                    <Typography id='conta'> Criar conta</Typography>
+                                
+                                    <Typography id='novaSenha'> Esqueci minha senha </Typography>
                                 </Box>
-                                <Button id='novaSenha'>Esqueci minha senha</Button>
                             </Box>
                         </Box>
                     </Box>
