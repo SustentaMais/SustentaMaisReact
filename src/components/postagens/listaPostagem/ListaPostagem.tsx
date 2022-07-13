@@ -6,11 +6,9 @@ import { busca } from '../../../services/Service';
 import PostagemModel from '../../../models/PostagemModel';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
-<<<<<<< HEAD
 import ModalDeletePost from '../modaldeletepost/ModalDeletePost'
-=======
 import { toast } from 'react-toastify';
->>>>>>> ad4db6df6634e2cb75d0218de652876e397880b6
+
 
 function ListaPostagem() {
 
@@ -52,7 +50,6 @@ function ListaPostagem() {
   }, [posts.length])
 
   
-    var IdPost;
   return (
     <>
     
