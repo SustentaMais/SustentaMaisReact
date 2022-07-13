@@ -5,10 +5,10 @@ import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
-
 import './Login.css';
 import { addToken } from '../../store/tokens/actions';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 
 function Login() {
 
@@ -47,9 +47,27 @@ function Login() {
                 try{
                     await login(`/usuario/logar`, userLogin, setToken)
     
-                    alert('Usuário logado com sucesso!');
+                    toast.success('Usuário logado com sucesso!', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
+                        });
                 }catch(error){
-                    alert('Dados do usuário inconsistentes. Erro ao logar!');
+                    toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
+                        });
                 }
             }
 
@@ -93,7 +111,9 @@ function Login() {
                             </Button>
                             <Box id='esqueci'>
                                 <Box>
+                                <Link to='/cadastro' className='text-decorator-none'>
                                     <Button id='conta'> Criar conta</Button>
+                                </Link>
                                 </Box>
                                 <Button id='novaSenha'>Esqueci minha senha</Button>
                             </Box>
