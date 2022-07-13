@@ -1,9 +1,8 @@
-
-li{
+#liEstrelinhas ul li{
 margin-top: 47px;
 list-style: none;
 }
-li::before{
+#liEstrelinhas ul li::before{
     content: '';
     position: relative;
     left: 0;
@@ -20,11 +19,12 @@ li::before{
 }
 a{
     text-decoration: none;
-    color: darkgreen;
+    color: rgb(16, 16, 16) !important;
 }
 .css-mkazzp-MuiButtonBase-root-MuiButton-root{
     border-radius: 119px 0px !important;
     height: 2.8rem !important;
+    width: 15rem;
 }
 .heroContainer{
     padding-top: 7rem !important;
@@ -49,3 +49,9 @@ hr{
 .section2Content{
     padding-bottom: 4rem;
 }
+#botaoVerde{
+    background-color: #006400 !important;
+}
+#facaLogin{
+   color: darkGreen;
+} 

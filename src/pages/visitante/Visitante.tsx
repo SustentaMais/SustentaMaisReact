@@ -20,7 +20,7 @@ function Visitante() {
                         <Typography variant='h4'>Textinho chamativo aqui</Typography>
                         <Box marginTop='1rem' textAlign='center'>
                             <Link to='/cadastro'>
-                                <Button type='submit' size='large' variant='contained' color='success'>
+                                <Button type='submit' size='large' variant='contained' color='success' id='botaoVerde'>
                                     Faça parte dessa rede!
                                 </Button>
                             </Link>
@@ -58,7 +58,7 @@ function Visitante() {
                 </Grid>
             </Grid>
             <hr style={{ width: "100px" }} />
-            <Box margin='auto' paddingTop='9rem' paddingBottom='9rem' width='40rem'>
+            <Box margin='auto' paddingTop='9rem' paddingBottom='9rem' width='40rem' id='liEstrelinhas'>
                 <ul>
                     <li>Garantindo habitação segura a mais de 100 famílias por dia;</li>
                     <li>Mais de 9M de usuários;</li>
