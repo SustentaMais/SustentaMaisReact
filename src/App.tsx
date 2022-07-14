@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/estaticos/navbar/Navbar';
-import Home from './pages/home/Home';
 import Footer from './components/estaticos/footer/Footer';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Sobre from './pages/sobrenos/Sobre';
@@ -13,14 +12,14 @@ import store from './store/store';
 import { Provider } from 'react-redux';
 import ListaTema from './components/temas/listaTema/ListaTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
-import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
-import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
-import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import AddPost from './components/estaticos/addPost/AddPost';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NavbarMain from './components/estaticos/navbar/NavbarMain';
 import Side_Navbar from './components/estaticos/navbar/Side_NavBar/Side_NavBar';
+import CadastroPost from './pages/home/cadastroPost/CadastroPost';
+import DeletarPostagem from './pages/home/deletarPostagem/DeletarPostagem';
+import ListaPostagem from './pages/home/listaPostagem/ListaPostagem';
 
 
 function App() {
@@ -33,7 +32,7 @@ function App() {
               <Routes> 
                 <Route path="/" element={<Visitante />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/home" element={<Home />} />
+                <Route path="/home" element={<ListaPostagem />} />
                 <Route path="/sobre" element={<Sobre />} />
                 <Route path="/cadastro" element={<CadastroUsuario />} />
                 <Route path="/visitante" element={<Visitante />} />
@@ -44,7 +43,7 @@ function App() {
                 <Route path="/criarpostagem" element={<CadastroPost />} />
                 <Route path="/criarpostagem/:id" element={<CadastroPost />} />
                 <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
-                <Route path="/postagem" element={<ListaPostagem />} />
+                <Route path="/postagem/:id" element={<ListaPostagem />} />
               </Routes >
             </div >
           <Footer />

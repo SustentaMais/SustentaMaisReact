@@ -1,8 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import React from 'react'
-import Navbar from '../../components/estaticos/navbar/Navbar';
-import SideBar from '../../components/estaticos/sidebar/SideBar';
-import ListaPostagem from '../../components/postagens/listaPostagem/ListaPostagem';
+import ListaPostagem from './listaPostagem/ListaPostagem';
+
 
 function Home() {
   return (
