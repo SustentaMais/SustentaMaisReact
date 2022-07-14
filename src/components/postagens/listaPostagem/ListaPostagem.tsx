@@ -8,7 +8,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import ModalDeletePost from '../modaldeletepost/ModalDeletePost'
 import { toast } from 'react-toastify';
-
+import './ListaPostagem.css'
 
 function ListaPostagem() {
 
@@ -56,7 +56,7 @@ function ListaPostagem() {
     {
       posts.map(post => (
       
-      <Box m={2} >
+      <Box m={2} className='cardsPost' >
         <Card variant="outlined">
           <CardContent>
             <Typography color="textSecondary" gutterBottom>

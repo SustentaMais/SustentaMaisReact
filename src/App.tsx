@@ -19,6 +19,8 @@ import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPosta
 import AddPost from './components/estaticos/addPost/AddPost';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import NavbarMain from './components/estaticos/navbar/NavbarMain';
+import Side_Navbar from './components/estaticos/navbar/Side_NavBar/Side_NavBar';
 
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
         <Provider store={store}>
           <ToastContainer />
           <Router>
-            <Navbar />
+            <Side_Navbar/>
             <div style={{ minHeight: '100vh' }}>
               <Routes> 
                 <Route path="/" element={<Visitante />} />

@@ -1,0 +1,39 @@
+#sidebarContainer {
+    position: fixed;
+    height: 97.5vh;
+    width: 24% !important;
+    background-color: rgb(255, 255, 255)!important;
+    color: rgba(0, 0, 0, 0.87)!important;
+    box-shadow: 4px 0px 4px 0px rgb(174 242 2 / 20%), 0px 4px 5px 0px rgb(174 242 2 / 14%), 0px 1px 10px 0px rgb(174 242 2 / 12%)!important;
+    z-index: 99!important;
+    border-radius: 45px 0px;
+}
+#DadosDoUsuario{
+    padding-top: 2rem;
+    padding-left: 0.8rem;
+}
+#sidebarRender{
+    background-color: lavender;
+}
+#divisor{
+    margin-top: 10px;
+    width: 100px;
+}
+#menuOptions{
+    margin: auto;
+    padding-top: 35px;
+}
+#menuOptions ul{
+    list-style-type: none;
+    margin: 0;
+}
+#menuOptions ul li{
+    align-content: center ;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.iconsUl{
+    padding-right: 10px;
+    height: 1.5rem !important;
+    margin-top: 5px;
+}

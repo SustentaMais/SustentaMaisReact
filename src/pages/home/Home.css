@@ -1,0 +1,6 @@
+#feed{
+    height: 95vh;
+    overflow-y: scroll;
+    margin-right: auto;
+    margin-left: auto;
+}
