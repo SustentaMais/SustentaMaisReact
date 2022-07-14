@@ -17,14 +17,14 @@ function CadastroTema() {
         (state) => state.tokens
       );
     
-    const [temas, setTema] = useState<TemaModel>({
+    const [temasTeste, setTema] = useState<TemaModel>({
         id: 0,
         tema: '',
         categoria: ''
     })
 
     useEffect(() => {
-        if(token === ''){
+        if(token == ''){
             toast.error('Você precisa estar logado', {
                 position: "top-right",
                 autoClose: 2000,
@@ -56,18 +56,25 @@ function CadastroTema() {
 
     function updatedTema(e: ChangeEvent<HTMLInputElement>){
         setTema({
-            ...temas,
+            ...temasTeste,
+            [e.target.name]:e.target.value,
+        })
+    }
+
+    function updatedCategoria(e: ChangeEvent<HTMLInputElement>){
+        setTema({
+            ...temasTeste,
             [e.target.name]:e.target.value,
         })
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        console.log("temas " + JSON.stringify(temas))
+        console.log("temas " + JSON.stringify(temasTeste))
 
         if (id !== undefined) {
-            console.log(temas)
-            put(`/tema`, temas, setTema, {
+            console.log(temasTeste)
+            put(`/tema`, temasTeste, setTema, {
                 headers: {
                     'Authorization': token
                 }
@@ -83,7 +90,7 @@ function CadastroTema() {
                 progress: undefined,
             });
         } else {
-            post(`/tema`, temas, setTema, {
+            post(`/tema`, temasTeste, setTema, {
                 headers: {
                     'Authorization': token
                 }
@@ -112,8 +119,8 @@ function CadastroTema() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={temas.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="tema" variant="outlined" name="tema" margin="normal" fullWidth />
-                <TextField value={temas.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="categoria" label="categoria" variant="outlined" name="categoria" margin="normal" fullWidth />
+                <TextField value={temasTeste.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="tema" variant="outlined" name="tema" margin="normal" fullWidth />
+                <TextField value={temasTeste.categoria} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)} id="categoria" label="categoria" variant="outlined" name="categoria" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>
