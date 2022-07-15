@@ -96,7 +96,7 @@ function CadastroPost() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-
+        console.log(postagem)
         if (id !== undefined) {
             put(`/postagem`, postagem, setPostagem, {
                 headers: {
@@ -135,7 +135,7 @@ function CadastroPost() {
     }
 
     function back() {
-        navigate('/postagem')
+        navigate('/home')
     }
 
  
