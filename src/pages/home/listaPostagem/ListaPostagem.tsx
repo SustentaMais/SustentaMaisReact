@@ -93,7 +93,7 @@ function ListaPostagem() {
               </Link>
               {/* <Link to={`/deletarpostagem/${post.id}`} className="text-decorator-none"> */}
                 <Box mx={1} >
-                  <ModalDeletePost  />
+                  <ModalDeletePost  id={post.id}/>
                   {/* <Button className='btn-delete' variant="contained" size='small' color="secondary">
                     deletar
                   </Button> */}

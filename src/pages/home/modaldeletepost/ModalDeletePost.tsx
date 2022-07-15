@@ -34,7 +34,7 @@ function getModalStyle() {
   );
 
 
-  function ModalDeletePost () {
+  function ModalDeletePost ( id: any) {
     const classes = useStyles();
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
@@ -54,7 +54,7 @@ function getModalStyle() {
         
         </Box>
         
-        <DeletarPostagem/>
+        <DeletarPostagem idPost={id}/>
         
       </div>
     );

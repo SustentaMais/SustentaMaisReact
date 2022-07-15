@@ -10,10 +10,10 @@ import { toast } from 'react-toastify';
 
 
 
-function DeletarPostagem() {
+function DeletarPostagem(idPost: any) {
 
     let navigate = useNavigate();
-    const { id } = useParams<{ id: string }>();
+    const id = idPost.idPost.id;
     const [post, setPosts] = useState<PostagemModel>()
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
