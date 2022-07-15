@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Box, Typography, Button, Paper, Hidden } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Visitante.css';
+import cardsExpanciso from './cards';
 
 function Visitante() {
     return (
@@ -66,6 +67,110 @@ function Visitante() {
                     <li>Diminuindo significamento o impacto ambiental negativo no planeta.</li>
                 </ul>
             </Box>
+
+            <Grid className='container'>
+                <Grid >
+                    <Box className='cards'>
+                        <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                        <Box className='conteudo'>
+                            <h4>João Lucas</h4>
+                            <Typography>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            </Typography>
+
+                        <a href="https://github.com/Joaolucas398" target="_blank"> 
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                        </a>
+
+                            <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                            </a>
+                        </Box>
+
+                    </Box>
+                </Grid>
+
+                <Grid>
+                    <Box className='cards'>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                        <Box className='conteudo'>
+                        <h4>João Lucas</h4>
+                            <Typography>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            </Typography>
+
+                        <a href="https://github.com/Joaolucas398" target="_blank"> 
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                        </a>
+
+                            <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                            </a>
+                        </Box>
+                    </Box>
+                </Grid>
+
+                <Grid>
+                    <Box className='cards'>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                        <Box className='conteudo'>
+                        <h4>João Lucas</h4>
+                            <Typography>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            </Typography>
+
+                        <a href="https://github.com/Joaolucas398" target="_blank"> 
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                        </a>
+
+                            <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                            </a>
+                        </Box>
+                    </Box>
+                </Grid>
+
+                <Grid>
+                    <Box className='cards'>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                        <Box className='conteudo'>
+                        <h4>João Lucas</h4>
+                            <Typography>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            </Typography>
+
+                        <a href="https://github.com/Joaolucas398" target="_blank"> 
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                        </a>
+
+                            <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                            </a>
+                        </Box>
+                    </Box>
+                </Grid>
+
+                <Grid>
+                    <Box className='cards'>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                        <Box className='conteudo'>
+                        <h4>João Lucas</h4>
+                            <Typography>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            </Typography>
+
+                        <a href="https://github.com/Joaolucas398" target="_blank"> 
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                        </a>
+
+                            <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                            </a>
+                        </Box>
+                    </Box>
+                </Grid>
+
+            </Grid>
         </>
     )
 }
