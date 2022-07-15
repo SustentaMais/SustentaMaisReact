@@ -56,8 +56,8 @@ function ListaPostagem() {
     {
       posts.map(post => (
       
-      <Box m={2} className='cardsPost' >
-        <Card variant="outlined">
+      <Box m={2} className='containerPost' >
+        <Card variant="outlined" className='cardsPost'>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Postagens
@@ -78,7 +78,7 @@ function ListaPostagem() {
               Postado por: {post.usuario?.nome}
             </Typography>
             <Typography variant="body2" component="p" color="textSecondary">
-              {post.data}
+              Postado em: {new Date(post.data).toLocaleDateString()} às {new Date(post.data).toLocaleTimeString([],{timeStyle:'short'})}
             </Typography>
           </CardContent>
           <CardActions>

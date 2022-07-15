@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import { Box } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,13 +15,11 @@ import PostAddIcon from '@mui/icons-material/PostAdd';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import PublicIcon from '@mui/icons-material/Public';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useDispatch } from "react-redux";
-import { addToken } from '../../../store/tokens/actions';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',

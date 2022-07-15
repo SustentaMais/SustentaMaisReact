@@ -7,8 +7,16 @@ import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+
 function SideBar() {
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
+      
     var sidebar;
+    if(token!=''){
     sidebar = <Grid container sm={3} id='sidebarRender'>
         <Grid id='sidebarContainer'>
             <Grid item >
@@ -81,6 +89,7 @@ function SideBar() {
         </Grid >
 
     </Grid >
+    }
     return (
         <>
             <Box padding='5px'>
