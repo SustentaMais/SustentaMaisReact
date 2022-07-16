@@ -3,10 +3,9 @@ interface Usuario{
     nome: string;
     usuario: string;
     senha: string;
-    foto?: string;
-    localidade?: string;
+    foto: string;
+    localidade: string;
     
-   
-
 }
+
 export default Usuario;

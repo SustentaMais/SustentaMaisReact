@@ -3,9 +3,10 @@ interface UserLogin{
     nome:string;
     usuario:string;
     senha:string;
-    foto:string | null;
-    localidade?:string | null;
-    token?:string | null;
+    foto:string;
+    localidade:string;
+    token:string;
 
 }
+
 export default UserLogin;
