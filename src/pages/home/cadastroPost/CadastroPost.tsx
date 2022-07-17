@@ -154,14 +154,15 @@ function CadastroPost() {
 
  
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit} >
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro postagem</Typography>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="titulo" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteudo" name="conteudo" variant="outlined" margin="normal" fullWidth />
-                <TextField value={postagem.anexos} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="anexos" label="anexos" name="anexos" variant="outlined" margin="normal" fullWidth />
+        <Container maxWidth="sm" className="fundo-criarPost topo">
+            <form onSubmit={onSubmit}>
+                <Typography variant="h3" color="textSecondary" component="h1" align="center" className='titulo-criarPost'>Criar Postagem</Typography>
+                <hr style={{marginBottom: "10px"}}/>
+                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="título" variant="outlined" name="titulo" margin="normal" fullWidth />
+                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteúdo" name="conteudo" variant="outlined" margin="normal" fullWidth multiline rows={3} />
+                <TextField value={postagem.anexos} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="anexos" label="link da imagem" name="anexos" variant="outlined" margin="normal" fullWidth />
 
-                <FormControl>
+                <FormControl fullWidth variant='filled' style={{marginTop: "20px"}}>
                     <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
@@ -178,8 +179,8 @@ function CadastroPost() {
                         }
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary" className='button'>
-                        Finalizar
+                    <Button type="submit" variant="contained" color='primary' className='btnCriar'>
+                        Publicar
                     </Button>
                 </FormControl>
             </form>

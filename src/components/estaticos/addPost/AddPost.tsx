@@ -1,33 +1,24 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import AddIcon from '@material-ui/icons/Add';
-import Fab from '@material-ui/core/Fab';
-import Tooltip from '@material-ui/core/Tooltip';
 import './AddPost.css'
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    fab: {
-      margin: theme.spacing(2),
-    },
-    fixed: {
-      position: 'fixed',
-      bottom: theme.spacing(2),
-      right: theme.spacing(3),
-    },
-  }),
-);
+import ModalPostagem from '../../../pages/home/ModalPostagem';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 export default function AddPost() {
-  const classes = useStyles();
+
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  var addPostComponent;
+
+  if(token !== ""){
+    addPostComponent = <div>
+    <ModalPostagem />
+  </div>
+  }
 
   return (
-    <div>
-      <Tooltip title="Criar Postagem" aria-label="add">
-        <Fab color="secondary" className={classes.fixed}>
-          <AddIcon />
-        </Fab>
-      </Tooltip>
-    </div>
+    <>{addPostComponent}</>
   );
 }

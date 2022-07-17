@@ -1,5 +1,23 @@
+.fundo-criarPost {
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin-right: 200px!important;
+    margin-bottom: 40px!important;
+    border-radius: 30px!important;
+}
 .topo{
-    margin-top: 20px;
+    margin-top: 90px;
+}
+.titulo-criarPost {
+    font-size: 35px!important;
+    margin-bottom: 10px!important;
+}
+.btnCriar {
+    background-color: #4b9e1b!important;
+    color: #FFFFFF!important;
+    margin-top: 10px!important;
+    border-radius: 30px!important;
+    margin-bottom: 12px!important;
 }
 
 /* .button {

@@ -166,7 +166,7 @@ function ListaPostagem() {
           <IconButton aria-label="add to favorites">
             <FavoriteIcon />
           </IconButton>
-          <IconButton aria-label="share">
+          <IconButton aria-label="share" >
             <ShareIcon />
           </IconButton>
           <Typography className='time-post' variant="body2" component="p" color="textSecondary">
