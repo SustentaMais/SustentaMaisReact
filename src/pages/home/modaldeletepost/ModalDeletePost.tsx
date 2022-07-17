@@ -4,6 +4,7 @@ import Modal from '@material-ui/core/Modal';
 import {Button,Box } from "@material-ui/core"
 import CloseIcon from '@material-ui/icons/Close';
 import DeletarPostagem from '../deletarPostagem/DeletarPostagem';
+import { MenuItem } from '@mui/material';
 
 
 
@@ -61,10 +62,7 @@ function getModalStyle() {
 
     return (
         <div>
-          <Button
-            variant="outlined"
-            className="btnModal"
-            onClick={handleOpen}>Deletar</Button>
+          <MenuItem onClick={handleOpen}>Deletar</MenuItem>
           <Modal
             open={open}
             onClose={handleClose}

@@ -1,0 +1,15 @@
+.titulo-tema {
+    margin-left: 15px;
+    margin-bottom: 5px;
+}
+.btnModal {
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+}
+.MuiButtonBase-root {
+    color: #1C1C1C!important;
+}
+.time-post {
+    margin-left: 20px!important;
+}

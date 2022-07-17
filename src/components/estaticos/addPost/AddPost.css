@@ -1,0 +1,7 @@
+.MuiFab-secondary {
+    color: #fff!important;
+    background-color: #4b9e1b;
+}
+.MuiFab-secondary:hover {
+    background-color: #60ca23;
+}
