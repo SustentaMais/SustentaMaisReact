@@ -18,6 +18,8 @@ import CadastroPost from './pages/home/cadastroPost/CadastroPost';
 import DeletarPostagem from './pages/home/deletarPostagem/DeletarPostagem';
 import ListaPostagem from './pages/home/listaPostagem/ListaPostagem';
 import Home from './pages/home/Home';
+import Config from './pages/configuracoes/Config';
+import Perfil from './pages/perfil/Perfil';
 
 
 function App() {
@@ -42,6 +44,8 @@ function App() {
             <Route path="/criarpostagem/:id" element={<CadastroPost />} />
             <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
             <Route path="/postagem/:id" element={<ListaPostagem />} />
+            <Route path="/configuracoes" element={<Config />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes >
         </div >
         <Footer />

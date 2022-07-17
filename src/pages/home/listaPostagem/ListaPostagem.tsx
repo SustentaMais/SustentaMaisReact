@@ -8,7 +8,7 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import ModalDeletePost from '../modaldeletepost/ModalDeletePost'
 import { toast } from 'react-toastify';
-import './ListaPostagem.css'
+
 
 function ListaPostagem() {
 
@@ -56,8 +56,8 @@ function ListaPostagem() {
     {
       posts.map(post => (
       
-      <Box m={2} className='containerPost' >
-        <Card variant="outlined" className='cardsPost'>
+      <Box m={2} >
+        <Card variant="outlined">
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Postagens
@@ -78,7 +78,7 @@ function ListaPostagem() {
               Postado por: {post.usuario?.nome}
             </Typography>
             <Typography variant="body2" component="p" color="textSecondary">
-              Postado em: {new Date(post.data).toLocaleDateString()} às {new Date(post.data).toLocaleTimeString([],{timeStyle:'short'})}
+            Postado em: {new Date(post.data).toLocaleDateString()} às {new Date(post.data).toLocaleTimeString([],{timeStyle:'short'})}
             </Typography>
           </CardContent>
           <CardActions>
@@ -93,7 +93,7 @@ function ListaPostagem() {
               </Link>
               {/* <Link to={`/deletarpostagem/${post.id}`} className="text-decorator-none"> */}
                 <Box mx={1} >
-                  <ModalDeletePost  id={post.id}/>
+                  <ModalDeletePost  />
                   {/* <Button className='btn-delete' variant="contained" size='small' color="secondary">
                     deletar
                   </Button> */}

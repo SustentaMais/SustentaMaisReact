@@ -9,11 +9,40 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import Usuario from '../../../models/UsuarioModel';
+import { buscaId } from '../../../services/Service';
+import { useEffect, useState } from 'react';
 
 function SideBar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
+    );
+
+    const [users, setUsers] = useState<Usuario>({
+        id: 0,
+        nome: '',
+        usuario: '',
+        senha: '',
+        foto: '',
+        localidade: ''
+    })
+
+    //buscar o ID armazenado no Store do redux
+    const userId = useSelector<TokenState, TokenState['id']>(
+    (state) => state.id
+    )
+
+  async function getUserId() {
+    await buscaId(`/usuario/${userId}`, setUsers, {
+      headers: {
+        'Authorization': token
+      }
+    })
+  }
+
+  useEffect(() => {
+    getUserId()
+  }, [])
       
     var sidebar;
     if(token!=''){
@@ -23,7 +52,7 @@ function SideBar() {
                 <Box display='flex' id='DadosDoUsuario'>
                     <Box>
                         <img src="https://i.imgur.com/SZFQZVj.png" alt="ProfilePic" />
-                        <Typography>NomeDeUsuario</Typography>
+                        <Typography>{users.nome}</Typography>
                     </Box>
 
                     <Typography>oo</Typography>
@@ -34,7 +63,7 @@ function SideBar() {
                 <Box id='menuOptions'>
                     <ul>
                         <li >
-                            <Link to='#'>
+                            <Link to='/perfil'>
                                 <Box className='iconsUl' >
                                     <PermIdentityIcon className='iconsUl' />
                                     Perfil
@@ -56,7 +85,7 @@ function SideBar() {
 
 
                         <li>
-                            <Link to='#'>
+                            <Link to='/eventos'>
                                 <Box className='iconsUl' >
                                     <EventAvailableIcon className='iconsUl' />
                                     Eventos
@@ -65,7 +94,7 @@ function SideBar() {
                             
                         </li>
                         <li>
-                            <Link to='#'>
+                            <Link to='/configuracoes'>
                                 <Box className='iconsUl' >
                                     <SettingsIcon className='iconsUl' />
                                     Configurações

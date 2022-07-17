@@ -1,20 +1,22 @@
-import React, { useState, useEffect, ChangeEvent } from 'react';
-import { Grid, Typography, TextField, Button } from '@material-ui/core';
-import { Box } from '@mui/material';
 // import GoogleIcon from '@mui/icons-material/Google';
+import { Button, Grid, TextField, Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { login } from '../../services/Service';
+import { addId, addToken } from '../../store/tokens/actions';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
-import { addToken } from '../../store/tokens/actions';
-import { useDispatch } from 'react-redux';
-import { toast } from 'react-toastify';
+
 
 function Login() {
 
     let navigate = useNavigate();
     const dispatch = useDispatch();
-    const [token, setToken] = useState('')
+    const [token, setToken] = useState('');
+
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id:0,
@@ -24,8 +26,17 @@ function Login() {
             foto:'',
             localidade:'',
             token:''
-        }
-        )
+        })
+
+        const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+            id: 0,
+            nome: '',
+            usuario: '',
+            senha: '',
+            foto: '',
+            localidade: '',
+            token: ''
+        })
 
         function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
@@ -42,11 +53,25 @@ function Login() {
                 }
             }, [token])
 
+            useEffect(() => {
+                if (respUserLogin.token !== "") {
+            
+                    // Verifica os dados pelo console (Opcional)
+                    console.log("Token: " + respUserLogin.token)
+                    console.log("ID: " + respUserLogin.id)
+            
+                    // Guarda as informações dentro do Redux (Store)
+                    dispatch(addToken(respUserLogin.token))
+                    dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
+                    navigate('/home')
+                }
+            }, [respUserLogin.token])
+
             async function onSubmit(e: ChangeEvent<HTMLFormElement>){
                 e.preventDefault();
                 try{
-                    await login(`/usuario/logar`, userLogin, setToken)
-    
+                    await login(`/usuario/logar`, userLogin, setRespUserLogin)
+                    console.log(respUserLogin)
                     toast.success('Usuário logado com sucesso!', {
                         position: "top-right",
                         autoClose: 2000,
