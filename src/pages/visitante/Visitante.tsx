@@ -7,25 +7,25 @@ import cardsExpanciso from './cards';
 function Visitante() {
     return (
         <>
-            <Grid container padding='5rem' direction="row"
+            <Grid  container padding='5rem' direction="row"
                 justifyContent="center"
                 alignItems="center"
                 className='heroContainer'
-                height='100vh'
-                paddingTop='5rem'>
+                
+                >
                 <Grid item alignItems="center" md={6} className='heroContainer-left'>
-                    <img src="https://imgur.com/gaVGNPl.png" height='300px' alt="Maos segurando o planeta-terra" />
+                    {/* <img src="https://imgur.com/gaVGNPl.png" height='300px' alt="Maos segurando o planeta-terra" /> */}
                 </Grid>
                 <Grid item alignItems="center" md={6} className='heroContainer-right'>
                     <Box className='CTA'>
-                        <Typography variant='h4'>Textinho chamativo aqui</Typography>
+                        <Typography variant='h4'>Junte-se a nós nessa missão de mudar a vida de milhares de pessoas.</Typography>
                         <Box marginTop='1rem' textAlign='center'>
                             <Link to='/cadastro'>
                                 <Button type='submit' size='large' variant='contained' color='success' id='botaoVerde'>
                                     Faça parte dessa rede!
                                 </Button>
                             </Link>
-                            <Box marginTop='4px' justifyContent='center' display='flex'>
+                            <Box  justifyContent='center' display='flex'>
                                 <Box marginRight={1} >
 
                                     <Typography>Já tem uma conta?</Typography>
@@ -41,7 +41,7 @@ function Visitante() {
             </Grid>
             <hr />
             <Box className='section2Title'>
-                <Typography variant='h4'>Mais de 100.000 pessoas foram beneficiadas por iniciativas que surgiram na <strong>SustentaMais!</strong></Typography>
+                <Typography variant='h3' >Mais de 100.000 pessoas foram beneficiadas por iniciativas que surgiram na <strong>SustentaMais!</strong></Typography>
             </Box>
             <Grid container justifyContent='center' alignItems='center' paddingRight='4rem' paddingLeft='4rem' className='section2Content' >
                 <Grid item sm={7}>
@@ -67,7 +67,9 @@ function Visitante() {
                     <li>Diminuindo significamento o impacto ambiental negativo no planeta.</li>
                 </ul>
             </Box>
-
+            <Typography className='equipedev' >Equipe Desenvolvedora</Typography>
+            <hr style={{ width: "500px" }} />
+            
             <Grid className='container'>
                 <Grid >
                     <Box className='cards'>
@@ -162,6 +164,7 @@ function Visitante() {
                         <a href="https://github.com/Joaolucas398" target="_blank"> 
                             <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
                         </a>
+                       
 
                             <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
                             <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
