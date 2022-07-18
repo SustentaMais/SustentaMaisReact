@@ -73,9 +73,9 @@ function Visitante() {
                     <Box className='cards'>
                         <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
                         <Box className='conteudo'>
-                            <h4>João Lucas</h4>
+                            <h4>João paz</h4>
                             <Typography>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                               Desenvolvedor Full stack java
                             </Typography>
 
                         <a href="https://github.com/Joaolucas398" target="_blank"> 
@@ -92,11 +92,11 @@ function Visitante() {
 
                 <Grid>
                     <Box className='cards'>
-                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/100284708?v=4' />  </button>
                         <Box className='conteudo'>
-                        <h4>João Lucas</h4>
+                        <h4>Jennifer Sicherolli</h4>
                             <Typography>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            Desenvolvedora Full stack java
                             </Typography>
 
                         <a href="https://github.com/Joaolucas398" target="_blank"> 
@@ -112,11 +112,11 @@ function Visitante() {
 
                 <Grid>
                     <Box className='cards'>
-                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93798476?v=4' />  </button>
                         <Box className='conteudo'>
-                        <h4>João Lucas</h4>
+                        <h4>Gabriele Sá</h4>
                             <Typography>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            Desenvolvedora Full stack java
                             </Typography>
 
                         <a href="https://github.com/Joaolucas398" target="_blank"> 
@@ -132,11 +132,11 @@ function Visitante() {
 
                 <Grid>
                     <Box className='cards'>
-                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/92693153?v=4' />  </button>
                         <Box className='conteudo'>
-                        <h4>João Lucas</h4>
+                        <h4>Fabyola Campos</h4>
                             <Typography>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            Desenvolvedora Full stack java
                             </Typography>
 
                         <a href="https://github.com/Joaolucas398" target="_blank"> 
@@ -152,11 +152,11 @@ function Visitante() {
 
                 <Grid>
                     <Box className='cards'>
-                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
+                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/94026401?v=4' />  </button>
                         <Box className='conteudo'>
-                        <h4>João Lucas</h4>
+                        <h4>Ruan Pablo</h4>
                             <Typography>
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam at, nemo eum cum, excepturi non laborum qui mollitia, consequuntur natus quia nam. Quisquam atque ex et voluptates incidunt minus! Quo?
+                            Desenvolvedor Full stack java
                             </Typography>
 
                         <a href="https://github.com/Joaolucas398" target="_blank"> 
