@@ -45,7 +45,7 @@
   .retangulo3{
     background:rgba(87, 232, 2, 0.19);
     width: 18.75rem;
-    height: 22.125rem;
+    height: 30.125rem;
     border-radius: 52px 0px;
     margin-bottom: 2%;
     margin-top:1%;
@@ -70,6 +70,13 @@
      margin-top: 4%;
      width: 12.625rem;
     }
+
+#nome{
+   border-radius: 10px;
+   background: rgba(255, 255, 255, 1);
+   font-family: 'Alef';
+   height: 0.7rem;
+  }
 
 #usuario{
     border-radius: 10px;

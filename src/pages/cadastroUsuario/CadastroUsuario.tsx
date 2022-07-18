@@ -52,10 +52,43 @@ function CadastrarUsuario() {
     }
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-         e.preventDefault()
-         if (confirmarSenha == usuario.senha) {
-             cadastroUsuario(`/usuario/cadastrar`, usuario, setUsuarioResult)
-             toast.success('Usuario cadastrado com sucesso', {
+        e.preventDefault()
+
+        // Estrutura Condicional que verifica se as senhas batem e se a Senha tem mais de 8 caracteres
+        if (confirmarSenha === usuario.senha && usuario.senha.length >= 8) {
+
+            //Tenta executar o cadastro
+            try {
+                await cadastroUsuario(`/usuario/cadastrar`, usuario, setUsuarioResult)
+                toast.success('Usuario cadastrado com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
+
+                //Se houver erro, pegue o Erro e retorna uma msg
+            } catch (error) {
+
+                //Pode modificar a msg de acordo com o erro 
+                toast.error('Usuário já existente', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
+            }
+
+        } else {
+            toast.error('Insira no miníno 8 caracteres na senha.', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -65,19 +98,11 @@ function CadastrarUsuario() {
                 theme: "colored",
                 progress: undefined,
                 });
-         } else {
-              toast.error('Dados Inconsistentes. Favor verificar as informações de cadastro!', {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: false,
-                theme: "colored",
-                progress: undefined,
-                });
+
+            setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
+            setConfirmarSenha("")           // Reinicia o campo de Confirmar Senha
         }
-      }
+    }
     
 
 
