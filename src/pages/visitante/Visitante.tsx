@@ -47,9 +47,7 @@ function Visitante() {
                 <Grid item sm={7}>
                     <Box textAlign='left' width='20rem'>
                         <Typography>
-                            Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est.
-                            Leite de capivaris, leite de mula manquis sem cabeça.Não sou faixa preta cumpadi, sou preto inteiris,
-                            inteiris.Si num tem leite então bota uma pinga aí cumpadi!
+                        Nossa rede social tem o intuito de tornar as cidades e comunidades mais inclusivas, seguras, resilientes e sustentável, apresentando soluções para a falta de habilitação segura, inspirar a sustentabilidade e realizar interações com usuários, pessoas ou empresas interessadas em ajudar alcançarmos essa causa.
                         </Typography>
                     </Box>
                 </Grid>
