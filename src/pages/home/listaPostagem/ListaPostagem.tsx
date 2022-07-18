@@ -9,7 +9,6 @@ import { useSelector } from 'react-redux';
 import ModalDeletePost from '../modaldeletepost/ModalDeletePost'
 import { toast } from 'react-toastify';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import clsx from 'clsx';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
@@ -18,7 +17,6 @@ import { green } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { findByLabelText } from '@testing-library/react';
 import { Menu, MenuItem } from '@mui/material';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -146,7 +144,7 @@ function ListaPostagem() {
           <Link to={`/criarpostagem/${post.id}`} className="text-decorator-none btnModal" >
             <MenuItem onClick={handleClose} className='btnModal'>Editar</MenuItem>
           </Link>
-          <div onClick={handleClose}><ModalDeletePost /></div>
+          <div onClick={handleClose}><ModalDeletePost id={post.id}/></div>
         </Menu>
         <Box className='titulo-tema'>
           <Typography variant="h5" component="h2">{post.titulo}</Typography>
