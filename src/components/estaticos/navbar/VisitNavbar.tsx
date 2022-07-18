@@ -1,18 +1,26 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import DirectionsRunOutlinedIcon from '@mui/icons-material/DirectionsRunOutlined';
+import InputIcon from '@mui/icons-material/Input';
 import PublicIcon from '@mui/icons-material/Public';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import { Link } from 'react-router-dom';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { useSelector } from 'react-redux';
 import './Navbar.css';
 
+
 export default function VisitNavbar() {
+ 
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -70,7 +78,7 @@ export default function VisitNavbar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      
+
       <Link to='/visitante'>
         <MenuItem>
           <IconButton size="large" color="inherit">
@@ -88,56 +96,80 @@ export default function VisitNavbar() {
         </MenuItem>
       </Link>
       <MenuItem>
+        <IconButton size="large" color="inherit">
+          <Brightness4Icon />
+        </IconButton>
+        <p>Dark Mode</p>
+      </MenuItem>
+      <Link to='/sobre'>
+        <MenuItem>
           <IconButton size="large" color="inherit">
-            <Brightness4Icon />
+            <InputIcon/>
           </IconButton>
-          <p>Dark Mode</p>
+          <p>Login</p>
         </MenuItem>
+      </Link>
+      
     </Menu>
   );
 
-  return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{}}>
-        <Toolbar>
-        <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png
-' alt="Logo SustentaMais" />
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Link to='/visitante'>
-            <IconButton size="large" color="inherit">
-                <DirectionsRunOutlinedIcon />
-                <p className="menu-text">Visitante</p>
-            </IconButton>
-          </Link>
+  var navbarComponent;
 
-          <Link to='/sobre'>
-            <IconButton size="large" color="inherit">
-                <PublicIcon />
-                <p className="menu-text">Sobre Nós</p>
-            </IconButton>
-          </Link>
-          <IconButton size="large" color="inherit">
+  if (token === "") {
+    navbarComponent =
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static" style={{}}>
+          <Toolbar>
+            <img className="logo-sustenta" src='https://media.discordapp.net/attachments/992082604792750240/992194781851689031/Logopng.png
+' alt="Logo SustentaMais" />
+            <Box sx={{ flexGrow: 1 }} />
+            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+              <Link to='/visitante'>
+                <IconButton size="large" color="inherit">
+                  <DirectionsRunOutlinedIcon />
+                  <p className="menu-text">Visitante</p>
+                </IconButton>
+              </Link>
+
+              <Link to='/sobre'>
+                <IconButton size="large" color="inherit">
+                  <PublicIcon />
+                  <p className="menu-text">Sobre Nós</p>
+                </IconButton>
+              </Link>
+              <IconButton size="large" color="inherit">
                 <Brightness4Icon />
                 <p className="menu-text">Dark Mode</p>
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </Box>
+              </IconButton>
+              <Link to='/login'>
+                <IconButton size="large" color="inherit">
+                  <InputIcon />
+                  <p className="menu-text">Login</p>
+                </IconButton>
+              </Link>
+            </Box>
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-controls={mobileMenuId}
+                aria-haspopup="true"
+                onClick={handleMobileMenuOpen}
+                color="inherit"
+              >
+                <MoreIcon />
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </AppBar>
+        {renderMobileMenu}
+        {renderMenu}
+      </Box>
+  }
+
+  return (
+    <>
+      {navbarComponent}
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
-import { Grid, TextField, } from '@material-ui/core';
+import { Grid, TextField, Typography, } from '@material-ui/core';
 import { Box, Button } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import Usuario from '../../models/UsuarioModel';
@@ -109,31 +109,35 @@ function CadastrarUsuario() {
     return (
         <Grid container className='gridLogin'>
 
-            <Grid item sm={6} className='centraliza'>
 
-                {/* <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo'/> */}
-                <Box className='retangulo3'>
-                    <Box className='forms'>
+            <Grid item className='centraliza' sm={6}>
+                <Box id='boxCadastro'>
+                 <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" id='logoCadastro' />
+                    <Box id='boxFormCadastro'>
                         <form onSubmit={onSubmit}>
-                            <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' />
-                            <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal' />
-                            <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' type='password' />
-                            <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' />
-                            <TextField id='foto' label='Foto (Opcional)' variant='outlined' name='foto' />
-                            <TextField id='localidade' label='Localidade (Opcional)' variant='outlined' name='localidade' margin='normal' />
-                            <Box marginTop={2} className='button'>
-                                <Link to='/visitantes' className='text-decorator-none'>
-                                    <Button className='button'>
-                                        Cancelar
-                                    </Button>
-                                </Link>
-                                {/* <Link to='/login' className='text-decorator-none'> */}
-                                    <Button type='submit' className='button'>
-                                        Cadastrar
-                                    </Button>
-                                {/* </Link> */}
+                            <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Nome' variant='outlined' name='nome' />
+                            <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Usuário' variant='outlined' name='usuario' margin='normal' />
+                            <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}className='inputForm' label='Senha' variant='outlined' name='senha' type='password' />
+                            <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' />
+                            <Box marginTop={2}>
+                                <Button type='submit' id='cadastrarButton'>
+                                    Cadastrar
+                                </Button>
                             </Box>
                         </form>
+                    </Box>
+                    <Box display='flex' justifyContent='center'>
+                        <Box textAlign='center'>
+                            <Box className='box1'>
+                                <hr style={{ width: "5.5rem" }} />
+                                <Typography id='ouCad'>  ou</Typography>
+                                <hr style={{ width: "5.5rem" }} />
+                            </Box>
+                            <Button id='googleCad'>
+                                <img className='googleIcon' src={require("../../assets/img/Google.png")} />
+                                Entrar com o Google
+                            </Button>
+                        </Box>
                     </Box>
                 </Box>
             </Grid>
@@ -146,7 +150,7 @@ function CadastrarUsuario() {
                     </Box>
                     <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot' />
                 </Box>
-            </Grid> 
+            </Grid>
 
         </Grid>
     );
