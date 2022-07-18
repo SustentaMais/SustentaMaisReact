@@ -2,13 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 90px!important;
 }
 .box-status {
     display: flex;
     justify-content: center;
 }
 .caixa-foto {
-    padding: 0!important;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -38,6 +38,10 @@
     align-items: center;
     justify-content: space-between;
 }
+.caixa-dark:hover {
+    width: 310px;
+    cursor: pointer;
+}
 .texto-dark {
     margin-left: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -47,9 +51,9 @@
     margin-right: 20px;
 }
 .user-titulo {
-    display: flex;
+    display: flex!important;
     justify-content: center;
-    align-items: center;
+    align-items: center!important;
     font-size: 25px!important;
     margin-top: 10px!important;
     margin-bottom: 10px!important;
@@ -57,27 +61,15 @@
 .atributos-user {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 .user-texto {
     background: #FFFFFF;
     border-radius: 10px;
-    width: 390px;
+    width: 300px;
     height: 30px;
     margin-left: 20px!important;
     display: flex;
-    align-items: center;
-}
-.trocar-senha {
-    margin-top: 40px!important;
-    background: #FFFFFF;
-    border-radius: 10px;
-    width: 390px;
-    height: 40px;
-    margin-left: 20px!important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center!important;
 }
 .form-perfil {
     display: flex!important;
@@ -99,4 +91,16 @@
     display: flex!important;
     justify-content: center!important;
     align-items: center!important;
+}
+.btnEdit {
+    background: #FFFFFF!important;
+    width: 150px;
+    height: 30px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    border: 1px solid #b7d865!important;
+}
+.btnEdit:hover {
+    background: #b7d865!important;
+    cursor: pointer;
 }

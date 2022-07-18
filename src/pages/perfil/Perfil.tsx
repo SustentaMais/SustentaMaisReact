@@ -70,8 +70,8 @@ function Perfil() {
             <Typography className="profile-name">{users.nome}</Typography>
             <Typography className="profile-email">{users.usuario}</Typography>
             <Typography className="profile-local">{users.localidade}</Typography>
+            <hr className='linha-perfil' />
           </Box>
-          <hr className='linha-perfil' />
 
         </>
     );
