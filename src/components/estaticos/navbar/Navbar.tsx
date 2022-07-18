@@ -66,8 +66,6 @@ export default function Navbar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
-  let navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
@@ -203,7 +201,7 @@ export default function Navbar() {
   );
 
   var navbarComponent;
-  if (token != "") {
+  if (token !== "") {
     navbarComponent = <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>

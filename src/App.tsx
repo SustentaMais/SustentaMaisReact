@@ -20,6 +20,7 @@ import ListaPostagem from './pages/home/listaPostagem/ListaPostagem';
 import Home from './pages/home/Home';
 import Config from './pages/configuracoes/Config';
 import Perfil from './pages/perfil/Perfil';
+import VisitNavbar from './components/estaticos/navbar/VisitNavbar';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Router>
         <div style={{ minHeight: '100vh' }}>
         <Side_Navbar />
+        <VisitNavbar />
           <Routes>
             <Route path="/" element={<Visitante />} />
             <Route path="/login" element={<Login />} />

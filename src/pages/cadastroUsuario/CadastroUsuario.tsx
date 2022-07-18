@@ -97,7 +97,7 @@ function CadastrarUsuario() {
                             <TextField id='foto' label='Foto (Opcional)' variant='outlined' name='foto' />
                             <TextField id='localidade' label='Localidade (Opcional)' variant='outlined' name='localidade' margin='normal' />
                             <Box marginTop={2} className='button'>
-                                <Link to='/visitantes' className='text-decorator-none'>
+                                <Link to='/visitante' className='text-decorator-none'>
                                     <Button className='button'>
                                         Cancelar
                                     </Button>
