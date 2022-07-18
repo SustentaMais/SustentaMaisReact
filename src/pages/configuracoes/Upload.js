@@ -6,7 +6,9 @@ import Brightness4Icon from '@material-ui/icons/Brightness4';
 import { useSelector } from 'react-redux';
 import './Config.css';
 
+{/*
 function Upload() {
+
 
     const [image, setImage] = useState('');
     const [endImg, setEndImg] = useState('./perfil.png');
@@ -49,6 +51,7 @@ function Upload() {
 
   return (
     <>
+ 
             <Grid alignItems="center" justifyContent="center" xs={6}>
                 <Box className='box-status'>
                     {status.type === 'success' ? <p style={{color: "green"}}>{status.mensagem}</p> : ""}
@@ -56,21 +59,22 @@ function Upload() {
                 </Box>
                 
                 <form className='form-perfil' onSubmit={uploadImage}>
-                    <Box className='caixa-foto' width={340} height={340} style={{backgroundColor: "#d7eba5"}}>
-                        {image ? <img src={URL.createObjectURL(image)} alt='foto do usuário' width="240" height="240" className='foto-user'/> : <img src={endImg} alt= 'user picture' width="240" height="240" className='foto-user'/>}
+                    <Box className='caixa-foto' width={300} height={300} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                        {image ? <img src={URL.createObjectURL(image)} alt='foto do usuário' width="200" height="200" className='foto-user'/> : <img src={endImg} alt= 'user picture' width="200" height="200" className='foto-user'/>}
                         
                         <input textAlign='center' type="file" name="image" id="user-img" className="inputfile" onChange={e => setImage(e.target.files[0])} />
                         <button textAlign='center' type='submit' className='btn-save'>Salvar</button>
                         
                     </Box>
-                    <Box className='caixa-dark' width={340} height={45} style={{backgroundColor: "#d7eba5"}}>
+                    <Box className='caixa-dark' width={300} height={45} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
                         <p className='texto-dark'>Dark Mode</p>
                         <Brightness4Icon className="dark-icon" />
                     </Box>
                 </form>
             </Grid>
+    
     </>
   )
 }
-
+*/}
 export default Upload;

@@ -1,6 +1,5 @@
 import { Avatar, Box, Grid, MenuItem, TextField, Typography } from '@mui/material';
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import EditIcon from '@material-ui/icons/Edit';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import './Config.css';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -11,6 +10,7 @@ import Upload from './Upload';
 import Usuario from '../../models/UsuarioModel';
 import { buscaId, put } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
+import ModalAtualizaUsuario from './ModalAtualizaUsuario';
 
 function Config() {
 
@@ -65,7 +65,6 @@ function Config() {
     
   }, [])
 
-{/*
     //useState para gerar o usuario
     const [usuario, setUsuario] = useState<Usuario>({
     id: +userId,    // Faz uma conversão de String para Number
@@ -121,39 +120,49 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
     function back() {
         navigate('/configuracoes')
     }
-*/}
 
   return (
     <>
 
         <Grid container marginTop={5} className="grid-maior">
+
+            <Grid xs={4} justifyContent='center' alignItems="center">
+                <form className='form-perfil'>
+                    <Box className='caixa-foto' width={300} height={300} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                        <img src={users.foto} alt={users.nome} width="200" height="200" className='foto-user'/>
+                    </Box>
+                    <Box className='caixa-dark' width={300} height={45} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                        <p className='texto-dark'>Dark Mode</p>
+                        <Brightness4Icon className="dark-icon" />
+                    </Box>
+                </form>
+            </Grid>
             
-            <Upload />
-            
-            <Grid xs={6} justifyContent='center' alignItems="center">
-                <Box width={500} height={450} style={{backgroundColor: "#d7eba5"}}>
+            <Grid xs={1} justifyContent='center' alignItems="center">
+                <Box width={400} height={460} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
                     <Typography className="user-titulo">Dados do Usuário</Typography>
                     <hr/>
                     <Box paddingX={4} className='atributos-user'>
                        <p>Nome</p>
-                        <EditIcon /> 
                     </Box>
                     <Typography className="user-texto" paddingX={4}>{users.nome}</Typography>
-                   {/*value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)}*/}
                     <Box paddingX={4} className='atributos-user'>
                        <p>Email</p>
-                        <EditIcon /> 
                     </Box>
                     <Typography className="user-texto" paddingX={4}>{users.usuario}</Typography>
                     <Box paddingX={4} className='atributos-user'>
                        <p>Localidade</p>
-                        <EditIcon /> 
                     </Box>
                     <Typography className="user-texto" paddingX={4}>{users.localidade}</Typography>
-                    <Typography className='trocar-senha' paddingX={4}>Alterar Senha <EditIcon /> </Typography>
+                    <Box paddingX={4} className='atributos-user'>
+                       <p>Senha</p>
+                    </Box>
+                    <Typography className="user-texto" paddingX={4}>***************</Typography>
+                    <Box display="flex" justifyContent="center" marginTop="19px">
+                        <ModalAtualizaUsuario/>
+                    </Box>  
                 </Box>
             </Grid>
-            
         </Grid>
 
     </>
