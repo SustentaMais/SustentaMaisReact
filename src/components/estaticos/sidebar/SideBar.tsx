@@ -69,17 +69,17 @@ function SideBar() {
 
 
     var sidebar;
-    if (token != '') {
+    if (token !== '') {
         sidebar = <Grid container sm={3} id='sidebarRender'>
             <Grid id='sidebarContainer'>
                 <Grid item >
                     <Box display='flex' id='DadosDoUsuario'>
                         <Box>
-                            <img src="https://i.imgur.com/SZFQZVj.png" alt="ProfilePic" />
+                            <img src={users.foto} className='fotosidebar' />
                             <Typography>{users.nome}</Typography>
                         </Box>
 
-                        <Typography>oo</Typography>
+                        {/* <Typography>oo</Typography> */}
                     </Box>
                 </Grid>
                 <hr id='divisor' />

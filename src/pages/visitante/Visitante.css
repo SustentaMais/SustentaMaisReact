@@ -30,15 +30,18 @@ list-style: none;
     text-align: center;
     justify-content: center;
 }
+
 a{
     text-decoration: none;
     color: rgb(16, 16, 16) !important;
 }
+
 .css-mkazzp-MuiButtonBase-root-MuiButton-root{
     border-radius: 119px 0px !important;
     height: 2.8rem !important;
     width: 15rem;
 }
+
 .heroContainer{
     width: 100vw;
     height: 98vh;

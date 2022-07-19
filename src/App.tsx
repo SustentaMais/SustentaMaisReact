@@ -24,6 +24,7 @@ import VisitNavbar from './components/estaticos/navbar/VisitNavbar';
 import MeusPosts from './pages/home/meusposts/MeusPosts';
 
 
+
 function App() {
   return (
     <Provider store={store}>

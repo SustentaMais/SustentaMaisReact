@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import './CadastroPost.css';
-import {useNavigate, useParams } from 'react-router-dom';
+import {Link, useNavigate, useParams } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import TemaModel from '../../../models/TemaModel';
 import PostagemModel from '../../../models/PostagemModel';
@@ -179,9 +179,11 @@ function CadastroPost() {
                         }
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color='primary' className='btnCriar'>
-                        Publicar
-                    </Button>
+                    
+                        <Button type="submit" variant="contained" color='primary' className='btnCriar'>
+                            Publicar
+                        </Button>
+                   
                 </FormControl>
             </form>
         </Container>

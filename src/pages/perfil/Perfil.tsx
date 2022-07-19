@@ -142,8 +142,8 @@ function Perfil() {
 
     return(
         <>
-          <Box className="profileImageContainer">
-            {users.foto ? <img className="profileImage" src={ users.foto } alt={users.nome} /> : <img className='profileImage' src={endImg}/>}
+          <Box className="profileImageContainer"> 
+           <img src={users.foto} alt={users.nome} width="200" height="200" className='foto-user'/>
             <Typography className="profile-name">{users.nome}</Typography>
             <Typography className="profile-email">{users.usuario}</Typography>
             <Typography className="profile-local">{users.localidade}</Typography>

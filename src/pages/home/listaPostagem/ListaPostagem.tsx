@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaPostagem.css';
-import { busca } from '../../../services/Service';
+import { busca, buscaId } from '../../../services/Service';
 import PostagemModel from '../../../models/PostagemModel';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
@@ -51,7 +51,7 @@ const ITEM_HEIGHT = 48;
 function ListaPostagem() {
 
   const [posts, setPosts] = useState<PostagemModel[]>([])
-  const {id} = useParams();
+ 
   let navigate = useNavigate();
 
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -75,7 +75,7 @@ function ListaPostagem() {
   }, [token])
 
   async function getPost() {
-    await busca("/postagem", setPosts, {
+    await buscaId(`/postagem`, setPosts, {
       headers: {
         'Authorization': token
       }
@@ -107,6 +107,7 @@ function ListaPostagem() {
     
     {
       posts.map(post => (
+        
         <Card className={classes.root}>
         <CardHeader
           avatar={

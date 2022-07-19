@@ -37,7 +37,9 @@
     height: 1.5rem !important;
     margin-top: 5px;
 }
-/* 
-.textos{
-    font-size: 10px;
-} */
+
+.fotosidebar{
+    display: flex;
+    width: 50px;
+    border-radius: 50%;
+}
