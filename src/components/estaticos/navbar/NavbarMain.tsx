@@ -83,8 +83,8 @@ export default function NavbarMain() {
 
     return (
         <>
-        <Grid container>
-            <Grid item sm={9} padding='9px'>
+        <Grid >
+            <Grid >
                 {mainNavbarComponent}
             </Grid>
         </Grid>

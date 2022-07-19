@@ -109,7 +109,7 @@ function SideBar() {
 
 
                             <li>
-                                <Link to='/eventos'>
+                                <Link to='/home'>
                                     <Box className='iconsUl' >
                                         <EventAvailableIcon className='iconsUl' />
                                         Eventos

@@ -1,3 +1,5 @@
+import PostagemModel from "./PostagemModel";
+
 interface Usuario{
     id: number;
     nome: string;
@@ -5,6 +7,7 @@ interface Usuario{
     senha: string;
     foto: string;
     localidade: string;
+    postagem?: PostagemModel | null;
     
 }
 

@@ -7,6 +7,7 @@ import PostagemModel from '../../../models/PostagemModel';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
+import './DeletarPostagem.css'
 
 
 
@@ -79,7 +80,7 @@ function DeletarPostagem(idPost: any) {
     return (
         <>
             <Box m={2}>
-                <Card variant="outlined">
+                
                     <CardContent>
                         <Box justifyContent="center">
                             <Typography color="textSecondary" gutterBottom>
@@ -105,7 +106,7 @@ function DeletarPostagem(idPost: any) {
                             </Box>
                         </Box>
                     </CardActions>
-                </Card>
+                
             </Box>
         </>
     );

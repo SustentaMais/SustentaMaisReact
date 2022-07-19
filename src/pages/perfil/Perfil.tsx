@@ -1,13 +1,58 @@
-import { Button, Card, CardActions, CardContent, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
-import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+
 import Usuario from '../../models/UsuarioModel';
-import { busca, buscaId } from '../../services/Service';
-import { TokenState } from '../../store/tokens/tokensReducer';
 import './Perfil.css'
+// atuais
+import React, {useState, useEffect} from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import Avatar from '@material-ui/core/Avatar';
+import IconButton from '@material-ui/core/IconButton';
+import { green } from '@material-ui/core/colors';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { Grid, Menu, MenuItem } from '@mui/material';
+import UsuarioModel from '../../models/UsuarioModel';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import { buscaId } from '../../services/Service';
+import ModalDeletePost from '../home/modaldeletepost/ModalDeletePost';
+import MeusPosts from '../home/meusposts/MeusPosts';
+
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      maxWidth: 550,
+      marginLeft: "250px",
+      marginBottom: "30px"
+    },
+    media: {
+      height: 0,
+      paddingTop: '56.25%', // 16:9
+    },
+    expand: {
+      transform: 'rotate(0deg)',
+      marginLeft: 'auto',
+      transition: theme.transitions.create('transform', {
+        duration: theme.transitions.duration.shortest,
+      }),
+    },
+    expandOpen: {
+      transform: 'rotate(180deg)',
+    },
+    avatar: {
+      backgroundColor: green[500],
+    },
+  }),
+);
+
+const ITEM_HEIGHT = 48;
 
 function Perfil() {
 
@@ -20,7 +65,17 @@ function Perfil() {
         senha: '',
         foto: '',
         localidade: ''
+       
     })
+
+    const [user, setUser] = useState<UsuarioModel | any>({
+      id: 0,
+      nome: '',
+      usuario: '',
+      foto: '',
+      senha: '',
+      postagem: null
+    });
 
     const [endImg, setEndImg] = useState('./perfil.png');
   
@@ -63,6 +118,28 @@ function Perfil() {
     getUserId()
   }, [])
 
+  useEffect(() => {
+    if (token === "") {
+      alert("Você precisa estar logado")
+      navigate("/login")
+
+    }
+  }, [token]);
+
+  const classes = useStyles();
+
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+
     return(
         <>
           <Box className="profileImageContainer">
@@ -71,7 +148,19 @@ function Perfil() {
             <Typography className="profile-email">{users.usuario}</Typography>
             <Typography className="profile-local">{users.localidade}</Typography>
             <hr className='linha-perfil' />
-          </Box>
+          
+            </Box>
+
+              
+            <Grid className='caixa'>
+            <h3>Minhas postagens</h3>
+            <MeusPosts/>
+            </Grid>
+   
+    
+  
+
+        
 
         </>
     );

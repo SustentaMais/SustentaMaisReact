@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-import './ListaPostagem.css';
-import { busca } from '../../../services/Service';
+import './MeusPosts.css'
+import { busca, buscaId } from '../../../services/Service';
 import PostagemModel from '../../../models/PostagemModel';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
@@ -17,7 +17,8 @@ import { green } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Menu, MenuItem } from '@mui/material';
+import { Grid, Menu, MenuItem } from '@mui/material';
+import UsuarioModel from '../../../models/UsuarioModel';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -48,44 +49,57 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const ITEM_HEIGHT = 48;
 
-function ListaPostagem() {
+function MeusPosts() {
 
-  const [posts, setPosts] = useState<PostagemModel[]>([])
-  const {id} = useParams();
-  let navigate = useNavigate();
-
-  const token = useSelector<TokenState, TokenState["tokens"]>(
-    (state) => state.tokens
-  );
-
-  useEffect(() => {
-    if(token == ''){
-      toast.error('Você precisa estar logado', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: false,
-        theme: "colored",
-        progress: undefined,
-      });
-      navigate('/login')
-    }
-  }, [token])
-
-  async function getPost() {
-    await busca("/postagem", setPosts, {
-      headers: {
-        'Authorization': token
+    const [posts, setPosts] = useState<PostagemModel[]>([])
+    let navigate = useNavigate();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
+    const userId = useSelector<TokenState, TokenState["id"]>(
+      (state) => state.id
+    );
+  
+    const [user, setUser] = useState<UsuarioModel | any>({
+      id: 0,
+      nome: '',
+      usuario: '',
+      foto: '',
+      senha: '',
+      postagem: null
+    });
+  
+    useEffect(() => {
+      if (userId !== undefined) {
+        findById(userId)
       }
-    })
-  }
-
-  useEffect(() => {
-    getPost()
-    
-  }, [posts.length])
+      console.log(user)
+    }, [userId]);
+  
+    useEffect(() => {
+      if(token === ''){
+        toast.error('Você precisa estar logado', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          theme: "colored",
+          progress: undefined,
+        });
+        navigate('/login')
+      }
+    }, [token])
+  
+    async function findById(id: string) {
+      buscaId(`/usuario/${userId}`, setUser, {
+        headers: {
+          'Authorization': token
+        }
+      })
+      
+    }
 
   const classes = useStyles();
 
@@ -102,17 +116,19 @@ function ListaPostagem() {
 
   return (
     <>
+    
+    <div style={{height:"50px"}}></div>
 
-    <div style={{height:"100px"}}></div>
+    <Grid className='caixa' >
     
     {
-      posts.map(post => (
+      user.postagem?.map((post:any )=> (
         <Card className={classes.root}>
         <CardHeader
           avatar={
-            <Avatar src={post.usuario?.foto} aria-label="recipe" className={classes.avatar}>
+            <Avatar src={user.foto} />
               
-            </Avatar>
+            
           }
           action={
             <IconButton 
@@ -172,9 +188,13 @@ function ListaPostagem() {
           </Typography>
         </CardActions>
       </Card>
+
+    
       ))
     }
+    </Grid>
+
     </>)
 }
 
-export default ListaPostagem;
+export default MeusPosts;

@@ -5,6 +5,7 @@ import {Button,Box } from "@material-ui/core"
 import CloseIcon from '@material-ui/icons/Close';
 import DeletarPostagem from '../deletarPostagem/DeletarPostagem';
 import { MenuItem } from '@mui/material';
+import './ModalDeletePost.css'
 
 
 
@@ -50,7 +51,7 @@ function getModalStyle() {
   
     const body = (
       <div style={modalStyle} className={classes.paper}>
-        <Box display="flex" justifyContent="flex-end" className="cursor">
+        <Box display="flex" justifyContent="flex-end" className="cursor" >
           <CloseIcon onClick={handleClose}/>
         
         </Box>
@@ -64,6 +65,8 @@ function getModalStyle() {
         <div>
           <MenuItem onClick={handleOpen}>Deletar</MenuItem>
           <Modal
+          
+            disableEnforceFocus
             open={open}
             onClose={handleClose}
             aria-labelledby="simple-modal-title"

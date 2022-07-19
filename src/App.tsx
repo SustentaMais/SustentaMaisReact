@@ -21,6 +21,7 @@ import Home from './pages/home/Home';
 import Config from './pages/configuracoes/Config';
 import Perfil from './pages/perfil/Perfil';
 import VisitNavbar from './components/estaticos/navbar/VisitNavbar';
+import MeusPosts from './pages/home/meusposts/MeusPosts';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
             <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
             <Route path="/postagem/:id" element={<ListaPostagem />} />
             <Route path="/configuracoes" element={<Config />} />
+            <Route path="/minhaspostagens" element={<MeusPosts />} />
             <Route path="/perfil" element={<Perfil />} />
           </Routes >
         </div >
