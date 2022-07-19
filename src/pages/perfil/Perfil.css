@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 110px;
+    margin-top: 30px;
     margin-left: 340px;
 }
 .profileImage {
@@ -12,8 +12,6 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
     border: 3px solid #FFFFFF;
 }
 .profile-name {
