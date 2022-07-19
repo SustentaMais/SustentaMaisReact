@@ -121,6 +121,21 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
         navigate('/configuracoes')
     }
 
+    function implementacoes() {
+
+        toast.info('Função em Andamento', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: "colored",
+            progress: undefined,
+        });
+    
+      }
+
   return (
     <>
 
@@ -131,7 +146,7 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
                     <Box className='caixa-foto' width={300} height={300} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
                         <img src={users.foto} alt={users.nome} width="200" height="200" className='foto-user'/>
                     </Box>
-                    <Box className='caixa-dark' width={300} height={45} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                    <Box className='caixa-dark' width={300} height={45} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}} onClick={implementacoes}>
                         <p className='texto-dark'>Dark Mode</p>
                         <Brightness4Icon className="dark-icon" />
                     </Box>

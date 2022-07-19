@@ -90,7 +90,7 @@ function SideBar() {
                                 <Link to='/perfil'>
                                     <Box className='iconsUl' >
                                         <PermIdentityIcon className='iconsUl' />
-                                        Perfil
+                                         Perfil
                                     </Box>
                                 </Link>
 

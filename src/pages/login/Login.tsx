@@ -96,6 +96,21 @@ function Login() {
                 }
             }
 
+            function implementacoes() {
+
+                toast.info('Função em Andamento', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    theme: "colored",
+                    progress: undefined,
+                });
+            
+              }
+
     return (
 
         <Grid container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
@@ -130,7 +145,7 @@ function Login() {
                                 <Typography id='ou'>  ou</Typography>
                                 <hr style={{ width: "5.5rem" }} />
                             </Box>
-                            <Button id='google'>
+                            <Button id='google'onClick={implementacoes}>
                                 <img className='googleIcon' src={require("../../assets/img/Google.png")} />
                                 Entrar com o Google
                             </Button>

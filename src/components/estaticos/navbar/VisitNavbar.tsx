@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import './Navbar.css';
+import { toast } from 'react-toastify';
 
 
 export default function VisitNavbar() {
@@ -112,6 +113,20 @@ export default function VisitNavbar() {
       
     </Menu>
   );
+  function implementacoes() {
+
+    toast.info('Função em Andamento', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        theme: "colored",
+        progress: undefined,
+    });
+
+  }
 
   var navbarComponent;
 
@@ -137,7 +152,7 @@ export default function VisitNavbar() {
                   <p className="menu-text">Sobre Nós</p>
                 </IconButton>
               </Link>
-              <IconButton size="large" color="inherit">
+              <IconButton size="large" color="inherit" onClick={implementacoes}>
                 <Brightness4Icon />
                 <p className="menu-text">Dark Mode</p>
               </IconButton>
