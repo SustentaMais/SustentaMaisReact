@@ -159,7 +159,7 @@ function CadastroPost() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" className='titulo-criarPost'>Criar Postagem</Typography>
                 <hr style={{marginBottom: "10px"}}/>
                 <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="título" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteúdo" name="conteudo" variant="outlined" margin="normal" fullWidth multiline rows={3} />
+                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteúdo" name="conteudo" variant="outlined" margin="normal" fullWidth rows={3} />
                 <TextField value={postagem.anexos} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="anexos" label="link da imagem" name="anexos" variant="outlined" margin="normal" fullWidth />
 
                 <FormControl fullWidth variant='filled' style={{marginTop: "20px"}}>

@@ -128,10 +128,11 @@ function CadastrarUsuario() {
                     <Box className='boxCadastro centraliza'>
                         <Box className='boxFormCadastro'>
                             <form className='form-login' onSubmit={onSubmit}>
-                                <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Nome' variant='outlined' name='nome' fullWidth/>
-                                <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth/>
-                                <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}className='inputForm' label='Senha' variant='outlined' name='senha' type='password' fullWidth/>
-                                <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth/>
+                                <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Nome*' variant='outlined' placeholder='Insira seu nome' name='nome' fullWidth/>
+                                <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='E-mail*' variant='outlined' placeholder='Insira seu e-mail' name='usuario' margin='normal' fullWidth/>
+                                <TextField value={usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Foto (opcional)' variant='outlined' placeholder='Insira o link da foto' name='foto' margin='normal' fullWidth/>
+                                <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}className='inputForm' label='Senha*' variant='outlined' placeholder='Senha maior de 8 caracteres' name='senha' type='password' fullWidth/>
+                                <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' label='Confirmar Senha*' variant='outlined' placeholder='Confirme sua senha' name='confirmarSenha' margin='normal' type='password' fullWidth/>
                                 <Box marginTop={2}>
                                     <Button type='submit' id='entrarButton'>Cadastrar</Button>
                                 </Box>
@@ -149,7 +150,7 @@ function CadastrarUsuario() {
                                         Usar o Google
                                     </Button>
                                     <Link to='/'>
-                                        <Typography id='novaSenha'>Cancelar</Typography>
+                                        <Typography id='cancelar'>Cancelar</Typography>
                                     </Link>
                                 </Box>
                             </Box>
