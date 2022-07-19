@@ -55,8 +55,7 @@ export default function NavbarMain() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    let navigate = useNavigate();
-    const dispatch = useDispatch();
+    
 
     var mainNavbarComponent;
     if (token != "") {
