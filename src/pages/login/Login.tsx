@@ -108,58 +108,60 @@ function Login() {
                     theme: "colored",
                     progress: undefined,
                 });
-            
+
               }
 
     return (
 
-        <Grid container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
-            <Grid item sm={6} className='centraliza'>
-                <Box className='retangulo1'>
-                    <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos'/>
-                    <Box className='texto'>
-                        A rede que te inspira a ser mais sustentável!
+        <Grid sm={12} container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
+            <Box display="flex" flexDirection="row" className='boxLogin'>
+                <Grid item sm={5} className='centraliza'>
+                    <Box className='retangulo1'>
+                        <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos'/>
+                        <Box className='texto'>
+                            A rede que te inspira a ser mais sustentável!
+                        </Box>
+                        <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot'/>
                     </Box>
-                    <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot'/>
-                </Box>
-            </Grid>
+                </Grid>
 
-            <Grid item className='centraliza' sm={6}>
-                <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo'/>
-                <Box className='retangulo2'>
-                    <Box className='forms'>
-                        <form onSubmit={onSubmit}>
-                            <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail ou nome de usuário' variant='outlined' name='usuario'  />
-                            <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password'/>
-                            <Box marginTop={2}>
-                                    <Button type='submit' id='entrarButton'>
-                                        Entrar
-                                    </Button>
-                            </Box>
-                        </form>
-                    </Box>
-                    <Box display='flex' justifyContent='center'>
-                        <Box textAlign='center'>
-                            <Box className='box1'>
-                                <hr style={{ width: "5.5rem" }} />
-                                <Typography id='ou'>  ou</Typography>
-                                <hr style={{ width: "5.5rem" }} />
-                            </Box>
-                            <Button id='google'onClick={implementacoes}>
-                                <img className='googleIcon' src={require("../../assets/img/Google.png")} />
-                                Entrar com o Google
-                            </Button>
-                            <Box id='esqueci'>
+                <Grid item className='centraliza' sm={5}>
+                    <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo'/>
+                    <Box className='retangulo2 centraliza'>
+                        <Box className='forms'>
+                            <form className='form-login' onSubmit={onSubmit}>
+                                <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
+                                <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth/>
+                                <Box marginTop={2}>
+                                        <Button type='submit' id='entrarButton'>Entrar</Button>
+                                </Box>
+                            </form>
+                        </Box>
+                        <Box display='flex' justifyContent='center'>
+                            <Box textAlign='center'>
+                                <Box className='box1'>
+                                    <hr style={{ width: "5.5rem" }} />
+                                    <Typography id='ou'>  ou</Typography>
+                                    <hr style={{ width: "5.5rem" }} />
+                                </Box>
+                                <Button id='google' onClick={implementacoes}>
+                                    <img className='googleIcon' src={require("../../assets/img/Google.png")} />
+                                    Entrar com o Google
+                                </Button>
                                 <Box>
-                                <Link to='/cadastro' className='text-decorator-none'>
-                                    <Button id='conta'> Criar conta</Button>
-                                </Link>
+                                    <Box>
+                                    <Link to='/cadastro' className='text-decorator-none'>
+                                        <Typography id='conta'> Criar conta</Typography>
+                                    </Link>
+                                    </Box>
+                                    <Typography id='novaSenha' onClick={implementacoes}>Esqueci minha senha</Typography>
                                 </Box>
                             </Box>
                         </Box>
                     </Box>
-                </Box>
-            </Grid>
+                </Grid>
+            </Box>
+            
         </Grid>
 
     )

@@ -1,6 +1,19 @@
-.container{
-   margin-bottom: 50px;
-}
+.gridLogin{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+ }
+ .boxCadastroTotal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  width: 70%;
+  height: 36rem;
+  padding: 0!important;
+ }
+
 
 .retangulo4{
   margin-top:2%;
@@ -44,11 +57,6 @@
   direction: rtl;
 }
 
-.gridLogin{
- padding-top: 5rem;
- padding-bottom: 5rem;
-}
-
 .text-decorator-none{
    text-decoration: none;
 }
@@ -59,30 +67,26 @@
  padding-left: 10%
 }
 #logoCadastro{
- margin-left: 21%;
- display: block;
- width: 9.625rem;
- padding: 15px;
+  width: 14rem;
  }
-
-#boxCadastro{
-  background:rgba(87, 232, 2, 0.19);
-  width: 18.75rem;
-  height: 28.125rem;
+.boxCadastro{
+  background-color:rgba(87, 232, 2, 0.19)!important;
+  width: 21rem!important;
+  height: 26.5rem!important;
   border-radius: 52px 0px;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   margin-top:1%;
 }
-#boxFormCadastro{
- padding-left: 1.3rem;
- text-align: center;
- width: 16.2rem;
+.boxFormCadastro{
+ width: 18rem;
 }
 .inputForm{
    border-radius: 10px;
    background: rgba(255, 255, 255, 1);
-   font-family: 'Alef';
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
    width: 100%;
+   padding: 0!important;
+   margin: 7px!important;
    /* height: 30px; */
 }
 

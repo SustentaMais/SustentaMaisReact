@@ -1,11 +1,18 @@
-.container{
-    margin-bottom: 50px;
+.boxLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  width: 65%;
+  height: 35rem;
+  padding: 0!important;
 }
-
 .retangulo1{
-   margin-top:2%;
-   width: 18.75rem;
-   height: 28.125rem;
+
+   width: 21.5rem;
+   height: 28.4rem;
    background: #AEF202;
    background-size:cover ;
    border-radius: 0px 119px;
@@ -17,35 +24,33 @@
 } */
 
 .texto{
-   font-family: 'Aleo';
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif!important;
    font-style: italic;
-   font-weight: 400;
-   font-size: 1.313rem;
+   font-weight: 400!important;
+   font-size: 2rem!important;
    line-height: 3.063rem;
    display: flex;
    text-align: center;
-   color: #000000;
+   color: #FFFFFF!important;
+   text-shadow: 1px 1px #319F43;
+   margin-left: 0.5rem;
+   margin-right: 0.5rem;
 }
 
 .hexagonos{
   margin-left: 3px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-   width:17.063rem;
+   width:19rem;
    mix-blend-mode: soft-light;
    direction: rtl;
  }
  .hexagonosBot{
    margin-left: 1rem;
    padding-top: 0.5rem;
-   width:17.063rem;
+   width:20rem;
    mix-blend-mode: soft-light;
    direction: rtl;
- }
-
- .gridLogin{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
  }
 
 .text-decorator-none{
@@ -53,43 +58,42 @@
 }
 
 .centraliza{
-  display: block;
-  padding-right: 10%;
-  padding-left: 10%
+  display: flex!important;
+  flex-direction: column!important;
+  align-items: center!important;
+  justify-content: center!important;
 }
+
 .logo{
-  margin-left: 25%;
-  display: block;
-   margin-top: 4%;
-   width: 12.625rem;
-  }
+   width: 15rem;
+   margin-bottom: 1rem;
+}
 
 .retangulo2{
    background:rgba(87, 232, 2, 0.19);
-   width: 18.75rem;
-   height: 22.125rem;
+   width: 19rem;
+   height: 22.3rem;
    border-radius: 52px 0px;
-   margin-bottom: 2%;
+   margin-bottom: 1%;
    margin-top:1%;
 }
-.forms{
-  padding-left: 2.9rem;
-  padding-top: 2rem;
-  text-align: center;
-  width: 13rem;
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #usuario{
-    border-radius: 10px;
     background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
 }
 
  #senha{
-    border-radius: 10px;
     background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
+    border-radius: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
  }
 
 /* .button{
@@ -114,17 +118,15 @@
  
  #google{
    border-radius: 40px;
-   width: 13rem;
+   width: 15rem;
    background: rgba(255, 255, 255, 1) !important;
    text-align:center;
-   font-family: 'Alef';
+   text-transform: none!important;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    font-size: 0.8rem ;
    margin-bottom: 1rem;
    margin-top: 0.6rem;
  }
-#esqueci{
-  display: block;
-}
  .googleIcon{
   width: 1rem;
   height: 1rem;
@@ -134,25 +136,36 @@
 
  #conta{
    color: #319F43;
-   font-family: 'Alatsi' !important;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
    font-style: normal;
    font-weight: bold;
    align-items:center;
    justify-content: center;
-   font-size: small;
- }
+   font-size: 17px!important;
+  }
+  #conta:hover {
+    background-color: #81857d13;
+    border-radius: 30px;
+  }
 
  #novaSenha{
    color:#319F43;
    text-decoration-line: underline;
-   font-family: 'Alef';
-   font-size: small;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 13px;
+   margin-top: 6px;
+ }
+ #novaSenha:hover {
+  cursor: pointer;
  }
  #entrarButton{
-  width: 13rem;
+  width: 15rem;
   font-weight: 300;
   background-color:darkgreen;
+  color: #FFFFFF!important;
   margin-bottom: 0.7rem;
+  text-transform: none!important;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
  .box1{
   display: flex;
