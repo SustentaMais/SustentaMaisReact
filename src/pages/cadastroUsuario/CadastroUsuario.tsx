@@ -123,7 +123,7 @@ function CadastrarUsuario() {
     return (
         <Grid sm={12} container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
             <Box display="flex" flexDirection="row" className='boxCadastroTotal'>
-                    <Grid item className='centraliza' sm={6}>
+                    <Grid item className='centraliza margin-right' sm={6}>
                     <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" id='logoCadastro'/>
                     <Box className='boxCadastro centraliza'>
                         <Box className='boxFormCadastro'>
@@ -158,7 +158,7 @@ function CadastrarUsuario() {
                     </Grid>
 
                 <Grid item sm={5} className='centraliza'>
-                        <Box className='retangulo1'>
+                        <Box className='retangulo4'>
                             <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos'/>
                             <Box className='texto'>
                                 A rede que te inspira a ser mais sustentável!

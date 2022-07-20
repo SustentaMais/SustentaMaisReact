@@ -115,7 +115,7 @@ function Login() {
 
         <Grid sm={12} container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
             <Box display="flex" flexDirection="row" className='boxLogin'>
-                <Grid item sm={5} className='centraliza'>
+                <Grid item sm={5} className='centraliza margin-right'>
                     <Box className='retangulo1'>
                         <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos'/>
                         <Box className='texto'>
