@@ -110,8 +110,8 @@ function Login() {
             </Grid>
 
             <Grid item className='centraliza' sm={6}>
-                <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo'/>
                 <Box className='retangulo2'>
+                <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo'/>
                     <Box className='forms'>
                         <form onSubmit={onSubmit}>
                             <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail ou nome de usuário' variant='outlined' name='usuario'  />

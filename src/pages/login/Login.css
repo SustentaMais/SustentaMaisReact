@@ -6,7 +6,7 @@
    margin-top:2%;
    width: 18.75rem;
    height: 28.125rem;
-   background: #AEF202;
+   background:rgba(255, 255, 255, 0.521);
    background-size:cover ;
    border-radius: 0px 119px;
 }
@@ -58,16 +58,16 @@
   padding-left: 10%
 }
 .logo{
-  margin-left: 25%;
+  margin-left: 20%;
   display: block;
    margin-top: 4%;
    width: 12.625rem;
   }
 
 .retangulo2{
-   background:rgba(87, 232, 2, 0.19);
+  background:rgba(255, 255, 255, 0.521);
    width: 18.75rem;
-   height: 22.125rem;
+   height: 28.125rem;
    border-radius: 52px 0px;
    margin-bottom: 2%;
    margin-top:1%;
@@ -102,7 +102,7 @@
  } */
 
  #ou{
-   color: #81857D;
+  color:rgb(253, 253, 253);
    font-family: Anaheim;
    padding: 8px;
    margin: 0;
@@ -133,9 +133,7 @@
  }
 
  #conta{
-   color: #319F43;
-   font-family: 'Alatsi' !important;
-   font-style: normal;
+   color: #1F4710 !important;
    font-weight: bold;
    align-items:center;
    justify-content: center;
@@ -151,7 +149,8 @@
  #entrarButton{
   width: 13rem;
   font-weight: 300;
-  background-color:darkgreen;
+  background-color:#1F4710;
+  color:rgb(253, 253, 253) !important;
   margin-bottom: 0.7rem;
  }
  .box1{

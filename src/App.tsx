@@ -13,15 +13,13 @@ import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import AddPost from './components/estaticos/addPost/AddPost';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Side_Navbar from './components/estaticos/navbar/Side_NavBar/Side_NavBar';
 import CadastroPost from './pages/home/cadastroPost/CadastroPost';
 import DeletarPostagem from './pages/home/deletarPostagem/DeletarPostagem';
 import ListaPostagem from './pages/home/listaPostagem/ListaPostagem';
 import Home from './pages/home/Home';
 import Config from './pages/configuracoes/Config';
 import Perfil from './pages/perfil/Perfil';
-import VisitNavbar from './components/estaticos/navbar/VisitNavbar';
-
+import SideBar from './components/estaticos/sidebar/SideBar';
 
 function App() {
   return (
@@ -29,8 +27,6 @@ function App() {
       <ToastContainer />
       <Router>
         <div style={{ minHeight: '100vh' }}>
-        <Side_Navbar />
-        <VisitNavbar />
           <Routes>
             <Route path="/" element={<Visitante />} />
             <Route path="/login" element={<Login />} />
@@ -50,7 +46,7 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
           </Routes >
         </div >
-        <Footer />
+        {/* <Footer /> */}
         <AddPost />
       </Router >
     </Provider>

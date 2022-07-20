@@ -72,21 +72,26 @@ function SideBar() {
     if (token != '') {
         sidebar = <Grid container sm={3} id='sidebarRender'>
             <Grid id='sidebarContainer'>
+                <Box id='navSidebar' height={45}>
+                    <img src="https://i.imgur.com/zHAbLlb.png" height={40} id='profilePic' alt="" />
+                </Box>
                 <Grid item >
                     <Box display='flex' id='DadosDoUsuario'>
-                        <Box>
+                        <Box display='flex' alignItems={'center'}>
                             <img src="https://i.imgur.com/SZFQZVj.png" alt="ProfilePic" />
                             <Typography>{users.nome}</Typography>
                         </Box>
-
-                        <Typography>oo</Typography>
+                        {/* <label htmlFor="switch">
+                            <input type="checkbox" id='switch' /> Dark Mode
+                        </label> */}
+                        {/* <Typography>togledarkmode</Typography> */}
                     </Box>
                 </Grid>
-                <hr id='divisor' />
+                {/* <hr id='divisor'/> */}
                 <Grid item >
                     <Box id='menuOptions'>
-                        <ul>
-                            <li >
+                        <ul id='menuSidebar'>
+                            <li className='listedItem'>
                                 <Link to='/perfil'>
                                     <Box className='iconsUl' >
                                         <PermIdentityIcon className='iconsUl' />
@@ -97,7 +102,7 @@ function SideBar() {
                             </li>
 
 
-                            <li>
+                            <li className='listedItem'>
                                 <Link to='/home'>
                                     <Box className='iconsUl' >
                                         <FeedIcon className='iconsUl' />
@@ -108,7 +113,7 @@ function SideBar() {
                             </li>
 
 
-                            <li>
+                            <li className='listedItem'>
                                 <Link to='/eventos'>
                                     <Box className='iconsUl' >
                                         <EventAvailableIcon className='iconsUl' />
@@ -117,7 +122,7 @@ function SideBar() {
                                 </Link>
 
                             </li>
-                            <li>
+                            <li className='listedItem'>
                                 <Link to='/configuracoes'>
                                     <Box className='iconsUl' >
                                         <SettingsIcon className='iconsUl' />
@@ -126,7 +131,7 @@ function SideBar() {
                                 </Link>
 
                             </li>
-                            <li>
+                            <li className='listedItem'>
                                 <Link to='/sobre'>
                                     <Box className='iconsUl' >
                                         <PeopleAltIcon className='iconsUl' />
@@ -136,7 +141,7 @@ function SideBar() {
 
                             </li>
 
-                            <li>
+                            <li className='listedItem'>
 
                                 <Box className='iconsUl' onClick={goLogout}>
                                     <LogoutIcon className='iconsUl' />
@@ -155,10 +160,7 @@ function SideBar() {
     }
     return (
         <>
-            <Box padding='5px'>
-                {sidebar}
-            </Box>
-
+            {sidebar}
         </>
     )
 }
