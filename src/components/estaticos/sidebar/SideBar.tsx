@@ -22,6 +22,9 @@ function SideBar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
+    const userId = useSelector<TokenState, TokenState['id']>(
+        (state) => state.id
+    )
 
     const [users, setUsers] = useState<Usuario>({
         id: 0,
@@ -33,9 +36,7 @@ function SideBar() {
     })
 
     //buscar o ID armazenado no Store do redux
-    const userId = useSelector<TokenState, TokenState['id']>(
-        (state) => state.id
-    )
+
 
     async function getUserId() {
         await buscaId(`/usuario/${userId}`, setUsers, {
@@ -75,7 +76,7 @@ function SideBar() {
                 <Grid item >
                     <Box display='flex' id='DadosDoUsuario'>
                         <Box>
-                            <img src={users.foto} className='fotosidebar' />
+                            <img src={users.foto} alt='' className='fotosidebar' />
                             <Typography>{users.nome}</Typography>
                         </Box>
 
