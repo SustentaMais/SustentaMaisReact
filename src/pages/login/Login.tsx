@@ -138,11 +138,11 @@ function Login() {
                     </Box>
                     <Box display='flex' justifyContent='center'>
                         <Box textAlign='center'>
-                            <Box className='box1'>
+                            {/* <Box className='box1'>
                                 <hr style={{ width: "5.5rem" }} />
                                 <Typography id='ou'>  ou</Typography>
                                 <hr style={{ width: "5.5rem" }} />
-                            </Box>
+                            </Box> */}
                             <Button id='google' onClick={implementacoes}>
                                 <img className='googleIcon' src={require("../../assets/img/Google.png")} />
                                 Entrar com o Google
