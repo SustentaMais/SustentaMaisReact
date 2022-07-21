@@ -1,19 +1,32 @@
-
-
-body{
-    background-color: #d2f8c8 !important;
-}
-
+/* p, h3 li{
+    
+} */
 
 .MuiButtonBase-root{
     color: white !important;
 }
 
-
-
+#jaTemConta{
+    color: azure;
+}
+.text{
+    text-align: justify;
+}
 #liEstrelinhas ul li{
-margin-top: 47px;
+/* margin-top: 47px; */
 list-style: none;
+margin:auto;
+margin-left: 25%;
+padding-bottom:25px;
+color: azure;
+
+}
+#liEstrelinhas{
+    width:99vw; 
+    height: fit-content;
+    background-image: url(https://i.imgur.com/WJMDTiu.jpg);
+    background-size: cover;
+    padding-top: 15px;
 }
 #liEstrelinhas ul li::before{
     content: '';
@@ -21,17 +34,17 @@ list-style: none;
     left: 0;
     top: 0;
     padding: 5px 15px;
-    background-image: url(https://i.imgur.com/66vBx0d.png);
+    background-image: url(https://i.imgur.com/PEqzNn6.png);
     background-repeat: no-repeat;
     background-size: 27px;
     margin-right: 3px;
 }
+
 .CTA{
     text-align: center;
     justify-content: center;
 }
-
-a{
+.linkVisitante{
     text-decoration: none;
     color: rgb(16, 16, 16) !important;
 }
@@ -47,7 +60,7 @@ a{
     height: 98vh;
     padding-top: 10px !important;
     padding-top: 7rem !important;
-    background-image: url(../../assets/img/banner-rosa.png) ;
+    background-image: url(https://i.imgur.com/WJMDTiu.jpg) ;
     background-size: cover ;
     background-repeat: no-repeat;
     
@@ -79,7 +92,8 @@ hr{
     padding-bottom: 4rem;
 }
 #botaoVerde{
-    background-color: #006400 !important;
+    background-color: #006400e3 !important;
+    color: rgb(0, 32, 0) !important;
 }
 #facaLogin{
    color: darkGreen;
@@ -90,9 +104,9 @@ hr{
     padding: 0 !important;
 }
 
-h4{
+/* h4{
     color: white;
-}
+} */
 
 /*Cards Das Pessoas Desenvolvedoras */
 
@@ -163,11 +177,10 @@ button {
     margin: 20px ;
 }
 
-.equipedev{
+#equipedev{
+    padding: 50px;
     display: flex;
-    justify-content: center;
-    font-size: 18px;
-    
+    justify-content: center;    
 }
 
 

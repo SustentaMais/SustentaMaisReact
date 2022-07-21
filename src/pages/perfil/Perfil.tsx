@@ -2,7 +2,7 @@
 import Usuario from '../../models/UsuarioModel';
 import './Perfil.css'
 // atuais
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 
@@ -23,6 +23,7 @@ import { TokenState } from '../../store/tokens/tokensReducer';
 import { buscaId } from '../../services/Service';
 import ModalDeletePost from '../home/modaldeletepost/ModalDeletePost';
 import MeusPosts from '../home/meusposts/MeusPosts';
+import SideBar from '../../components/estaticos/sidebar/SideBar';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -57,52 +58,52 @@ const ITEM_HEIGHT = 48;
 function Perfil() {
 
   const { id } = useParams<{ id: string }>();
-    
-    const [users, setUsers] = useState<Usuario>({
-        id: 0,
-        nome: '',
-        usuario: '',
-        senha: '',
-        foto: '',
-        localidade: ''
-       
-    })
 
-    const [user, setUser] = useState<Usuario | any>({
-      id: 0,
-      nome: '',
-      usuario: '',
-      foto: '',
-      senha: '',
-      localidade: '',
-      postagem: null
-    });
+  const [users, setUsers] = useState<Usuario>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    senha: '',
+    foto: '',
+    localidade: ''
 
-    const [endImg, setEndImg] = useState('./perfil.png');
-  
-    let navigate = useNavigate();
+  })
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
+  const [user, setUser] = useState<Usuario | any>({
+    id: 0,
+    nome: '',
+    usuario: '',
+    foto: '',
+    senha: '',
+    localidade: '',
+    postagem: null
+  });
 
-     //buscar o ID armazenado no Store do redux
-     const userId = useSelector<TokenState, TokenState['id']>(
-        (state) => state.id
-    )
+  const [endImg, setEndImg] = useState('./perfil.png');
+
+  let navigate = useNavigate();
+
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  //buscar o ID armazenado no Store do redux
+  const userId = useSelector<TokenState, TokenState['id']>(
+    (state) => state.id
+  )
 
   useEffect(() => {
-    if(token == ''){
-        toast.error('Você precisa estar logado', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
-          });
+    if (token == '') {
+      toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+      });
       navigate('/login')
     }
   }, [token])
@@ -141,30 +142,33 @@ function Perfil() {
   };
 
 
-    return(
-        <>
-          <Box className="profileImageContainer"> 
-           <img src={users.foto} alt={users.nome} width="200" height="200" className='foto-user'/>
-            <Typography className="profile-name">{users.nome}</Typography>
-            <Typography className="profile-email">{users.usuario}</Typography>
-            <Typography className="profile-local">{users.localidade}</Typography>
-            <hr className='linha-perfil' />
-          
-            </Box>
+  return (
+    <>
+      <Grid sm={3}>
+        <SideBar />
+      </Grid>
+      <Box className="profileImageContainer">
+        <img src={users.foto} alt={users.nome} className="profileImage" width="200" height="200" />
+        <Typography className="profile-name">{users.nome}</Typography>
+        <Typography className="profile-email">{users.usuario}</Typography>
+        <Typography className="profile-local">{users.localidade}</Typography>
+        <hr className='linha-perfil' />
 
-              
-            <Grid className='caixa'>
-            <h3>Minhas postagens</h3>
-            <MeusPosts/>
-            </Grid>
-   
-    
-  
+      </Box>
 
-        
 
-        </>
-    );
+      <Grid className='caixa'>
+        <h3>Minhas postagens</h3>
+        <MeusPosts />
+      </Grid>
+
+
+
+
+
+
+    </>
+  );
 }
 
 export default Perfil;

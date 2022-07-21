@@ -50,7 +50,7 @@ function ModalAtualizaUsuario(){
     }
 
     const body=(
-        <div style={modalStyle} className={classes.paper}>
+        <div >
             <Box display='flex' justifyContent='flex-end' className='cursor'>
                 <CloseIcon onClick={handleClose}/>
             </Box>

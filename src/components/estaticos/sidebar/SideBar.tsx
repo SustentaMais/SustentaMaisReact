@@ -73,74 +73,76 @@ function SideBar() {
     if (token !== '') {
         sidebar = <Grid container sm={3} id='sidebarRender'>
             <Grid id='sidebarContainer'>
+                <Box id='navSidebar' height={45}>
+                    <img src="https://i.imgur.com/zHAbLlb.png" height={40} id='profilePic' alt="" />
+                </Box>
                 <Grid item >
                     <Box display='flex' id='DadosDoUsuario'>
-                        <Box>
+                        <Box display='flex' alignItems={'center'}>
                             <img src={users.foto} alt='' className='fotosidebar' />
-                            <Typography>{users.nome}</Typography>
+                            <Typography paddingLeft={1}>{users.nome}</Typography>
                         </Box>
 
                         {/* <Typography>oo</Typography> */}
                     </Box>
                 </Grid>
-                <hr id='divisor' />
+                {/* <hr id='divisor'/> */}
                 <Grid item >
                     <Box id='menuOptions'>
-                        <ul>
-                            <li >
+                        <ul id='menuSidebar'>
                                 <Link to='/perfil'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <PermIdentityIcon className='iconsUl' />
                                          Perfil
                                     </Box>
-                                </Link>
 
                             </li>
-                            
+                                </Link>
 
 
-                            <li>
                                 <Link to='/home'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <FeedIcon className='iconsUl' />
                                         Feed
                                     </Box>
-                                </Link>
 
                             </li>
+                                </Link>
 
 
-                            <li>
                                 <Link to='/home'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <EventAvailableIcon className='iconsUl' />
                                         Eventos
                                     </Box>
-                                </Link>
 
                             </li>
-                            <li>
+                                </Link>
                                 <Link to='/configuracoes'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <SettingsIcon className='iconsUl' />
                                         Configurações
                                     </Box>
-                                </Link>
 
                             </li>
-                            <li>
+                                </Link>
                                 <Link to='/sobre'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <PeopleAltIcon className='iconsUl' />
                                         Sobre Nós
                                     </Box>
-                                </Link>
 
                             </li>
+                                </Link>
 
-                            <li>
+                            <li className='listedItem' onClick={goLogout}>
 
-                                <Box className='iconsUl' onClick={goLogout}>
+                                <Box className='iconsUl' >
                                     <LogoutIcon className='iconsUl' />
                                     Sair
                                 </Box>
@@ -157,10 +159,7 @@ function SideBar() {
     }
     return (
         <>
-            <Box padding='5px'>
-                {sidebar}
-            </Box>
-
+        { sidebar }
         </>
     )
 }

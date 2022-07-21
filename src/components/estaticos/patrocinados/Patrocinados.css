@@ -1,0 +1,69 @@
+.cardSponsor{
+    background-color: var(--subTomBg);
+
+    margin: 20px;
+    border-radius: 15px;
+}
+.renderSponsor{
+    display: flex;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.renderSponsor:hover{
+    background-color: var(--subTomBg2);
+    
+}
+.cardTitle{
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 12px;
+}
+
+.Noticia{
+    text-align:left;
+}
+.subtitleSponsor{
+    color: var(--subTomColor);
+}
+.imgSponsor{
+    border-radius: 15px;
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+}
+/* .boxImgSponsor{
+
+} */
+
+#busca-header{
+    display: flex;
+    background-color: var(--subTomBg);
+    /* width:85%; */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    padding: 10px;
+    align-items: center;
+    border-radius: 25px;
+  }
+#busca-header svg{
+    float: left;
+ 	font-size: inherit;
+ 	height: 1em;
+ 	overflow: visible;
+ 	fill: var(--subTomColor);
+}
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:10px;
+    font-size:11px;
+    border:none;
+    height:10px;
+    width:260px;
+    font-family: 'Montserrat';
+    color: var(--subTomColor);
+  }

@@ -1,292 +1,171 @@
-.gridLogin{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  background-image: url('https://i.imgur.com/WJMDTiu.jpeg');
-  background-size: cover;
- }
- .boxCadastroTotal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  width: 70%;
-  height: 36rem;
-  padding: 0!important;
- }
-.margin-right {
-  margin-right: 15px!important;
+.container{
+  margin-bottom: 50px;
 }
 
 .retangulo4{
-  width: 23rem;
-  height: 30rem;
-  background: #AEF202;
-  background-size:cover ;
-  border-radius: 0 53px;
-  
+ margin-top:2%;
+ width: 18.75rem;
+ height: 28.125rem;
+ background:rgba(255, 255, 255, 0.421);
+ background-size:cover ;
+ border-radius: 0px 119px;
+ z-index: 9999;
+ backdrop-filter: blur(4px);
+ -webkit-backdrop-filter: blur(4px);
+ -moz-backdrop-filter: blur(4px);
 }
 
 /* .test{
- display: flex;
-  flex-direction: row;
+display: flex;
+ flex-direction: row;
 } */
 
 .texto{
-  font-family: 'Aleo';
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.313rem;
-  line-height: 3.063rem;
-  display: flex;
-  text-align: center;
-  color: #000000;
+ font-family: 'Aleo';
+ font-style: italic;
+ font-weight: 400;
+ font-size: 1.313rem;
+ line-height: 3.063rem;
+ display: flex;
+ text-align: center;
+ color: #000000;
 }
 
 .hexagonos{
- margin-left: 3px;
- padding-top: 0.5rem;
- padding-bottom: 0.5rem;
-  width:17.063rem;
-  mix-blend-mode: soft-light;
-  direction: rtl;
+margin-left: 3px;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+ width:17.063rem;
+ mix-blend-mode: soft-light;
+ direction: rtl;
 }
 .hexagonosBot{
-  margin-left: 1rem;
-  padding-top: 0.5rem;
-  width:17.063rem;
-  mix-blend-mode: soft-light;
-  direction: rtl;
+ margin-left: 1rem;
+ padding-top: 0.5rem;
+ width:17.063rem;
+ mix-blend-mode: soft-light;
+ direction: rtl;
+}
+
+.gridLogin{
+padding-top: 5rem;
+padding-bottom: 5rem;
 }
 
 .text-decorator-none{
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .centraliza{
- display: block;
- padding-right: 10%;
- padding-left: 10%
+display: block;
+padding-right: 10%;
+padding-left: 10%
 }
 #logoCadastro{
-  width: 13rem;
- }
-.boxCadastro{
-  background-color:rgba(86, 232, 2, 0.37)!important;
-  width: 21rem!important;
-  height: 28rem!important;
-  border-radius: 52px 0px;
-  margin-bottom: 1%;
-  margin-top:1%;
+margin-left: 21%;
+display: block;
+width: 9.625rem;
+padding: 15px;
 }
-.boxFormCadastro{
- width: 18rem;
+
+#boxCadastro{
+ background:rgba(255, 255, 255, 0.421);
+ width: 18.75rem;
+ height: 28.125rem;
+ border-radius: 52px 0px;
+ margin-bottom: 2%;
+ margin-top:1%;
+ z-index: 9999;
+ backdrop-filter: blur(4px);
+ -webkit-backdrop-filter: blur(4px);
+ -moz-backdrop-filter: blur(4px);
+}
+#boxFormCadastro{
+padding-left: 1.3rem;
+text-align: center;
+width: 16.2rem;
 }
 .inputForm{
-   border-radius: 10px;
-   background: rgba(255, 255, 255, 1);
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
-   width: 100%;
-   padding: 0!important;
-   margin: 6px!important;
-   /* height: 30px; */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 1);
+  font-family: 'Alef';
+  width: 100%;
+  /* height: 30px; */
 }
 
 /* .button{
-   border-radius: 5px;
-   background: darkgreen;
-   rgba(46, 128, 3, 0.7) 
-   text-align:center;   
-   font-family: 'Alatsi';
-   width: 13rem;
+  border-radius: 5px;
+  background: darkgreen;
+  rgba(46, 128, 3, 0.7) 
+  text-align:center;   
+  font-family: 'Alatsi';
+  width: 13rem;
 } */
 
 #ouCad{
-  color: #81857D;
-  font-family: Anaheim;
-  padding: 0px;
-  margin: 0;
+ color: rgb(252, 252, 252);
+ font-family: Anaheim;
+ padding: 0px;
+ margin: 0;
 }
 hr{
- margin: 0;
+margin: 0;
 }
 
 
 #googleCad{
-  border-radius: 40px;
-  width: 16rem;
-  background: rgba(255, 255, 255, 1) !important;
-  text-align:center;
-  font-family: 'Alef';
-  font-size: 0.8rem ;
-  margin-bottom: 1rem;
-  margin-top: 0.6rem;
-  height: 2rem;
-  color: #000000 !important;
+ border-radius: 40px;
+ width: 16rem;
+ background: rgba(255, 255, 255, 1) !important;
+ text-align:center;
+ font-family: 'Alef';
+ font-size: 0.8rem ;
+ margin-bottom: 1rem;
+ margin-top: 0.6rem;
+ height: 2rem;
+ color: #000000 !important;
 }
 #esqueci{
- display: block;
+display: block;
 }
 .googleIcon{
- width: 1rem;
- height: 1rem;
- margin-right: 3%;
- margin-bottom: 1%;
+width: 1rem;
+height: 1rem;
+margin-right: 3%;
+margin-bottom: 1%;
 }
 
 #conta{
-  color: #319F43;
-  font-family: 'Alatsi' !important;
-  font-style: normal;
-  font-weight: bold;
-  align-items:center;
-  justify-content: center;
-  font-size: small;
+ color: #319F43;
+ font-family: 'Alatsi' !important;
+ font-style: normal;
+ font-weight: bold;
+ align-items:center;
+ justify-content: center;
+ font-size: small;
 }
 
 #cadastrarButton{
- width: 16rem;
- font-weight: 300;
- background-color:darkgreen;
- margin-bottom: 0.7rem;
+width: 16rem;
+font-weight: 300;
+color: rgb(252, 252, 252) !important;
+background-color:#1F4710;
+margin-bottom: 0.7rem;
 }
 .box1{
- display: flex;
- align-items:center;
- justify-content: center;
- background-color: transparent;
- height: fit-content;
- margin: 0;
+display: flex;
+align-items:center;
+justify-content: center;
+background-color: transparent;
+height: fit-content;
+margin: 0;
 }
 .MuiInputBase-input {
-   height: 0px !important;
-}
-#cancelar{
-  color:#319F43;
-  text-decoration-line: underline;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 13px;
+  height: 0px !important;
 }
 
-
-
-
-
-
-
-
-/* .gridLogin{
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    direction: row ;
-    justify-content: center;
-    align-items: center;
-   }
-  
-.retangulo4{
-    margin-top:2%;
-    width: 18.75rem;
-    height: 28.125rem;
-    background: #AEF202;
-    background-size:cover ;
-    border-radius: 0px 119px;
- }
-
- .texto{
-    font-family: 'Aleo';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.313rem;
-    line-height: 3.063rem;
-    display: flex;
-    text-align: center;
-    color: #000000;
- }
- 
- .hexagonos{
-   margin-left: 3px;
-   padding-top: 0.5rem;
-   padding-bottom: 0.5rem;
-    width:17.063rem;
-    mix-blend-mode: soft-light;
-    direction: rtl;
-  }
-  .hexagonosBot{
-    margin-left: 1rem;
-    padding-top: 0.5rem;
-    width:17.063rem;
-    mix-blend-mode: soft-light;
-    direction: rtl;
-  }
-
-  .retangulo3{
-    background:rgba(87, 232, 2, 0.19);
-    width: 18.75rem;
-    height: 30.125rem;
-    border-radius: 52px 0px;
-    margin-bottom: 2%;
-    margin-top:1%;
- }
-
-.centraliza{
-    display: block;
-    padding-right: 10%;
-    padding-left: 10%
-  }
-  
-.forms{
-    padding-left: 2.9rem;
-    padding-top: 2rem;
-    text-align: center;
-    width: 13rem;
-  }
-  
-.logo{
-    margin-left: 25%;
-    display: block;
-     margin-top: 4%;
-     width: 12.625rem;
-    }
-
-#nome{
-   border-radius: 10px;
-   background: rgba(255, 255, 255, 1);
-   font-family: 'Alef';
-   height: 0.7rem;
-  }
-
-#usuario{
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
+.gridLogin{
+ background-image: url(https://i.imgur.com/WJMDTiu.jpg);
+ background-size:100vw;
+ background-repeat:no-repeat;
 }
-
- #senha{
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
- }
-
- #confirmarSenha{
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
- }
-
- #foto{
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
- }
-
- #localidade{
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 1);
-    font-family: 'Alef';
-    height: 0.7rem;
- } */

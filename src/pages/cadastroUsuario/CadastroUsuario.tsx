@@ -6,6 +6,7 @@ import Usuario from '../../models/UsuarioModel';
 import { cadastroUsuario } from '../../services/Service';
 import { toast } from 'react-toastify';
 import './CadastroUsuario.css';
+import SideBar from '../../components/estaticos/sidebar/SideBar';
 
 function CadastrarUsuario() {
 
@@ -50,7 +51,20 @@ function CadastrarUsuario() {
             [e.target.name]: e.target.value
         })
     }
+    function implementacoes() {
 
+        toast.info('Implementação futura', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: "colored",
+            progress: undefined,
+        });
+
+    }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
@@ -69,7 +83,7 @@ function CadastrarUsuario() {
                     draggable: false,
                     theme: "colored",
                     progress: undefined,
-                    });
+                });
 
                 //Se houver erro, pegue o Erro e retorna uma msg
             } catch (error) {
@@ -84,7 +98,7 @@ function CadastrarUsuario() {
                     draggable: false,
                     theme: "colored",
                     progress: undefined,
-                    });
+                });
             }
 
         } else {
@@ -97,79 +111,68 @@ function CadastrarUsuario() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
-                });
+            });
 
             setUsuario({ ...usuario, senha: "" }) // Reinicia o campo de Senha
             setConfirmarSenha("")           // Reinicia o campo de Confirmar Senha
         }
     }
-    
-    function implementacoes() {
 
-        toast.info('Função em Andamento', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            theme: "colored",
-            progress: undefined,
-        });
-
-      }
 
 
     return (
-        <Grid sm={12} container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
-            <Box display="flex" flexDirection="row" className='boxCadastroTotal'>
-                    <Grid item className='centraliza margin-right' sm={6}>
-                    <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" id='logoCadastro'/>
-                    <Box className='boxCadastro centraliza'>
-                        <Box className='boxFormCadastro'>
-                            <form className='form-login' onSubmit={onSubmit}>
-                                <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Nome*' variant='outlined' placeholder='Insira seu nome' name='nome' fullWidth/>
-                                <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='E-mail*' variant='outlined' placeholder='Insira seu e-mail' name='usuario' margin='normal' fullWidth/>
-                                <TextField value={usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Foto (opcional)' variant='outlined' placeholder='Insira o link da foto' name='foto' margin='normal' fullWidth/>
-                                <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}className='inputForm' label='Senha*' variant='outlined' placeholder='Senha maior de 8 caracteres' name='senha' type='password' fullWidth/>
-                                <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' label='Confirmar Senha*' variant='outlined' placeholder='Confirme sua senha' name='confirmarSenha' margin='normal' type='password' fullWidth/>
+        <>
+            <Grid sm={3}>
+                <SideBar />
+            </Grid>
+            <Grid container className='gridLogin'>
+
+
+                <Grid item className='centraliza' sm={6}>
+                    <Box id='boxCadastro'>
+                        <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" id='logoCadastro' />
+                        <Box id='boxFormCadastro'>
+                            <form onSubmit={onSubmit}>
+                                <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Nome' variant='outlined' name='nome' />
+                                <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='E-mail' variant='outlined' name='usuario' margin='normal' />
+                                {/* <TextField value={usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Foto (Opcional)' variant='outlined' name='foto' margin='normal' /> */}
+                                <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Senha' variant='outlined' name='senha' type='password' />
+                                <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' />
                                 <Box marginTop={2}>
-                                    <Button type='submit' id='entrarButton'>Cadastrar</Button>
+                                    <Button type='submit' id='cadastrarButton'>
+                                        Cadastrar
+                                    </Button>
                                 </Box>
                             </form>
                         </Box>
-                            <Box display='flex' justifyContent='center'>
-                                <Box textAlign='center'>
-                                    <Box className='box1'>
-                                        <hr style={{ width: "5.5rem" }} />
-                                        <Typography id='ou'>  ou</Typography>
-                                        <hr style={{ width: "5.5rem" }} />
-                                    </Box>
-                                    <Button id='google' onClick={implementacoes}>
-                                        <img className='googleIcon' src={require("../../assets/img/Google.png")} />
-                                        Usar o Google
-                                    </Button>
-                                    <Link to='/'>
-                                        <Typography id='cancelar'>Cancelar</Typography>
-                                    </Link>
+                        <Box display='flex' justifyContent='center'>
+                            <Box textAlign='center'>
+                                <Box className='box1'>
+                                    <hr style={{ width: "5.5rem" }} />
+                                    <Typography id='ouCad'>  ou</Typography>
+                                    <hr style={{ width: "5.5rem" }} />
                                 </Box>
+                                <Button id='googleCad' onClick={implementacoes}>
+                                    <img className='googleIcon' src={require("../../assets/img/Google.png")} />
+                                    Entrar com o Google
+                                </Button>
                             </Box>
                         </Box>
-                    </Grid>
-
-                <Grid item sm={5} className='centraliza'>
-                        <Box className='retangulo4'>
-                            <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos'/>
-                            <Box className='texto'>
-                                A rede que te inspira a ser mais sustentável!
-                            </Box>
-                            <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot'/>
-                        </Box>
+                    </Box>
                 </Grid>
-            </Box>
-            
 
-        </Grid>
+                <Grid item sm={6} className='centraliza'>
+                    <Box className='retangulo4'>
+                        <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos' />
+                        <Box className='texto'>
+                            A rede que te inspira a ser mais sustentável!
+                        </Box>
+                        <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot' />
+                    </Box>
+                </Grid>
+
+            </Grid>
+        </>
     );
 
     //deixa ele acessível para outros componentes

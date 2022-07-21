@@ -3,16 +3,25 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-left: 340px;
+    margin-left: 25%;
+    background-color: var(--bodyBg);
+    color: var(--bodyColor);
+    padding-top: 50px;
 }
 .profileImage {
     object-fit: cover;
     width: 150px;
+    height: 150px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
     border: 3px solid #FFFFFF;
+}
+#renderPerfil{
+    background-color: var(--bodyBg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 .profile-name {
     margin: 20px;
@@ -56,12 +65,13 @@
 .caixa{
     justify-content: space-between;
     margin-left: 12vw;
-
-
-
+    background-color: var(--bodyBg);
 }
 
 .caixa h3{
     text-align: center;
     padding-left: 12vw;
+    margin: 0px;
+    color: var(--bodyColor);
+    padding-bottom: 25px;
 }

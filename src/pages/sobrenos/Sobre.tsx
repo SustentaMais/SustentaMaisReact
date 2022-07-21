@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './Sobre.css';
 import { Box, Grid, Typography } from '@mui/material';
+import SideBar from '../../components/estaticos/sidebar/SideBar';
 
 
 function Sobre() {
@@ -66,8 +67,8 @@ function Sobre() {
     return (
 
         <Grid container display='flex'>
-            <Grid item sm={3}>
-
+            <Grid sm={3}>
+                <SideBar />
             </Grid>
             <Grid item sm={9}>
                 {sobrenosComponent}

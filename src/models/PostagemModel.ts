@@ -5,7 +5,7 @@ interface PostagemModel{
     id: number;
     titulo: string;
     conteudo: string;
-    anexos: string;
+    anexos?: string | null;
     data: string;
     tema?: TemaModel | null
     usuario?: UsuarioModel | null

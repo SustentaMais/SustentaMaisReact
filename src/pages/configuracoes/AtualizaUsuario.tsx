@@ -1,6 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
-import { Button, FormControl, FormControlLabel, Grid, Radio, RadioGroup, TextField, Typography } from '@material-ui/core';
-import { Box } from '@mui/material';
+import { Box, Button, Grid, TextField, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -8,13 +7,14 @@ import Usuario from '../../models/UsuarioModel';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { buscaId, put } from '../../services/Service';
 import { addToken } from '../../store/tokens/actions';
+import './Config.css'
 
 function AtualizarUsuario() {
 
     let navigate = useNavigate();
 
     const [confirmarSenha, setConfirmarSenha] = useState<String>("")
-    
+
     const userId = useSelector<TokenState, TokenState['id']>(
         (state) => state.id
     )
@@ -36,25 +36,25 @@ function AtualizarUsuario() {
 
     useEffect(() => {
         if (token === "") {
-          toast.info('Você precisa estar logado.', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: 'colored',
+            toast.info('Você precisa estar logado.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
             });
-          navigate("/login")
+            navigate("/login")
         }
-      }, [token])    
+    }, [token])
 
     useEffect(() => {
         if (userId !== undefined) {
-          findById(userId)
+            findById(userId)
         }
-      }, [userId]);
+    }, [userId]);
 
     async function findById(id: string) {
         buscaId(`/usuario/${id}`, setUser, {
@@ -66,7 +66,7 @@ function AtualizarUsuario() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
-        user.postagem=null
+        user.postagem = null
         if (confirmarSenha === user.senha) {
             put(`/usuario/atualizar`, user, setUser, {
                 headers: {
@@ -82,7 +82,7 @@ function AtualizarUsuario() {
                 draggable: true,
                 progress: undefined,
                 theme: 'colored',
-                });
+            });
             navigate('/perfil')
         } else {
             toast.warn('As senhas devem ser as mesmas.', {
@@ -94,7 +94,7 @@ function AtualizarUsuario() {
                 draggable: true,
                 progress: undefined,
                 theme: 'colored',
-                });
+            });
         }
     }
 
@@ -127,36 +127,36 @@ function AtualizarUsuario() {
     return (
         <>
             <Grid container direction='row' justifyContent='center' alignItems='center'>
-                <Grid item alignItems='center' >
-                    <Box paddingX={10} marginY={10} className='cardCadastro'>
-                        <form onSubmit={onSubmit}>
-                            <Typography variant='h3' gutterBottom color='textPrimary' component='h4' align='center' className="textos1">Editar Perfil</Typography>
 
-                            <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
+                <Box paddingX={10} marginY={10} className='cardCadastro' id='formAtualizar'>
+                    <form onSubmit={onSubmit}>
+                        <Typography variant='h5' className='inputAtualiza' gutterBottom color='textPrimary' component='h5' align='center'>Editar Perfil</Typography>
 
-                            <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='Link da Foto' variant='outlined' name='foto' margin='normal' fullWidth />
+                        <TextField value={user.nome} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' variant='outlined' placeholder='Insira o seu nome' name='nome' margin='normal' fullWidth />
 
-                            <TextField value={user.localidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="local" label="localidade" name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
+                        <TextField value={user.foto} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' placeholder='link da foto' variant='outlined' name='foto' margin='normal' fullWidth />
+
+                        <TextField value={user.localidade} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="local" name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
 
                         {/*    <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />*/}
 
-                            <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField value={user.senha} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' variant='outlined' placeholder='insirir senha' name='senha' margin='normal' type='password' fullWidth />
 
-                            <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmação de Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                        <TextField value={confirmarSenha} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' placeholder='confirmar senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
 
-                            <Box marginTop={2} textAlign='center'>
-                                <Link to="/perfil" className='text-decorator-none'>
-                                    <Button variant='contained' color='secondary' className='btnCancelar'>
-                                        Cancelar
-                                    </Button>
-                                </Link>
-                                <Button type='submit' variant='contained' color='primary' className='btnEdit'>
-                                    Atualizar
+                        <Box marginTop={2} textAlign='center'>
+                            <Link to="/perfil" className='text-decorator-none'>
+                                <Button variant='contained' color='secondary' className='btnEdit'>
+                                    Cancelar
                                 </Button>
-                            </Box>
-                        </form>
-                    </Box>
-                </Grid>
+                            </Link>
+                            <Button type='submit' variant='contained' color='primary' className='btnEdit'>
+                                Atualizar
+                            </Button>
+                        </Box>
+                    </form>
+                </Box>
+
             </Grid>
         </>
     )

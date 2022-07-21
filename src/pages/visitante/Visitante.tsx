@@ -3,6 +3,8 @@ import { Grid, Box, Typography, Button, Paper, Hidden } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Visitante.css';
 import cardsExpanciso from './cards';
+import Navbar from '../../components/estaticos/navbar/Navbar';
+
 
 function Visitante() {
     return (
@@ -11,16 +13,16 @@ function Visitante() {
                 justifyContent="center"
                 alignItems="center"
                 className='heroContainer'
-
             >
+                <Navbar />
                 <Grid item alignItems="center" md={6} className='heroContainer-left'>
-                    {/* <img src="https://imgur.com/gaVGNPl.png" height='300px' alt="Maos segurando o planeta-terra" /> */}
+                    <img src="https://i.imgur.com/8DLGZnf.gif" height='300px' alt="Maos segurando o planeta-terra" />
                 </Grid>
                 <Grid item alignItems="center" md={6} className='heroContainer-right'>
                     <Box className='CTA'>
-                        <Typography variant='h4'>Junte-se a nós nessa missão de mudar a vida de milhares de pessoas.</Typography>
+                        <Typography variant='h4'>Construa uma <strong>comunidade</strong> e torne o mundo melhor.</Typography>
                         <Box marginTop='1rem' textAlign='center'>
-                            <Link to='/cadastro'>
+                            <Link to='/cadastro' className='linkVisitante'>
                                 <Button type='submit' size='large' variant='contained' color='success' id='botaoVerde'>
                                     Faça parte dessa rede!
                                 </Button>
@@ -28,10 +30,10 @@ function Visitante() {
                             <Box justifyContent='center' display='flex'>
                                 <Box marginRight={1} >
 
-                                    <Typography>Já tem uma conta?</Typography>
+                                    <Typography id='jaTemConta'>Já tem uma conta?</Typography>
 
                                 </Box>
-                                <Link to='/login'>
+                                <Link to='/login' className='linkVisitante'>
                                     <Typography gutterBottom id='facaLogin'>Faça o login</Typography>
                                 </Link>
                             </Box>
@@ -45,8 +47,8 @@ function Visitante() {
             </Box>
             <Grid container justifyContent='center' alignItems='center' paddingRight='4rem' paddingLeft='4rem' className='section2Content' >
                 <Grid item sm={7}>
-                    <Box textAlign='left' width='20rem'>
-                        <Typography>
+                    <Box textAlign='left' width='20rem' paddingLeft='60px'>
+                        <Typography className='text'>
                             Nossa rede social tem o intuito de tornar as cidades e comunidades mais inclusivas, seguras, resilientes e sustentável, apresentando soluções para a falta de habilitação segura, inspirar a sustentabilidade e realizar interações com usuários, pessoas ou empresas interessadas em ajudar alcançarmos essa causa.
                         </Typography>
                     </Box>
@@ -57,16 +59,16 @@ function Visitante() {
                 </Grid>
             </Grid>
             <hr style={{ width: "100px" }} />
-            <Box margin='auto' paddingTop='9rem' paddingBottom='9rem' width='40rem' id='liEstrelinhas'>
+            <Box id='liEstrelinhas'>
                 <ul>
-                    <li>Garantindo habitação segura a mais de 100 famílias por dia;</li>
-                    <li>Mais de 9M de usuários;</li>
-                    <li>Presente em mais de 19 países;</li>
-                    <li>Diminuindo significamento o impacto ambiental negativo no planeta.</li>
+                    <li>Garantindo <strong>habitação segura</strong> a mais de 100 famílias por dia;</li>
+                    <li>Mais de <strong>9M</strong> de usuários;</li>
+                    <li>Presente em mais de <strong>19 países</strong>;</li>
+                    <li>Diminuindo significamente o <strong>impacto ambiental </strong>negativo no planeta.</li>
                 </ul>
             </Box>
-            <Typography className='equipedev' >Equipe Desenvolvedora</Typography>
-            <hr style={{ width: "500px" }} />
+            <Typography id='equipedev' variant='h4'>Equipe Desenvolvedora</Typography>
+            {/* <hr style={{ width: "500px" }} /> */}
 
             <Grid className='container'>
                 <Grid >
@@ -78,16 +80,12 @@ function Visitante() {
                                 Desenvolvedor Full stack java
                             </Typography>
 
-                            <a href="https://github.com/Joaolucas398" target="_blank">
+                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
                             </a>
 
-                            <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
-
-                            <a href="https://www.instagram.com/lucasbreckgm" target="_blank">
-                                <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
                             </a>
                         </Box>
 
@@ -103,18 +101,13 @@ function Visitante() {
                                 Desenvolvedora Full stack java
                             </Typography>
 
-                            <a href="https://github.com/jheesicherolli" target="_blank">
+                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
                             </a>
 
-                            <a href="https://www.linkedin.com/in/jennifer-sicherolli" target="_blank">
+                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
                             </a>
-
-                            <a href="https://www.instagram.com/jhee_sicherolli" target="_blank">
-                                <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
-                            </a>
-
                         </Box>
                     </Box>
                 </Grid>
@@ -128,16 +121,12 @@ function Visitante() {
                                 Desenvolvedora Full stack java
                             </Typography>
 
-                            <a href="https://github.com/psgabriele" target="_blank">
+                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
                             </a>
 
-                            <a href="https://www.linkedin.com/in/gabriele-s%C3%A1" target="_blank">
+                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
-                            
-                            <a href="https://www.instagram.com/psgab" target="_blank">
-                                <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
                             </a>
                         </Box>
                     </Box>
@@ -152,46 +141,37 @@ function Visitante() {
                                 Desenvolvedora Full stack java
                             </Typography>
 
-                            <a href="https://github.com/fabyolafc" target="_blank">
+                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
                             </a>
 
-                            <a href="https://www.linkedin.com/in/fabyola-campos" target="_blank">
+                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
                                 <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
                             </a>
 
-                            <a href="https://www.instagram.com/fabyolacampos/?hl=pt-br" target="_blank">
-                                <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
-                            </a>
+                            <Grid>
+                                <Box className='cards'>
+                                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/94026401?v=4' />  </button>
+                                    <Box className='conteudo'>
+                                        <h4>Ruan Pablo</h4>
+                                        <Typography>
+                                            Desenvolvedor Full stack java
+                                        </Typography>
+
+                                        <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
+                                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                        </a>
+
+
+                                        <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                        </a>
+                                    </Box>
+                                </Box>
+                            </Grid>
                         </Box>
                     </Box>
-                </Grid>
-
-                <Grid>
-                    <Box className='cards'>
-                        <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/94026401?v=4' />  </button>
-                        <Box className='conteudo'>
-                            <h4>Ruan Pablo</h4>
-                            <Typography>
-                                Desenvolvedor Full stack java
-                            </Typography>
-
-                            <a href="https://github.com/Rpablo4" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                            </a>
-
-
-                            <a href="https://www.linkedin.com/in/ruan-pablo-38533520b" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
-
-                            <a href="https://www.instagram.com/rpablo_4" target="_blank">
-                                <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
-                            </a>
-                        </Box>
-                    </Box>
-                </Grid>
-
+                </Grid>    
             </Grid>
         </>
     )

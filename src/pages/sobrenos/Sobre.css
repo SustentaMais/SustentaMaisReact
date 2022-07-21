@@ -48,7 +48,9 @@
     /* padding-top: 10px; */
     padding-bottom: 15px;
 }
-.texto-sobre {
-    font-size: 17px!important;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
+.bigContainerSobre{
+    padding-top: 80px;
+    color: var(--bodyColor);
+    background-color: var(--bodyBg);
+    
 }

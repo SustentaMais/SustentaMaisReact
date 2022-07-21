@@ -1,45 +1,92 @@
-#sidebarContainer {
+:root{
+    --bodyBg: black;
+    --bodyColor: white;
+    --bodyLink: white;
+    --subTomBg:rgb(15, 15, 15);
+    --subTomColor: rgb(228, 228, 228);
+    --subTomBg2:rgb(31, 31, 31);
+    --linhasColor: rgb(93, 93, 93);
+    --navbarFeed: rgba(0, 0, 0, 0.588);
+    --bgHover: rgb(8, 8, 8);
+}
+#nomeUsuario{
+    padding-left: 10px;
+}
+.darkMode:root{
+    --bodyBg: rgb(253, 253, 253);
+    --bodyColor: black;
+    --bodyLink: black;
+    --subTomBg:rgb(230, 230, 230);
+    --subTomColor: rgb(23, 23, 23);
+    --subTomBg2:rgb(209, 209, 209);
+    --linhasColor: rgb(190, 190, 190);
+    --navbarFeed: rgba(153, 153, 153, 0.588);
+    --bgHover: rgb(240, 240, 240);
+}
+
+#sidebarContainer{
+    background-color: var(--bodyBg);
+    color: var(--bodyColor) !important;
+    height: 100vh;
+    padding-right: 34px;
+    /* width: 100%; */
     position: fixed;
-    height: 97.5vh;
-    width: 24% !important;
-    background-color: rgb(255, 255, 255)!important;
-    color: rgba(0, 0, 0, 0.87)!important;
-    box-shadow: 4px 0px 4px 0px rgb(174 242 2 / 20%), 0px 4px 5px 0px rgb(174 242 2 / 14%), 0px 1px 10px 0px rgb(174 242 2 / 12%)!important;
-    z-index: 99!important;
-    border-radius: 45px 0px;
-}
-#DadosDoUsuario{
-    padding-top: 2rem;
-    padding-left: 0.8rem;
-}
-#sidebarRender{
-    background-color: lavender;
-}
-#divisor{
-    margin-top: 10px;
-    width: 100px;
-}
-#menuOptions{
-    margin: auto;
-    padding-top: 35px;
-}
-#menuOptions ul{
-    list-style-type: none;
-    margin: 0;
-}
-#menuOptions ul li{
-    align-content: center ;
-    justify-content: center;
-    padding-bottom: 20px;
+    padding-left: 25px;
+        border-top: 0px;
+    border-right: 1px;
+    border-bottom:  0px;
+    border-left:  0px;
+    border-style: solid;
+    border-color: var(--linhasColor);
 }
 .iconsUl{
+    color: var(--bodyColor) !important;
+    list-style-type: none; 
     padding-right: 10px;
     height: 1.5rem !important;
-    margin-top: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .fotosidebar{
     display: flex;
     width: 50px;
     border-radius: 50%;
+    display: flex;
+    gap: 15px;
+}
+.listedItem{
+    color: var(--bodyColor) !important;
+    list-style-type: none; 
+    font-size:1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.listedItem:hover{
+    background-color: var(--subTomBg2);
+}
+#menuSidebar{
+    margin-top: 20%;
+    padding-left: 20px;
+    margin-right: 15px;
+}
+#DadosDoUsuario{
+    padding-left: 20px;
+}
+#divisor{
+    margin-top: 10%;
+    display: flex;
+}
+#navSidebar{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+#profilePic{
+    padding-left: 20px;
+}
+#sidebarRender{
+ padding-right: 20px;
 }
