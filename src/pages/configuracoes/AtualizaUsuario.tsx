@@ -1,39 +1,117 @@
-import { Button, Container, FormControl, TextField, Typography } from "@material-ui/core";
-import React, { ChangeEvent, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
-import Usuario from "../../models/UsuarioModel";
-import { buscaId, put } from "../../services/Service";
-import { TokenState } from "../../store/tokens/tokensReducer";
+import React, { ChangeEvent, useEffect, useState } from 'react'
+import { Button, FormControl, FormControlLabel, Grid, Radio, RadioGroup, TextField, Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import Usuario from '../../models/UsuarioModel';
+import { TokenState } from '../../store/tokens/tokensReducer';
+import { buscaId, put } from '../../services/Service';
+import { addToken } from '../../store/tokens/actions';
 
-function AtualizaUsuario() {
+function AtualizarUsuario() {
 
-    const { id } = useParams<{ id: string }>();
+    let navigate = useNavigate();
+
+    const [confirmarSenha, setConfirmarSenha] = useState<String>("")
     
-    const [users, setUsers] = useState<Usuario>({
+    const userId = useSelector<TokenState, TokenState['id']>(
+        (state) => state.id
+    )
+
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    const dispatch = useDispatch();
+
+    const [user, setUser] = useState<Usuario>({
         id: 0,
         nome: '',
         usuario: '',
         senha: '',
         foto: '',
         localidade: ''
-    })
-  
-    let navigate = useNavigate();
+    });
 
-    const token = useSelector<TokenState, TokenState["tokens"]>(
-        (state) => state.tokens
-    );
+    useEffect(() => {
+        if (token === "") {
+          toast.info('Você precisa estar logado.', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'colored',
+            });
+          navigate("/login")
+        }
+      }, [token])    
 
-     //buscar o ID armazenado no Store do redux
-     const userId = useSelector<TokenState, TokenState['id']>(
-        (state) => state.id
-    )
+    useEffect(() => {
+        if (userId !== undefined) {
+          findById(userId)
+        }
+      }, [userId]);
 
-  useEffect(() => {
-    if(token == ''){
-        toast.error('Você precisa estar logado', {
+    async function findById(id: string) {
+        buscaId(`/usuario/${id}`, setUser, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        user.postagem=null
+        if (confirmarSenha === user.senha) {
+            put(`/usuario/atualizar`, user, setUser, {
+                headers: {
+                    'Authorization': token
+                }
+            })
+            toast.success('Usuário atualizado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                });
+            navigate('/perfil')
+        } else {
+            toast.warn('As senhas devem ser as mesmas.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: 'colored',
+                });
+        }
+    }
+
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
+        setConfirmarSenha(e.target.value)
+    }
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    function goLogout() {
+        dispatch(addToken(''));
+        toast.info('Usuário atualizado, por favor use suas credenciais atualizadas', {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -42,98 +120,46 @@ function AtualizaUsuario() {
             draggable: false,
             theme: "colored",
             progress: undefined,
-          });
-      navigate('/login')
+        });
+        navigate('/login')
     }
-  }, [token])
 
-  async function getUserId() {
-    await buscaId(`/usuario/${userId}`, setUsers, {
-      headers: {
-        'Authorization': token
-      }
-    })
-  }
-
-  useEffect(() => {
-    getUserId()
-    
-  }, [])
-
-        //useState para gerar o usuario
-        const [usuario, setUsuario] = useState<Usuario>({
-            id: +userId,    // Faz uma conversão de String para Number
-            nome: '',
-            usuario: '',
-            senha: '',
-            foto: '',
-            localidade: ''
-            })
-        
-        
-        //para atualizar o usuário
-        async function findByIdUsuario(id: string) {
-            await buscaId(`usuario/${id}`, setUsuario, {
-                headers: {
-                    'Authorization': token
-                }
-            })
-        }
-        
-        function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
-        
-            setUsuario({
-                ...usuario,
-                [e.target.name]: e.target.value
-            })
-        
-        }
-        
-            async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
-                e.preventDefault()
-        
-                if (id !== undefined) {
-                    put(`/usuario`, usuario, setUsuario, {
-                        headers: {
-                            'Authorization': token
-                        }
-                    })
-                    toast.success('Usuário atualizado com sucesso', {
-                        position: "top-right",
-                        autoClose: 2000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: false,
-                        draggable: false,
-                        theme: "colored",
-                        progress: undefined,
-                    })
-                } 
-                back()
-            }
-        
-            function back() {
-                navigate('/configuracoes')
-            }
-
-    return(
+    return (
         <>
-            <Container maxWidth="sm">
-                <form onSubmit={onSubmit}>
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Editar Usuário</Typography>
-                    <TextField value={users.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="foto" label="foto" variant="outlined" name="foto" placeholder='Insira o link da foto' margin="normal" fullWidth />
-                    <TextField value={users.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="nome" label="trocar nome" name="nome"  variant="outlined" margin="normal" placeholder='Insira o seu nome' required fullWidth />
-                    <TextField value={users.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="email" label="trocar email" name="email" variant="outlined" margin="normal" placeholder='Insira o seu email' required fullWidth />
-                    <TextField value={users.localidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="local" label="trocar localidade" name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
-                    <TextField value={users.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="senha" label="Alterar Senha" name="senha" variant="outlined" margin="normal" placeholder='Altere a sua senha' required fullWidth />
+            <Grid container direction='row' justifyContent='center' alignItems='center'>
+                <Grid item alignItems='center' >
+                    <Box paddingX={10} marginY={10} className='cardCadastro'>
+                        <form onSubmit={onSubmit}>
+                            <Typography variant='h3' gutterBottom color='textPrimary' component='h4' align='center' className="textos1">Editar Perfil</Typography>
 
-                    <Button type="submit" variant="contained" color="primary" className='btnEdit'>
-                        Salvar
-                    </Button>
-                </form>
-            </Container>
+                            <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
+
+                            <TextField value={user.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto' label='Link da Foto' variant='outlined' name='foto' margin='normal' fullWidth />
+
+                            <TextField value={user.localidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="local" label="localidade" name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
+
+                        {/*    <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />*/}
+
+                            <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+
+                            <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmação de Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+
+                            <Box marginTop={2} textAlign='center'>
+                                <Link to="/perfil" className='text-decorator-none'>
+                                    <Button variant='contained' color='secondary' className='btnCancelar'>
+                                        Cancelar
+                                    </Button>
+                                </Link>
+                                <Button type='submit' variant='contained' color='primary' className='btnEdit'>
+                                    Atualizar
+                                </Button>
+                            </Box>
+                        </form>
+                    </Box>
+                </Grid>
+            </Grid>
         </>
-    );
+    )
 }
 
-export default AtualizaUsuario;
+export default AtualizarUsuario;

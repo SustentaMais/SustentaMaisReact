@@ -154,7 +154,7 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
             </Grid>
             
             <Grid xs={1} justifyContent='center' alignItems="center">
-                <Box width={400} height={460} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                <Box width={400} height={400} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
                     <Typography className="user-titulo">Dados do Usuário</Typography>
                     <hr/>
                     <Box paddingX={4} className='atributos-user'>
@@ -169,10 +169,10 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
                        <p>Localidade</p>
                     </Box>
                     <Typography className="user-texto" paddingX={4}>{users.localidade}</Typography>
-                    <Box paddingX={4} className='atributos-user'>
+                    {/*<Box paddingX={4} className='atributos-user'>
                        <p>Senha</p>
                     </Box>
-                    <Typography className="user-texto" paddingX={4}>***************</Typography>
+                    <Typography className="user-texto" paddingX={4}>***************</Typography>*/}
                     <Box display="flex" justifyContent="center" marginTop="19px">
                         <ModalAtualizaUsuario/>
                     </Box>  

@@ -68,12 +68,13 @@ function Perfil() {
        
     })
 
-    const [user, setUser] = useState<UsuarioModel | any>({
+    const [user, setUser] = useState<Usuario | any>({
       id: 0,
       nome: '',
       usuario: '',
       foto: '',
       senha: '',
+      localidade: '',
       postagem: null
     });
 
