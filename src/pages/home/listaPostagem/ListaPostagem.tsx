@@ -141,7 +141,7 @@ function ListaPostagem() {
                 <Link to={`/criarpostagem/${post.id}`} className="text-decorator-none btnModal" >
                   <MenuItem onClick={handleClose} className='btnModal'>Editar</MenuItem>
                 </Link>
-                <div onClick={handleClose}><ModalDeletePost /></div>
+                <div onClick={handleClose}><ModalDeletePost id={post.id}/></div>
               </Menu>
               <Box className='titulo-tema'>
                 <Typography variant="h6" component="h6">{post.titulo}</Typography>
@@ -199,7 +199,7 @@ function ListaPostagem() {
                 <Link to={`/criarpostagem/${post.id}`} className="text-decorator-none btnModal" >
                   <MenuItem onClick={handleClose} className='btnModal'>Editar</MenuItem>
                 </Link>
-                <div onClick={handleClose}><ModalDeletePost /></div>
+                <div onClick={handleClose}><ModalDeletePost id={post.id} /></div>
               </Menu>
               <Box className='titulo-tema'>
                 <Typography variant="h6" component="h6">{post.titulo}</Typography>

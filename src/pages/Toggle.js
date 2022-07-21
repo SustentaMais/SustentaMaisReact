@@ -1,7 +1,9 @@
 export default function Toggle (){
 
-console.log("TOggleee")
 const $html = document.querySelector('html');
-    $html.classList.toggle("darkMode")
-    $html.classList.add("darkMode")
+    if($html.classList.contains("darkMode")===true){
+        $html.removeAttribute('class','darkMode');
+    }else{
+       $html.setAttribute("class","darkMode")
+    }
 }
