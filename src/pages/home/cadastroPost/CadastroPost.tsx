@@ -154,18 +154,19 @@ function CadastroPost() {
 
  
     return (
-        <Container maxWidth="sm" className="fundo-criarPost topo">
-            <form onSubmit={onSubmit}>
+        <Container maxWidth="sm" className="fundo-criarPost">
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" className='titulo-criarPost'>Criar Postagem</Typography>
+            <form onSubmit={onSubmit}>
                 <hr style={{marginBottom: "10px"}}/>
-                <TextField value={postagem.titulo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" label="título" variant="outlined" name="titulo" margin="normal" fullWidth />
-                <TextField value={postagem.conteudo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" label="conteúdo" name="conteudo" variant="outlined" margin="normal" fullWidth multiline rows={3} />
-                <TextField value={postagem.anexos} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="anexos" label="link da imagem" name="anexos" variant="outlined" margin="normal" fullWidth />
+                <TextField value={postagem.titulo} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="titulo" placeholder="título" variant="outlined" name="titulo" margin="normal" fullWidth />
+                <TextField value={postagem.conteudo} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="conteudo" placeholder="conteúdo" name="conteudo" variant="outlined" margin="normal" fullWidth  />
+                <TextField value={postagem.anexos}  className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedPostagem(e)} id="anexos" placeholder="link da imagem" name="anexos" variant="outlined" margin="normal" fullWidth />
 
-                <FormControl fullWidth variant='filled' style={{marginTop: "20px"}}>
-                    <InputLabel id="demo-simple-select-helper-label">Tema </InputLabel>
+                <FormControl className='inputAtualiza' fullWidth variant='filled' style={{marginTop: "20px"}}>
+                    <InputLabel className='inputAtualiza' id="demo-simple-select-helper-label">Tema </InputLabel>
                     <Select
                         labelId="demo-simple-select-helper-label"
+                        className='inputAtualiza'
                         id="demo-simple-select-helper"
                         onChange={(e) => buscaId(`/tema/${e.target.value}`, setTema, {
                             headers: {
@@ -174,11 +175,11 @@ function CadastroPost() {
                         })}>
                         {
                             temas.map(tema => (
-                                <MenuItem value={tema.id}>{tema.categoria}</MenuItem>
+                                <MenuItem className='inputAtualiza' value={tema.id}>{tema.categoria}</MenuItem>
                             ))
                         }
                     </Select>
-                    <FormHelperText>Escolha um tema para a postagem</FormHelperText>
+                    <FormHelperText className='inputAtualiza'>Escolha um tema para a postagem</FormHelperText>
                     <Button type="submit" variant="contained" color='primary' className='btnCriar'>
                         Publicar
                     </Button>

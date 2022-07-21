@@ -6,10 +6,13 @@
   margin-top:2%;
   width: 18.75rem;
   height: 28.125rem;
-  background:rgba(255, 255, 255, 0.521);
+  background:rgba(255, 255, 255, 0.421);
   background-size:cover ;
   border-radius: 0px 119px;
-  
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
 }
 
 /* .test{
@@ -66,12 +69,16 @@
  }
 
 #boxCadastro{
-  background:rgba(255, 255, 255, 0.521);
+  background:rgba(255, 255, 255, 0.421);
   width: 18.75rem;
   height: 28.125rem;
   border-radius: 52px 0px;
   margin-bottom: 2%;
   margin-top:1%;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
 }
 #boxFormCadastro{
  padding-left: 1.3rem;

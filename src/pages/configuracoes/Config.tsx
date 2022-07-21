@@ -124,11 +124,11 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
   return (
     <>
 
-        <Grid container marginTop={5} className="grid-maior">
+        <Grid container className="grid-maior">
 
             <Grid xs={4} justifyContent='center' alignItems="center">
                 <form className='form-perfil'>
-                    <Box className='caixa-foto' width={300} height={300} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                    <Box className='caixa-foto' width={280} height={300}>
                         <img src={users.foto} alt={users.nome} width="200" height="200" className='foto-user'/>
                     </Box>
                     {/* <Box className='caixa-dark' width={300} id='switch'height={45} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
@@ -142,7 +142,7 @@ function updatedUsuario(e: ChangeEvent<HTMLInputElement>) {
             </Grid>
             
             <Grid xs={1} justifyContent='center' alignItems="center">
-                <Box width={400} height={460} style={{backgroundColor: "#d7eba5", borderRadius: "15px"}}>
+                <Box width={300} height={460} id='caixaDados'>
                     <Typography className="user-titulo">Dados do Usuário</Typography>
                     <hr/>
                     <Box paddingX={4} className='atributos-user'>

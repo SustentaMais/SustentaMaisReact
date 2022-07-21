@@ -26,7 +26,8 @@ function App() {
     <Provider store={store}>
       <ToastContainer />
       <Router>
-        <div style={{ minHeight: '100vh' }}>
+        <div id='renderAll' style={{ minHeight:'100vh' }}>
+          <SideBar/>
           <Routes>
             <Route path="/" element={<Visitante />} />
             <Route path="/login" element={<Login />} />

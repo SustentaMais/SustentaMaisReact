@@ -48,5 +48,7 @@
 }
 .bigContainerSobre{
     padding-top: 80px;
+    color: var(--bodyColor);
+    background-color: var(--bodyBg);
     
 }

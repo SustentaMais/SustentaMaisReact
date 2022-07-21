@@ -70,7 +70,7 @@ function SideBar() {
 
     var sidebar;
     if (token != '') {
-        sidebar = <Grid container sm={3} id='sidebarRender'>
+        sidebar = <Grid container sm={4} id='sidebarRender'>
             <Grid id='sidebarContainer'>
                 <Box id='navSidebar' height={45}>
                     <img src="https://i.imgur.com/zHAbLlb.png" height={40} id='profilePic' alt="" />
@@ -79,7 +79,7 @@ function SideBar() {
                     <Box display='flex' id='DadosDoUsuario'>
                         <Box display='flex' alignItems={'center'}>
                             <img src="https://i.imgur.com/SZFQZVj.png" alt="ProfilePic" />
-                            <Typography>{users.nome}</Typography>
+                            <Typography id='nomeUsuario'>{users.nome}</Typography>
                         </Box>
                         {/* <label htmlFor="switch">
                             <input type="checkbox" id='switch' /> Dark Mode
@@ -91,59 +91,59 @@ function SideBar() {
                 <Grid item >
                     <Box id='menuOptions'>
                         <ul id='menuSidebar'>
-                            <li className='listedItem'>
                                 <Link to='/perfil'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <PermIdentityIcon className='iconsUl' />
                                         Perfil
                                     </Box>
-                                </Link>
 
                             </li>
+                                </Link>
 
 
-                            <li className='listedItem'>
                                 <Link to='/home'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <FeedIcon className='iconsUl' />
                                         Feed
                                     </Box>
-                                </Link>
 
                             </li>
+                                </Link>
 
 
+                                <Link to='/home'>
                             <li className='listedItem'>
-                                <Link to='/eventos'>
                                     <Box className='iconsUl' >
                                         <EventAvailableIcon className='iconsUl' />
                                         Eventos
                                     </Box>
-                                </Link>
 
                             </li>
-                            <li className='listedItem'>
+                                </Link>
                                 <Link to='/configuracoes'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <SettingsIcon className='iconsUl' />
                                         Configurações
                                     </Box>
-                                </Link>
 
                             </li>
-                            <li className='listedItem'>
+                                </Link>
                                 <Link to='/sobre'>
+                            <li className='listedItem'>
                                     <Box className='iconsUl' >
                                         <PeopleAltIcon className='iconsUl' />
                                         Sobre Nós
                                     </Box>
-                                </Link>
 
                             </li>
+                                </Link>
 
-                            <li className='listedItem'>
+                            <li className='listedItem' onClick={goLogout}>
 
-                                <Box className='iconsUl' onClick={goLogout}>
+                                <Box className='iconsUl' >
                                     <LogoutIcon className='iconsUl' />
                                     Sair
                                 </Box>
@@ -160,7 +160,7 @@ function SideBar() {
     }
     return (
         <>
-            {sidebar}
+        { sidebar }
         </>
     )
 }

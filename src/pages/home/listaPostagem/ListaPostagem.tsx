@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       maxWidth: 450,
       color: 'var(--bodyColor) !important',
-      background: 'var(--bodyBg)'
+      background: 'transparent'
       // marginLeft: "250px",
       // marginBottom: "30px"
     },
@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: green[500],
     },
     cardHeader: {
-      color: 'var(--bodyColor) !important'
+      // color: 'var(--bodyColor) !important'
     },
   }),
 );

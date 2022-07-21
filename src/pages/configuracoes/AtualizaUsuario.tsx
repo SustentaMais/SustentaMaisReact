@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import Usuario from "../../models/UsuarioModel";
 import { buscaId, put } from "../../services/Service";
 import { TokenState } from "../../store/tokens/tokensReducer";
+import './Config.css'
 
 function AtualizaUsuario() {
 
@@ -118,14 +119,14 @@ function AtualizaUsuario() {
 
     return(
         <>
-            <Container maxWidth="sm">
+            <Container maxWidth="sm" id='formAtualizar'>
                 <form onSubmit={onSubmit}>
-                    <Typography variant="h3" color="textSecondary" component="h1" align="center" >Editar Usuário</Typography>
-                    <TextField value={users.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="foto" label="foto" variant="outlined" name="foto" placeholder='Insira o link da foto' margin="normal" fullWidth />
-                    <TextField value={users.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="nome" label="trocar nome" name="nome"  variant="outlined" margin="normal" placeholder='Insira o seu nome' required fullWidth />
-                    <TextField value={users.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="email" label="trocar email" name="email" variant="outlined" margin="normal" placeholder='Insira o seu email' required fullWidth />
-                    <TextField value={users.localidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="local" label="trocar localidade" name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
-                    <TextField value={users.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} id="senha" label="Alterar Senha" name="senha" variant="outlined" margin="normal" placeholder='Altere a sua senha' required fullWidth />
+                    <Typography variant="h5"  className='inputAtualiza'  color="textSecondary" component="h5" align="center" >Editar Usuário</Typography>
+                    <TextField value={users.foto} className='inputAtualiza'  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} variant="outlined" name="foto" placeholder='Insira o link da foto' margin="normal" fullWidth />
+                    <TextField value={users.nome} className='inputAtualiza'  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)} name="nome"  variant="outlined" margin="normal" placeholder='Insira o seu nome' required fullWidth />
+                    <TextField value={users.usuario} className='inputAtualiza'  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)}  name="email" variant="outlined" margin="normal" placeholder='Insira o seu email' required fullWidth />
+                    <TextField value={users.localidade} className='inputAtualiza'  onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)}  name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
+                    <TextField value={users.senha} id='ultimoInput' className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedUsuario(e)}   name="senha" variant="outlined" margin="normal" placeholder='Altere a sua senha' required fullWidth />
 
                     <Button type="submit" variant="contained" color="primary" className='btnEdit'>
                         Salvar

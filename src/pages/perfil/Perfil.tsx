@@ -64,7 +64,7 @@ function Perfil() {
   }, [])
 
     return(
-        <>
+        <><Box id='renderPerfil'>
           <Box className="profileImageContainer">
             {users.foto ? <img className="profileImage" src={ users.foto } alt={users.nome} /> : <img className='profileImage' src={endImg}/>}
             <Typography className="profile-name">{users.nome}</Typography>
@@ -72,6 +72,7 @@ function Perfil() {
             <Typography className="profile-local">{users.localidade}</Typography>
             <hr className='linha-perfil' />
           </Box>
+        </Box>
 
         </>
     );

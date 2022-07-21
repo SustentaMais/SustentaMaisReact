@@ -2,25 +2,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 90px!important;
+    background-color: var(--bodyBg);
+    color: var(--bodyColor);
+    height: 100vh;
+}
+.inputAtualiza{
+    background-color: var(--BodyBg) !important;
+    color: var(--bodyColor) !important;
+}
+.inputAtualiza input{
+    background-color: var(--subTomBg2)!important;
+    color: var(--bodyColor) !important;
+}
+.inputAtualiza::-webkit-input-placeholder{
+    color:var(--bodyColor);
+    background-color: var(--subTomBg2);
+    text-transform: uppercase;
+    font-style: bold;
+}
+
+.inputAtualiza::-moz-placeholder {
+    color:var(--bodyColor);
+    background-color: var(--subTomBg2);
+    text-transform: uppercase;
+    font-style: bold;
 }
 .box-status {
     display: flex;
     justify-content: center;
+}
+#caixaDados{
+    background-color: var(--subTomBg);
+    border-radius: 20px;
 }
 .caixa-foto {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: var(--subTomBg);
+    border-radius: 20px;
 }
 .foto-user {
     border-radius: 50%;
-    border: 5px solid #FFFFFF;
+    border: 5px solid var(--BodyBg);
 }
 .btn-trocaFoto {
     margin-top: 20px;
-    background: #FFFFFF;
+    background-color: var(--BodyBg);
     border: 0;
     border-radius: 10px;
     width: 150px;
@@ -29,7 +58,7 @@
     font-weight: bold;
 }
 .btn-trocaFoto:hover {
-    background: #b7d865;
+    background-color: var(--BodyBg);
 }
 .caixa-dark {
     padding: 0!important;
@@ -56,16 +85,18 @@
     align-items: center!important;
     font-size: 25px!important;
     margin-top: 10px!important;
-    margin-bottom: 10px!important;
+    /* margin-bottom: 10px!important; */
 }
 .atributos-user {
     display: flex;
     align-items: center;
+    width: 100px;
+    border-radius: 20px;
 }
 .user-texto {
-    background: #FFFFFF;
-    border-radius: 10px;
-    width: 300px;
+    background-color: var(--BodyBg) !important;
+    border-radius: 20px;
+    width: 150px;
     height: 30px;
     margin-left: 20px!important;
     display: flex;
@@ -78,14 +109,19 @@
     flex-direction: column!important;
 }
 #user-img {
-    background-color: #FFFFFF;
+    background-color: var(--bodyBg);
 }
 .inputfile {
     margin-top: 10px;
-    background-color: #FFFFFF!important;
+    background-color: var(--bodyBg);
 }
 .btn-save {
     margin-top: 10px;
+    background-color: #4b9e1b!important;
+    color: var(--bodyColor)!important;
+    margin-top: 10px!important;
+    border-radius: 30px!important;
+    margin-bottom: 12px!important;
 }
 .form {
     display: flex!important;
@@ -93,14 +129,32 @@
     align-items: center!important;
 }
 .btnEdit {
-    background: #FFFFFF!important;
-    width: 150px;
-    height: 30px;
-    padding: 5px 20px 5px 20px;
-    border-radius: 20px;
-    border: 1px solid #b7d865!important;
+    background-color: #4b9e1b!important;
+    color: var(--bodyColor)!important;
+    margin-top: 10px!important;
+    border-radius: 30px!important;
+    margin-bottom: 12px!important;
+    padding: 10px;
 }
 .btnEdit:hover {
-    background: #b7d865!important;
+    background-color: var(--BodyBg);
     cursor: pointer;
+}
+#formAtualizar form{
+    background-color: var(--subTomBg) !important;
+    color: var(--bodyColor) !important;
+    z-index: 9999;
+    width: 400px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 20px;
+}
+/* .makeStyles-paper-49{
+    background-color: var(--BodyBg) !important;
+    color: var(--bodyColor) !important;
+} */
+#ultimoInput{
+    margin-bottom: 15px;
 }
