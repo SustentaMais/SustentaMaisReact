@@ -1,6 +1,7 @@
-const $html = document.querySelector('html')
-const $checkbox = document.querySelector('#switch')
+export default function Toggle (){
 
-    $checkbox.addEventListener('change', funciton(){
-        $html.classList.toggle('darkMode')
-    })
+console.log("TOggleee")
+const $html = document.querySelector('html');
+    $html.classList.toggle("darkMode")
+    $html.classList.add("darkMode")
+}

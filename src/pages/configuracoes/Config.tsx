@@ -12,7 +12,7 @@ import { buscaId, put } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import SideBar from '../../components/estaticos/sidebar/SideBar';
 import ModalAtualizaUsuario from './ModalAtualizaUsuario';
-
+import Toggle from '../Toggle';
 function Config() {
 
     const { id } = useParams<{ id: string }>();
@@ -122,20 +122,20 @@ function Config() {
         navigate('/configuracoes')
     }
 
-    function implementacoes() {
+    // function implementacoes() {
 
-        toast.info('Função em Andamento', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            theme: "colored",
-            progress: undefined,
-        });
+    //     toast.info('Função em Andamento', {
+    //         position: "top-right",
+    //         autoClose: 2000,
+    //         hideProgressBar: false,
+    //         closeOnClick: true,
+    //         pauseOnHover: false,
+    //         draggable: true,
+    //         theme: "colored",
+    //         progress: undefined,
+    //     });
 
-    }
+    // }
 
     return (
         <>
@@ -149,10 +149,11 @@ function Config() {
                         <Box className='caixa-foto' width={280} height={300}>
                             <img src={users.foto} alt={users.nome} width="200" height="200" className='foto-user' />
                         </Box>
-                        <Box className='caixa-dark' width={280} height={45} onClick={implementacoes}>
+                        <Box className='caixa-dark' onClick={Toggle}  id='darkModeBox' width={280} height={45}>
                             <p className='texto-dark'>Dark Mode</p>
                             <Brightness4Icon className="dark-icon" />
                         </Box>
+            
                         {/* <label htmlFor="wwitch">
                         <input type="checkbox" id='switch' /> Dark Mode
                     </label> */}
