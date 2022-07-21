@@ -144,7 +144,7 @@ function Login() {
                                 <hr style={{ width: "5.5rem" }} />
                             </Box>
                             <Button id='google' onClick={implementacoes}>
-                                <img className='googleIcon' src={require("../../assets/img/Google.png")} />
+                                <img className='googleIcon' src={require("https://i.imgur.com/lQkQc84.png")} />
                                 Entrar com o Google
                             </Button>
                             <Box id='esqueci'>
