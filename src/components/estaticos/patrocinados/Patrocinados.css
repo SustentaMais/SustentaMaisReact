@@ -37,7 +37,10 @@
 /* .boxImgSponsor{
 
 } */
-
+.linkSponsor{
+    text-decoration: none;
+    color: var(--bodyColor);
+}
 #busca-header{
     display: flex;
     background-color: var(--subTomBg);

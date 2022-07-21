@@ -20,6 +20,7 @@ import Perfil from './pages/perfil/Perfil';
 import MeusPosts from './pages/home/meusposts/MeusPosts';
 import SideBar from './components/estaticos/sidebar/SideBar';
 import Login from './pages/login/Login';
+import Footer from './components/estaticos/footer/Footer';
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
             <Route path="/perfil" element={<Perfil />} />
           </Routes >
         </div >
-        {/* <Footer /> */}
+        <Footer />
         <AddPost />
       </Router >
     </Provider>

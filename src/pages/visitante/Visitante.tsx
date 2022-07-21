@@ -72,106 +72,147 @@ function Visitante() {
 
             <Grid className='container'>
                 <Grid >
-                    <Box className='cards'>
-                        <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93235011?v=4' />  </button>
-                        <Box className='conteudo'>
-                            <h4>João paz</h4>
-                            <Typography>
-                                Desenvolvedor Full stack java
-                            </Typography>
+                    <div className="flip-card cards">
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                                <img src='https://avatars.githubusercontent.com/u/93235011?v=4' />
+                            </div>
+                            <div className="flip-card-back">
+                                <h3>João Paz</h3>
+                                <p> Olá, meu nome João! Tenho 22 anos e sou um desenvolvedor  nordestino que adora desafios. Fazer parte do time Sustenta+ acendeu ainda mais a chama Dev dentro de mim.</p>
 
-                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                            </a>
+                                <a href="https://github.com/Joaolucas398" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                </a>
 
-                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
-                        </Box>
+                                <a href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                </a>
 
-                    </Box>
+                                <a href="https://www.instagram.com/lucasbreckgm" target="_blank">
+                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </Grid>
 
                 <Grid>
-                    <Box className='cards'>
-                        <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/100284708?v=4' />  </button>
-                        <Box className='conteudo'>
-                            <h4>Jennifer Sicherolli</h4>
-                            <Typography>
-                                Desenvolvedora Full stack java
-                            </Typography>
 
-                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                            </a>
+                    <div className="flip-card cards">
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                                <img src='https://avatars.githubusercontent.com/u/100284708?v=4' />
+                            </div>
+                            <div className="flip-card-back">
+                                <h3>Jennifer Sicherolli</h3>
+                                <p>Oii!! Sou a Jenny, uma garota apaixonada por tecnologia e aprendizagem. Graças ao Sustenta+ pude conhecer a fundo esse mundo, um projeto incrível que me tornou a desenvolvedora web java que sou hoje.</p>
 
-                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
-                        </Box>
-                    </Box>
+                                <a href="https://github.com/jheesicherolli" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/jennifer-sicherolli" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                </a>
+
+                                <a href="https://www.instagram.com/jhee_sicherolli" target="_blank">
+                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </Grid>
 
                 <Grid>
-                    <Box className='cards'>
-                        <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/93798476?v=4' />  </button>
-                        <Box className='conteudo'>
-                            <h4>Gabriele Sá</h4>
-                            <Typography>
-                                Desenvolvedora Full stack java
-                            </Typography>
 
-                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                            </a>
+                    <div className="flip-card cards">
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                                <img src='https://avatars.githubusercontent.com/u/93798476?v=4' />
+                            </div>
+                            <div className="flip-card-back">
+                                <h3>Gabriele Sá</h3>
+                                <p>Olá, eu sou a Gabi! Tenho 18 anos, sou mineira e uma desenvolvedora em constante aprendizado. Fazer parte do time do Sustenta+ me contribuiu como profissional e como pessoa, e é um orgulho que vou carregar para sempre.</p>
 
-                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
-                        </Box>
-                    </Box>
+                                <a href="https://github.com/psgabriele" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/gabriele-s%C3%A1" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                </a>
+
+                                <a href="https://www.instagram.com/psgab" target="_blank">
+                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
                 </Grid>
 
                 <Grid>
-                    <Box className='cards'>
-                        <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/92693153?v=4' />  </button>
-                        <Box className='conteudo'>
-                            <h4>Fabyola Campos</h4>
-                            <Typography>
-                                Desenvolvedora Full stack java
-                            </Typography>
 
-                            <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                            </a>
+                    <div className="flip-card cards">
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                                <img src='https://avatars.githubusercontent.com/u/92693153?v=4' />
+                            </div>
+                            <div className="flip-card-back">
+                                <h3>Fabyola Campos</h3>
+                                <p> Olá, meu nome é Fabyola, Sou uma Desenvolvedora Fullstack Java. A minha paixão pela tecnologia veio através do curso do #OTechTaOn. Gosto de novas experiências e de novos desafios, conhecimento é a minha chave para o sucesso!</p>
 
-                            <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
-                                <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                            </a>
+                                <a href="https://github.com/fabyolafc" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                </a>
 
-                            <Grid>
-                                <Box className='cards'>
-                                    <button onClick={cardsExpanciso} className='cartao-expansivel'><img src='https://avatars.githubusercontent.com/u/94026401?v=4' />  </button>
-                                    <Box className='conteudo'>
-                                        <h4>Ruan Pablo</h4>
-                                        <Typography>
-                                            Desenvolvedor Full stack java
-                                        </Typography>
+                                <a href="https://www.linkedin.com/in/fabyola-campos" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                </a>
 
-                                        <a className='linkVisitante' href="https://github.com/Joaolucas398" target="_blank">
-                                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                                        </a>
+                                <a href="https://www.instagram.com/fabyolacampos/?hl=pt-br" target="_blank">
+                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
+                                </a>
 
 
-                                        <a className='linkVisitante' href="https://www.linkedin.com/in/jlsouzapaz" target="_blank">
-                                            <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                                        </a>
-                                    </Box>
-                                </Box>
-                            </Grid>
-                        </Box>
-                    </Box>
-                </Grid>    
+                            </div>
+                        </div>
+                    </div>
+                </Grid>
+
+                <Grid>
+
+                    <div className="flip-card cards">
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
+                                <img src='https://media-exp1.licdn.com/dms/image/C4D03AQGUdyLtIYva9A/profile-displayphoto-shrink_800_800/0/1644597789062?e=1663804800&v=beta&t=RKJ-sPX_msy_0G9Hjx08fTQt5K0Py5maRH67YYXK6ys' />
+                            </div>
+                            <div className="flip-card-back">
+                                <h3>Ruan Pablo</h3>
+                                <p> Olá, eu sou o Ruan! Desenvolvedor FUllStack, apaixonado por arte, tecnologia e esportes. Amo novas aventuras e desafios!</p>
+
+                                <a href="https://github.com/Rpablo4" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                </a>
+
+
+                                <a href="https://www.linkedin.com/in/ruan-pablo-38533520b" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                </a>
+
+                                <a href="https://www.instagram.com/rpablo_4" target="_blank">
+                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
+                                </a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </Grid>
             </Grid>
         </>
     )
