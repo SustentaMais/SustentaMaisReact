@@ -153,7 +153,7 @@ function CadastrarUsuario() {
                                     <hr style={{ width: "5.5rem" }} />
                                 </Box>
                                 <Button id='googleCad' onClick={implementacoes}>
-                                    <img className='googleIcon' src={require("https://imgur.com/DZ9FcHJ.png")} />
+                                    <img className='googleIcon' src={require("../../assets/img/Google.png")} />
                                     Entrar com o Google
                                 </Button>
                             </Box>
