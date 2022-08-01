@@ -143,7 +143,7 @@ function Perfil() {
 
 
   return (
-    <>
+    <Grid container id='containerProfile'>
       <Grid sm={3}>
         <SideBar />
       </Grid>
@@ -158,16 +158,14 @@ function Perfil() {
 
 
       <Grid className='caixa'>
-        <h3>Minhas postagens</h3>
-        <MeusPosts />
+        <div id='minhasPostagens'>
+          <h3>Minhas postagens</h3>
+        </div>
+        <Box id='renderMeusPosts'>
+          <MeusPosts />
+        </Box>
       </Grid>
-
-
-
-
-
-
-    </>
+    </Grid>
   );
 }
 

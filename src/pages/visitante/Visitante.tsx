@@ -76,10 +76,10 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/93235011?v=4' />
-                                <h3>João Paz</h3>
+                                <h4>João Paz</h4>
                             </div>
                             <div className="flip-card-back">
-                                <h3>João Paz</h3>
+                                <h4>João Paz</h4>
                                 <p> Olá, meu nome João! Tenho 22 anos e sou um desenvolvedor  nordestino que adora desafios. Fazer parte do time Sustenta+ acendeu ainda mais a chama Dev dentro de mim.</p>
 
                                 <a href="https://github.com/Joaolucas398" target="_blank">
@@ -105,10 +105,10 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://media-exp1.licdn.com/dms/image/C4D03AQGUdyLtIYva9A/profile-displayphoto-shrink_800_800/0/1644597789062?e=1663804800&v=beta&t=RKJ-sPX_msy_0G9Hjx08fTQt5K0Py5maRH67YYXK6ys' />
-                                <h3>Ruan Pablo</h3>
+                                <h4>Ruan Pablo</h4>
                             </div>
                             <div className="flip-card-back">
-                                <h3>Ruan Pablo</h3>
+                                <h4>Ruan Pablo</h4>
                                 <p> Olá, eu sou o Ruan! Desenvolvedor FullStack, apaixonado por arte, tecnologia e esportes. O Sus+ é parte da minha jornada como desenvolvedor, resultado de meses de estudo e trabalho. Espero que gostem!</p>
 
                                 <a href="https://github.com/Rpablo4" target="_blank">
@@ -136,10 +136,10 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/100284708?v=4' />
-                                <h3>Jennifer Sicherolli</h3>
+                                <h4>Jennifer Sicherolli</h4>
                             </div>
                             <div className="flip-card-back">
-                                <h3>Jennifer Sicherolli</h3>
+                                <h4>Jennifer Sicherolli</h4>
                                 <p>Oii!! Sou a Jenny, uma garota apaixonada por tecnologia e aprendizagem. Graças ao Sustenta+ pude conhecer a fundo esse mundo, um projeto incrível que me tornou a desenvolvedora web java que sou hoje.</p>
 
                                 <a href="https://github.com/jheesicherolli" target="_blank">
@@ -166,10 +166,10 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/93798476?v=4' />
-                                <h3>Gabriele Sá</h3>
+                                <h4>Gabriele Sá</h4>
                             </div>
                             <div className="flip-card-back">
-                                <h3>Gabriele Sá</h3>
+                                <h4>Gabriele Sá</h4>
                                 <p>Olá, eu sou a Gabi! Tenho 18 anos, sou mineira e uma desenvolvedora em constante aprendizado. Fazer parte do time do Sustenta+ me contribuiu como profissional e como pessoa, e é um orgulho que vou carregar para sempre.</p>
 
                                 <a href="https://github.com/psgabriele" target="_blank">
@@ -195,10 +195,10 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/92693153?v=4' />
-                                <h3>Fabyola Campos</h3>
+                                <h4>Fabyola Campos</h4>
                             </div>
                             <div className="flip-card-back">
-                                <h3>Fabyola Campos</h3>
+                                <h4>Fabyola Campos</h4>
                                 <p> Olá, meu nome é Fabyola, Sou uma Desenvolvedora Fullstack Java. A minha paixão pela tecnologia veio através do curso do #OTechTaOn. Gosto de novas experiências e de novos desafios, conhecimento é a minha chave para o sucesso!</p>
 
                                 <a href="https://github.com/fabyolafc" target="_blank">

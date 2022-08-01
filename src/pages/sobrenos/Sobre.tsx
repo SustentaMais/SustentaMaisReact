@@ -6,7 +6,7 @@ import SideBar from '../../components/estaticos/sidebar/SideBar';
 
 function Sobre() {
     var sobrenosComponent;
-    sobrenosComponent = <Grid sm={12} className='bigContainerSobre'>
+    sobrenosComponent = <Grid sm={12} className='bigContainerSobre scroll'>
         <Grid container display='flex' className='containerSobre'>
             <Grid sm={7} justifyContent='center' >
                 <Box className='tituloSobre'>

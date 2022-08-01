@@ -6,14 +6,14 @@ import './Home.css';
 
 function Home() {
   return (
-    <Grid display='flex' container id='homeContainer'>
+    <Grid display='flex' className='scroll' container id='homeContainer'>
       <Grid sm={3} id='sideBarGrid'>
         <SideBar/>
       </Grid>
-      <Grid sm={6} id='feed'>
+      <Grid sm={6} className='scroll' id='feed'>
         <ListaPostagem />
       </Grid>
-      <Grid sm={3} id='produtosParceiros'>
+      <Grid sm={3} className='scroll' id='produtosParceiros'>
         <Patrocinados/>
       </Grid>
     </Grid>

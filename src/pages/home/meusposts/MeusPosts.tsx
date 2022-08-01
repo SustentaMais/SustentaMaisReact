@@ -55,7 +55,8 @@ createStyles({
 const ITEM_HEIGHT = 48;
 
 function MeusPosts() {
-
+  
+  const { id } = useParams();
   const [posts, setPosts] = useState<PostagemModel[]>([])
   let navigate = useNavigate();
   const token = useSelector<TokenState, TokenState["tokens"]>(

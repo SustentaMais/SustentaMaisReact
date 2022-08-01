@@ -25,6 +25,7 @@
 }
 
 #sidebarContainer{
+    width: 25vw;
     background-color: var(--bodyBg);
     color: var(--bodyColor) !important;
     height: 100vh;
