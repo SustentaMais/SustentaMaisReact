@@ -2,33 +2,37 @@
     
 } */
 
-.MuiButtonBase-root{
+.MuiButtonBase-root {
     color: white !important;
 }
 
-#jaTemConta{
+#jaTemConta {
     color: azure;
 }
-.text{
+
+.text {
     text-align: justify;
 }
-#liEstrelinhas ul li{
-/* margin-top: 47px; */
-list-style: none;
-margin:auto;
-margin-left: 25%;
-padding-bottom:25px;
-color: azure;
+
+#liEstrelinhas ul li {
+    /* margin-top: 47px; */
+    list-style: none;
+    margin: auto;
+    margin-left: 25%;
+    padding-bottom: 25px;
+    color: azure;
 
 }
-#liEstrelinhas{
-    width:99vw; 
+
+#liEstrelinhas {
+    width: 99vw;
     height: fit-content;
     background-image: url(https://i.imgur.com/WJMDTiu.jpg);
     background-size: cover;
     padding-top: 15px;
 }
-#liEstrelinhas ul li::before{
+
+#liEstrelinhas ul li::before {
     content: '';
     position: relative;
     left: 0;
@@ -40,66 +44,73 @@ color: azure;
     margin-right: 3px;
 }
 
-.CTA{
+.CTA {
     text-align: center;
     justify-content: center;
 }
-.linkVisitante{
+
+.linkVisitante {
     text-decoration: none;
     color: rgb(16, 16, 16) !important;
 }
 
-.css-mkazzp-MuiButtonBase-root-MuiButton-root{
+.css-mkazzp-MuiButtonBase-root-MuiButton-root {
     border-radius: 119px 0px !important;
     height: 2.8rem !important;
     width: 15rem;
 }
 
-.heroContainer{
+.heroContainer {
     width: 100vw;
     height: 98vh;
     padding-top: 10px !important;
     padding-top: 7rem !important;
-    background-image: url(https://i.imgur.com/WJMDTiu.jpg) ;
-    background-size: cover ;
+    background-image: url(https://i.imgur.com/WJMDTiu.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
-.heroContainer-right h4{
+.heroContainer-right h4 {
     color: white !important;
 }
 
-.heroContainer-left{
+.heroContainer-left {
     padding-left: 3rem;
 
 }
-.heroContainer-right{
+
+.heroContainer-right {
     padding-right: 3rem;
 }
-.section2Title{
+
+.section2Title {
     padding-top: 3rem;
-    margin-bottom:50px;
-    text-align:center;
-    padding-right:8rem;
-    padding-left:8rem;
+    margin-bottom: 50px;
+    text-align: center;
+    padding-right: 8rem;
+    padding-left: 8rem;
 }
-hr{
+
+hr {
     margin-left: auto !important;
     margin-right: auto !important;
 }
-.section2Content{
+
+.section2Content {
     padding-bottom: 4rem;
 }
-#botaoVerde{
+
+#botaoVerde {
     background-color: #006400e3 !important;
     color: rgb(0, 32, 0) !important;
 }
-#facaLogin{
-   color: darkGreen;
-} 
 
-.css-1elsn54-MuiGrid-root{
+#facaLogin {
+    color: darkGreen;
+}
+
+.css-1elsn54-MuiGrid-root {
     margin: 0 !important;
     padding: 0 !important;
 }
@@ -110,10 +121,10 @@ hr{
 
 /*Cards Das Pessoas Desenvolvedoras */
 
-.container{
+.container {
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .cards {
@@ -129,7 +140,7 @@ a {
 }
 
 
-button img{
+button img {
     width: 100px;
     border-radius: 50%;
     align-items: center;
@@ -142,22 +153,22 @@ button {
     transition: all 0.2s;
     cursor: pointer;
     margin-bottom: 20px;
-  
-  }
-  
 
-  
+}
+
+
+
 .cartao-expansivel {
-    
+
     background-color: #ffffff00;
     border-radius: 100%;
     display: flex;
     justify-content: center;
-    
+
 }
 
 .conteudo {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     max-height: 0;
     overflow: hidden;
     width: 15vw;
@@ -173,77 +184,83 @@ button {
     margin: 5px;
 }
 
-.conteudo p{
-    margin: 20px ;
+.conteudo p {
+    margin: 20px;
 }
 
-#equipedev{
+#equipedev {
     padding: 50px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
 }
+
 .flip-card {
     background-color: transparent;
     width: 230px;
-    height: 240px;
+    height: 300px;
     border: 1px solid green;
-    perspective: 1000px; 
+    perspective: 1000px;
     border-radius: 5px;
 
-  
+
 }
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: transparent;
     color: black;
     border-radius: 5px;
-    
-  }
-  .flip-card-front img{
-    width: 230px;
-    height: 240px;
-    border-radius: 5px;
 
-  }
+}
+
+.flip-card-front img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin-top: 23px;
+}
 
 
-  /* Style the back side */
-  .flip-card-back {
+/* Style the back side */
+.flip-card-back {
     color: rgb(12, 12, 12);
     transform: rotateY(180deg);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 5px;
     max-height: 0;
-    
-  }
 
-  .flip-card-back a {
+}
+
+.flip-card-back a {
     margin: 5px;
 }
+
 .cards {
     display: flex;
     align-items: center;
@@ -252,9 +269,26 @@ button {
 }
 
 
-.container{
+.container {
     display: flex;
     justify-content: space-between;
-    
+    width: 99vw;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
 }
 
+.container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.container::-webkit-scrollbar-track {
+    background: #d7eba5;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: darkgreen;
+    border-radius: 20px;
+    border: 3px solid darkgreen;
+}

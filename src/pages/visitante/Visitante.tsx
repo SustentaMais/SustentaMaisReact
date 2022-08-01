@@ -76,6 +76,7 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/93235011?v=4' />
+                                <h3>João Paz</h3>
                             </div>
                             <div className="flip-card-back">
                                 <h3>João Paz</h3>
@@ -103,7 +104,39 @@ function Visitante() {
                     <div className="flip-card cards">
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
+                                <img src='https://media-exp1.licdn.com/dms/image/C4D03AQGUdyLtIYva9A/profile-displayphoto-shrink_800_800/0/1644597789062?e=1663804800&v=beta&t=RKJ-sPX_msy_0G9Hjx08fTQt5K0Py5maRH67YYXK6ys' />
+                                <h3>Ruan Pablo</h3>
+                            </div>
+                            <div className="flip-card-back">
+                                <h3>Ruan Pablo</h3>
+                                <p> Olá, eu sou o Ruan! Desenvolvedor FullStack, apaixonado por arte, tecnologia e esportes. O Sus+ é parte da minha jornada como desenvolvedor, resultado de meses de estudo e trabalho. Espero que gostem!</p>
+
+                                <a href="https://github.com/Rpablo4" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
+                                </a>
+
+
+                                <a href="https://www.linkedin.com/in/ruan-pablo-38533520b" target="_blank">
+                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
+                                </a>
+
+                                <a href="https://www.instagram.com/rpablo_4" target="_blank">
+                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
+                                </a>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </Grid>
+
+                <Grid>
+
+                    <div className="flip-card cards">
+                        <div className="flip-card-inner">
+                            <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/100284708?v=4' />
+                                <h3>Jennifer Sicherolli</h3>
                             </div>
                             <div className="flip-card-back">
                                 <h3>Jennifer Sicherolli</h3>
@@ -133,6 +166,7 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/93798476?v=4' />
+                                <h3>Gabriele Sá</h3>
                             </div>
                             <div className="flip-card-back">
                                 <h3>Gabriele Sá</h3>
@@ -161,6 +195,7 @@ function Visitante() {
                         <div className="flip-card-inner">
                             <div className="flip-card-front">
                                 <img src='https://avatars.githubusercontent.com/u/92693153?v=4' />
+                                <h3>Fabyola Campos</h3>
                             </div>
                             <div className="flip-card-back">
                                 <h3>Fabyola Campos</h3>
@@ -184,35 +219,6 @@ function Visitante() {
                     </div>
                 </Grid>
 
-                <Grid>
-
-                    <div className="flip-card cards">
-                        <div className="flip-card-inner">
-                            <div className="flip-card-front">
-                                <img src='https://media-exp1.licdn.com/dms/image/C4D03AQGUdyLtIYva9A/profile-displayphoto-shrink_800_800/0/1644597789062?e=1663804800&v=beta&t=RKJ-sPX_msy_0G9Hjx08fTQt5K0Py5maRH67YYXK6ys' />
-                            </div>
-                            <div className="flip-card-back">
-                                <h3>Ruan Pablo</h3>
-                                <p> Olá, eu sou o Ruan! Desenvolvedor FUllStack, apaixonado por arte, tecnologia e esportes. Amo novas aventuras e desafios!</p>
-
-                                <a href="https://github.com/Rpablo4" target="_blank">
-                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578617135204/github.png" alt="" />
-                                </a>
-
-
-                                <a href="https://www.linkedin.com/in/ruan-pablo-38533520b" target="_blank">
-                                    <img src="https://cdn.discordapp.com/attachments/992082604792750240/997300578986246154/linkedin.png" alt="" />
-                                </a>
-
-                                <a href="https://www.instagram.com/rpablo_4" target="_blank">
-                                    <img src="https://media.discordapp.net/attachments/992082604792750240/998753481299071016/instagram.png" alt="" />
-                                </a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </Grid>
             </Grid>
         </>
     )
