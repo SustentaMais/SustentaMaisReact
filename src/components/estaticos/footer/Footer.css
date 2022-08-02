@@ -31,3 +31,8 @@
     color: darkgreen;
     padding: 0.5rem;
 }
+@media (max-width:800px) {
+    .box-footer{
+        padding: 50px !important;
+    }
+}

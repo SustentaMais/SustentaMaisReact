@@ -194,6 +194,10 @@ button {
     justify-content: center;
 }
 
+#renderHero {
+    padding: 80px;
+}
+
 .flip-card {
     background-color: transparent;
     width: 200px;
@@ -286,10 +290,100 @@ button {
 
 .container::-webkit-scrollbar-track {
     background: #d7eba5;
+
 }
 
 .container::-webkit-scrollbar-thumb {
     background-color: darkgreen;
     border-radius: 20px;
     border: 3px solid darkgreen;
+    width: 7px;
+}
+
+@media (max-width: 800px) {
+    .heroContainer-left img {
+        height: 150px !important;
+        padding-right: 50px;
+    }
+    .heroContainer-left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #ctaText{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroContainer-right h4 {
+        font-size: 25px;
+        width: 300px;
+        padding-bottom: 25px;
+    }
+    .text{
+        padding-left: 0px !important;
+        width: 40vw;
+    }
+    #boxTxtSection2{
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    #renderHero {
+        padding: 40px;
+        display: flex;
+        gap: 30px;
+        padding-top: 40px !important;
+    }
+
+    .heroContainer-left {
+        padding-left: 0px;
+    }
+
+    .section2Title h3 {
+        font-size: 30px;
+    }
+    #imgSection2 img{
+        height: 150px;
+    }
+    #imgSection2{
+        display: flex;
+        justify-content: center;
+    }
+    #liEstrelinhas ul li {
+        margin-left: 15%;
+        font-size: 2vw;
+    }
+
+    #equipedev{
+        font-size: 30px !important;
+    }
+}
+@media (max-width: 600px) {
+    #renderHero {
+        gap: 10px!important;
+    }
+    .heroContainer-right{
+        padding-right: 0px;
+    }
+    .heroContainer-left img{
+        padding-right: 0px;
+    }
+    .section2Title {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    #boxTxtSection2{
+        padding-left: 0px;
+    }
+    .text{
+        width: auto;
+    }
+    #liEstrelinhas ul li {
+        margin-left: 0%;
+        font-size: medium;
+    }
+    #equipedev{
+        font-size: 30px !important;
+    }
 }

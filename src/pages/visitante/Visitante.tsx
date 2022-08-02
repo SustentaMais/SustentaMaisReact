@@ -9,18 +9,21 @@ import Navbar from '../../components/estaticos/navbar/Navbar';
 function Visitante() {
     return (
         <>
-            <Grid container padding='5rem' direction="row"
+            <Grid container id='renderHero'  direction="row"
                 justifyContent="center"
                 alignItems="center"
                 className='heroContainer'
             >
                 <Navbar />
-                <Grid item alignItems="center" md={6} className='heroContainer-left'>
+                <Grid item alignItems="center" md={6} xs={12} className='heroContainer-left'>
                     <img src="https://i.imgur.com/8DLGZnf.gif" height='300px' alt="Maos segurando o planeta-terra" />
                 </Grid>
-                <Grid item alignItems="center" md={6} className='heroContainer-right'>
+                <Grid item alignItems="center" md={6} xs={12} className='heroContainer-right'>
                     <Box className='CTA'>
+                        <Box id='ctaText'>
                         <Typography variant='h4'>Construa uma <strong>comunidade</strong> e torne o mundo melhor.</Typography>
+                        </Box>
+                            
                         <Box marginTop='1rem' textAlign='center'>
                             <Link to='/cadastro' className='linkVisitante'>
                                 <Button type='submit' size='large' variant='contained' color='success' id='botaoVerde'>
@@ -45,16 +48,16 @@ function Visitante() {
             <Box className='section2Title'>
                 <Typography variant='h3' >Mais de 100.000 pessoas foram beneficiadas por iniciativas que surgiram na <strong>SustentaMais!</strong></Typography>
             </Box>
-            <Grid container justifyContent='center' alignItems='center' paddingRight='4rem' paddingLeft='4rem' className='section2Content' >
-                <Grid item sm={7}>
-                    <Box textAlign='left' width='20rem' paddingLeft='60px'>
+            <Grid container justifyContent='center' spacing={1} alignItems='center' paddingRight='4rem' paddingLeft='4rem' className='section2Content' >
+                <Grid item sm={7} xs={12}>
+                    <Box textAlign='left' width='320px' id="boxTxtSection2" paddingLeft='60px'>
                         <Typography className='text'>
                             Nossa rede social tem o intuito de tornar as cidades e comunidades mais inclusivas, seguras, resilientes e sustentável, apresentando soluções para a falta de habilitação segura, inspirar a sustentabilidade e realizar interações com usuários, pessoas ou empresas interessadas em ajudar alcançarmos essa causa.
                         </Typography>
                     </Box>
                 </Grid>
 
-                <Grid justifyItems='center' alignItems='center' item sm={5}>
+                <Grid justifyItems='center' alignItems='center' id='imgSection2' item sm={5} xs={12}>
                     <img src="https://imgur.com/CG1yhTy.png" height='250px' alt="Pessoas levantando planeta" />
                 </Grid>
             </Grid>
