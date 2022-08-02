@@ -1,18 +1,18 @@
-.container{
+.container {
   margin-bottom: 50px;
 }
 
-.retangulo4{
- margin-top:2%;
- width: 18.75rem;
- height: 28.125rem;
- background:rgba(255, 255, 255, 0.421);
- background-size:cover ;
- border-radius: 0px 119px;
- z-index: 9999;
- backdrop-filter: blur(4px);
- -webkit-backdrop-filter: blur(4px);
- -moz-backdrop-filter: blur(4px);
+.retangulo4 {
+  margin-top: 2%;
+  width: 18.75rem;
+  height: 28.125rem;
+  background: rgba(255, 255, 255, 0.421);
+  background-size: cover;
+  border-radius: 0px 119px;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
 }
 
 /* .test{
@@ -20,72 +20,76 @@ display: flex;
  flex-direction: row;
 } */
 
-.texto{
- font-family: 'Aleo';
- font-style: italic;
- font-weight: 400;
- font-size: 1.313rem;
- line-height: 3.063rem;
- display: flex;
- text-align: center;
- color: #000000;
+.texto {
+  font-family: 'Aleo';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.313rem;
+  line-height: 3.063rem;
+  display: flex;
+  text-align: center;
+  color: #000000;
 }
 
-.hexagonos{
-margin-left: 3px;
-padding-top: 0.5rem;
-padding-bottom: 0.5rem;
- width:17.063rem;
- mix-blend-mode: soft-light;
- direction: rtl;
-}
-.hexagonosBot{
- margin-left: 1rem;
- padding-top: 0.5rem;
- width:17.063rem;
- mix-blend-mode: soft-light;
- direction: rtl;
+.hexagonos {
+  margin-left: 3px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 17.063rem;
+  mix-blend-mode: soft-light;
+  direction: rtl;
 }
 
-.gridLogin{
-padding-top: 5rem;
-padding-bottom: 5rem;
+.hexagonosBot {
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+  width: 17.063rem;
+  mix-blend-mode: soft-light;
+  direction: rtl;
 }
 
-.text-decorator-none{
+.gridLogin {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.text-decorator-none {
   text-decoration: none;
 }
 
-.centraliza{
-display: block;
-padding-right: 10%;
-padding-left: 10%
-}
-#logoCadastro{
-margin-left: 21%;
-display: block;
-width: 9.625rem;
-padding: 15px;
+.centraliza {
+  display: block;
+  padding-right: 10%;
+  padding-left: 10%
 }
 
-#boxCadastro{
- background:rgba(255, 255, 255, 0.421);
- width: 18.75rem;
- height: 28.125rem;
- border-radius: 52px 0px;
- margin-bottom: 2%;
- margin-top:1%;
- z-index: 9999;
- backdrop-filter: blur(4px);
- -webkit-backdrop-filter: blur(4px);
- -moz-backdrop-filter: blur(4px);
+#logoCadastro {
+  margin-left: 21%;
+  display: block;
+  width: 9.625rem;
+  padding: 15px;
 }
-#boxFormCadastro{
-padding-left: 1.3rem;
-text-align: center;
-width: 16.2rem;
+
+#boxCadastro {
+  background: rgba(255, 255, 255, 0.421);
+  width: 18.75rem;
+  height: 28.125rem;
+  border-radius: 52px 0px;
+  margin-bottom: 2%;
+  margin-top: 1%;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  -moz-backdrop-filter: blur(4px);
 }
-.inputForm{
+
+#boxFormCadastro {
+  padding-left: 1.3rem;
+  text-align: center;
+  width: 16.2rem;
+}
+
+.inputForm {
   border-radius: 10px;
   background: rgba(255, 255, 255, 1);
   font-family: 'Alef';
@@ -101,71 +105,109 @@ width: 16.2rem;
   font-family: 'Alatsi';
   width: 13rem;
 } */
-
-#ouCad{
- color: rgb(252, 252, 252);
- font-family: Anaheim;
- padding: 0px;
- margin: 0;
-}
-hr{
-margin: 0;
+#gridCadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-#googleCad{
- border-radius: 40px;
- width: 16rem;
- background: rgba(255, 255, 255, 1) !important;
- text-align:center;
- font-family: 'Alef';
- font-size: 0.8rem ;
- margin-bottom: 1rem;
- margin-top: 0.6rem;
- height: 2rem;
- color: #000000 !important;
-}
-#esqueci{
-display: block;
-}
-.googleIcon{
-width: 1rem;
-height: 1rem;
-margin-right: 3%;
-margin-bottom: 1%;
+#ouCad {
+  color: rgb(252, 252, 252);
+  font-family: Anaheim;
+  padding: 0px;
+  margin: 0;
 }
 
-#conta{
- color: #319F43;
- font-family: 'Alatsi' !important;
- font-style: normal;
- font-weight: bold;
- align-items:center;
- justify-content: center;
- font-size: small;
+hr {
+  margin: 0;
 }
 
-#cadastrarButton{
-width: 16rem;
-font-weight: 300;
-color: rgb(252, 252, 252) !important;
-background-color:#1F4710;
-margin-bottom: 0.7rem;
+
+#googleCad {
+  border-radius: 40px;
+  width: 16rem;
+  background: rgba(255, 255, 255, 1) !important;
+  text-align: center;
+  font-family: 'Alef';
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  margin-top: 0.6rem;
+  height: 2rem;
+  color: #000000 !important;
 }
-.box1{
-display: flex;
-align-items:center;
-justify-content: center;
-background-color: transparent;
-height: fit-content;
-margin: 0;
+
+#esqueci {
+  display: block;
 }
+
+.googleIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 3%;
+  margin-bottom: 1%;
+}
+
+#conta {
+  color: #319F43;
+  font-family: 'Alatsi' !important;
+  font-style: normal;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+}
+
+#cadastrarButton {
+  width: 16rem;
+  font-weight: 300;
+  color: rgb(252, 252, 252) !important;
+  background-color: #1F4710;
+  margin-bottom: 0.7rem;
+}
+
+#gridSecundario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  height: fit-content;
+  margin: 0;
+}
+
 .MuiInputBase-input {
   height: 0px !important;
 }
 
-.gridLogin{
- background-image: url(https://i.imgur.com/WJMDTiu.jpg);
- background-size:100vw;
- background-repeat:no-repeat;
+.gridLogin {
+  background-image: url(https://i.imgur.com/WJMDTiu.jpg);
+  background-size: 100vh;
+  background-repeat: cover;
+}
+
+@media (max-width:600px) {
+  #gridSecundario {
+    display: none !important;
+  }
+
+  .gridLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #boxCadastro {
+    margin-right: 0px;
+  }
+
+  #gridCadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

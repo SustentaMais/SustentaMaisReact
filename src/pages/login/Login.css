@@ -175,3 +175,26 @@ background-color: transparent;
 height: fit-content;
 margin: 0;
 }
+
+@media (max-width:600px) {
+  #boxLogin-Secundaria {
+    display: none !important;
+  }
+
+  .gridLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #retangulo2{
+    margin-right: 0px;
+  }
+
+  #gridLogin-primario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

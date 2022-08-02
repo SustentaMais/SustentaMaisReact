@@ -128,7 +128,7 @@ function CadastrarUsuario() {
             <Grid container className='gridLogin'>
 
 
-                <Grid item className='centraliza' sm={6}>
+                <Grid item className='centraliza' id='gridCadastro' sm={6} xs={12}>
                     <Box id='boxCadastro'>
                         <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" id='logoCadastro' />
                         <Box id='boxFormCadastro'>
@@ -161,7 +161,7 @@ function CadastrarUsuario() {
                     </Box>
                 </Grid>
 
-                <Grid item sm={6} className='centraliza'>
+                <Grid item sm={6} className='centraliza' id='gridSecundario'>
                     <Box className='retangulo4'>
                         <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos' />
                         <Box className='texto'>

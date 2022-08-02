@@ -19,16 +19,6 @@ function Login() {
 
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
-            id:0,
-            nome:'',
-            usuario:'',
-            senha:'',
-            foto:'',
-            localidade:'',
-            token:''
-        })
-
-        const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
             id: 0,
             nome: '',
             usuario: '',
@@ -38,101 +28,111 @@ function Login() {
             token: ''
         })
 
-        function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+        id: 0,
+        nome: '',
+        usuario: '',
+        senha: '',
+        foto: '',
+        localidade: '',
+        token: ''
+    })
 
-            setUserLogin({
-                ...userLogin,
-                [e.target.name]: e.target.value
-            })
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    useEffect(() => {
+        if (token != '') {
+            dispatch(addToken(token));
+            navigate('/home', { replace: true });
         }
+    }, [token])
 
-            useEffect(()=>{
-                if(token != ''){
-                    dispatch(addToken(token));
-                    navigate('/home', {replace: true});
-                }
-            }, [token])
+    useEffect(() => {
+        if (respUserLogin.token !== "") {
 
-            useEffect(() => {
-                if (respUserLogin.token !== "") {
-            
-                    // Verifica os dados pelo console (Opcional)
-                    console.log("Token: " + respUserLogin.token)
-                    console.log("ID: " + respUserLogin.id)
-            
-                    // Guarda as informações dentro do Redux (Store)
-                    dispatch(addToken(respUserLogin.token))
-                    dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
-                    navigate('/home')
-                }
-            }, [respUserLogin.token])
-            function implementacoes() {
+            // Verifica os dados pelo console (Opcional)
+            console.log("Token: " + respUserLogin.token)
+            console.log("ID: " + respUserLogin.id)
 
-                toast.info('Implementação futura', {
-                    position: "top-right",
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: true,
-                    theme: "colored",
-                    progress: undefined,
-                });
-        
-              }
-            async function onSubmit(e: ChangeEvent<HTMLFormElement>){
-                e.preventDefault();
-                try{
-                    await login(`/usuario/logar`, userLogin, setRespUserLogin)
-                    console.log(respUserLogin)
-                    toast.success('Usuário logado com sucesso!', {
-                        position: "top-right",
-                        autoClose: 2000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: false,
-                        draggable: false,
-                        theme: "colored",
-                        progress: undefined,
-                        });
-                }catch(error){
-                    toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
-                        position: "top-right",
-                        autoClose: 2000,
-                        hideProgressBar: false,
-                        closeOnClick: true,
-                        pauseOnHover: false,
-                        draggable: false,
-                        theme: "colored",
-                        progress: undefined,
-                        });
-                }
-            }
+            // Guarda as informações dentro do Redux (Store)
+            dispatch(addToken(respUserLogin.token))
+            dispatch(addId(respUserLogin.id.toString()))    // Faz uma conversão de Number para String
+            navigate('/home')
+        }
+    }, [respUserLogin.token])
+    function implementacoes() {
+
+        toast.info('Implementação futura', {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            theme: "colored",
+            progress: undefined,
+        });
+
+    }
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            await login(`/usuario/logar`, userLogin, setRespUserLogin)
+            console.log(respUserLogin)
+            toast.success('Usuário logado com sucesso!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        } catch (error) {
+            toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+        }
+    }
 
     return (
 
         <Grid container direction='row' justifyContent='center' alignItems='center' className='gridLogin'>
-            <Grid item sm={6} className='centraliza'>
+            <Grid item sm={6} className='centraliza' id='boxLogin-Secundaria'>
                 <Box className='retangulo1'>
-                    <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos'/>
+                    <img src="https://i.imgur.com/zW3Yj5R.png" alt="hexagonos" className='hexagonos' />
                     <Box className='texto'>
                         A rede que te inspira a ser mais sustentável!
                     </Box>
-                    <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot'/>
+                    <img src="https://i.imgur.com/mrfJjEl.png" alt="hexagonos" className='hexagonosBot' />
                 </Box>
             </Grid>
 
-            <Grid item className='centraliza' sm={6}>
+            <Grid item className='centraliza' id='gridLogin-primario' xs={12} sm={6}>
                 <Box className='retangulo2'>
-                <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo'/>
+                    <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo' />
                     <Box className='forms'>
                         <form onSubmit={onSubmit}>
-                            <TextField value={userLogin.usuario} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail ou nome de usuário' variant='outlined' name='usuario'  />
-                            <TextField value={userLogin.senha} onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password'/>
+                            <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail ou nome de usuário' variant='outlined' name='usuario' />
+                            <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' />
                             <Box marginTop={2}>
-                                    <Button type='submit' id='entrarButton'>
-                                        Entrar
-                                    </Button>
+                                <Button type='submit' id='entrarButton'>
+                                    Entrar
+                                </Button>
                             </Box>
                         </form>
                     </Box>
@@ -149,9 +149,9 @@ function Login() {
                             </Button>
                             <Box id='esqueci'>
                                 <Box>
-                                <Link to='/cadastro' className='text-decorator-none'>
-                                    <Button id='conta'> Criar conta</Button>
-                                </Link>
+                                    <Link to='/cadastro' className='text-decorator-none'>
+                                        <Button id='conta'> Criar conta</Button>
+                                    </Link>
                                 </Box>
                                 <Button id='esqueciSenha'> Esqueci a minha senha</Button>
                             </Box>
