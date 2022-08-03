@@ -8,6 +8,7 @@ import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import CadastroPost from './cadastroPost/CadastroPost';
 import AddIcon from '@material-ui/icons/Add';
+import './Home.css'
 
 function getModalStyle(){
 
@@ -70,7 +71,7 @@ function ModalPostagem(){
     return(
     <div>
         <div onClick={handleOpen}>
-        <Tooltip title="Criar Postagem" aria-label="add">
+        <Tooltip title="Criar Postagem" id='criarPost-Button' aria-label="add">
           <Fab color="secondary" className={classes.fixed}>
             <AddIcon />
           </Fab>

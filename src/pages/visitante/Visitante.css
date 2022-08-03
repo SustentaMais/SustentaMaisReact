@@ -377,7 +377,10 @@ button {
         padding-left: 0px;
     }
     .text{
-        width: auto;
+        width: 60vw;
+    }
+    #boxTxtSection2{
+        width: 60vw;
     }
     #liEstrelinhas ul li {
         margin-left: 0%;

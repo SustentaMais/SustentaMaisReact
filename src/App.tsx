@@ -28,7 +28,7 @@ function App() {
       <ToastContainer />
       <Router>
         <div id='renderAll' style={{ minHeight:'100vh', minWidth:'100vw' }}>
-          <SideBar/>
+          {/* <SideBar/> */}
           <Routes>
             <Route path="/" element={<Visitante />} />
             <Route path="/login" element={<Login />} />

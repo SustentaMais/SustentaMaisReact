@@ -42,3 +42,22 @@
     border-style: solid;
     border-color: var(--linhasColor);
 } */
+@media (max-width:600px){
+    #produtosParceiros{
+        display: none;
+    }
+    #sideBarGrid{
+        display: none;
+    }
+    .MuiPaper-root {
+        background-color: var(--subTomBg) !important;
+        color: var(--bodyColor) !important;
+        z-index: 9999 !important;
+        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px) !important;
+        -moz-backdrop-filter: blur(4px) !important;
+    }
+    #criarPost-Button{
+        display: none !important;;
+    }
+}

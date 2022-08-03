@@ -48,3 +48,8 @@
 .renderPost:hover{
     background-color: var(--bgHover);
 }
+@media (max-width:600px){
+    #navbarFeed{
+        width: 100vw;
+    }
+}
