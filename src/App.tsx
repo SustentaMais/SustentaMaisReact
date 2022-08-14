@@ -21,6 +21,7 @@ import MeusPosts from './pages/home/meusposts/MeusPosts';
 import SideBar from './components/estaticos/sidebar/SideBar';
 import Login from './pages/login/Login';
 import Footer from './components/estaticos/footer/Footer';
+import MenuMobile from './components/estaticos/menuMobile/MenuMobile';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
       <ToastContainer />
       <Router>
         <div id='renderAll' style={{ minHeight:'100vh', minWidth:'100vw' }}>
+          <MenuMobile/>
           {/* <SideBar/> */}
           <Routes>
             <Route path="/" element={<Visitante />} />

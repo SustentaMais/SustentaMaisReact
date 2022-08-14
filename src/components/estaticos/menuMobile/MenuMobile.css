@@ -1,0 +1,26 @@
+#menuMobile{
+    display: none;
+}
+@media (max-width:600px){
+    #menuMobile{
+        display: flex;
+        position: fixed;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    .MuiPaper-root {
+        background-color: var(--subTomBg) !important;
+        color: var(--bodyColor) !important;
+        z-index: 9999 !important;
+        backdrop-filter: blur(4px) !important;
+        -webkit-backdrop-filter: blur(4px) !important;
+        -moz-backdrop-filter: blur(4px) !important;
+    }
+    #criarPost-Button{
+        display: none !important;;
+    }
+    #toolbarMobile{
+        justify-content: space-between ;
+        width: 50vw;
+    }
+}
