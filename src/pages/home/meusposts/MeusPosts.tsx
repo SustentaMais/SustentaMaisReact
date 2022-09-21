@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography } from '@mui/material';
 import './MeusPosts.css'
 import { busca, buscaId } from '../../../services/Service';
 import PostagemModel from '../../../models/PostagemModel';

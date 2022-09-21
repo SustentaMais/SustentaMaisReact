@@ -1,3 +1,9 @@
+*{
+   
+    
+    /* overflow: auto; */
+
+}
 .fundo-criarPost {
     display: flex;
     justify-content: center;
@@ -11,6 +17,30 @@
     border-radius: 30px!important;
     z-index: 9999;
 }
+.makeStyles-paper-11{
+    background-color:var(--subTomBg)!important;
+    color: var(--bodyColor); 
+    border-radius: 15px;
+
+
+}
+
+.makeStyles-paper-6{
+    background-color:var(--subTomBg)!important;
+    color: var(--bodyColor); 
+    border-radius: 15px;
+
+
+}
+
+.makeStyles-paper-5{
+    background-color:var(--subTomBg)!important;
+    color: var(--bodyColor); 
+    border-radius: 15px;
+
+
+}
+
 .inputAtualiza{
     background-color:var(--subTomBg)!important;
     color: var(--bodyColor)!important;
@@ -18,7 +48,14 @@
 .MuiMenu-list{
     background-color:var(--subTomBg)!important;
     color: var(--bodyColor)!important;
+    color: aliceblue;
 }
+
+.MuiMenuItem-root{
+    color: aliceblue;
+
+}
+
 .makeStyles-paper-13{
     width: 400px !important;
     margin-top: 25px;

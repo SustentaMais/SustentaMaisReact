@@ -1,7 +1,7 @@
 import React from "react";
-import {Button, Typography} from '@material-ui/core'
+import {Button, Typography} from '@mui/material'
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles'
-import Modal from '@material-ui/core/Modal'
+import Modal from '@mui/material/Modal'
 import CloseIcon from '@material-ui/icons/Close'
 import { Box } from '@mui/material';
 import EditIcon from '@material-ui/icons/Edit';

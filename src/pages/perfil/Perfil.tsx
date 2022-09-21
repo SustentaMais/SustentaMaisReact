@@ -3,25 +3,14 @@ import Usuario from '../../models/UsuarioModel';
 import './Perfil.css'
 // atuais
 import React, { useState, useEffect } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
-
+import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import { green } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Grid, Menu, MenuItem } from '@mui/material';
-import UsuarioModel from '../../models/UsuarioModel';
+import { Grid, Box, Typography} from '@mui/material';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { buscaId } from '../../services/Service';
-import ModalDeletePost from '../home/modaldeletepost/ModalDeletePost';
 import MeusPosts from '../home/meusposts/MeusPosts';
 import SideBar from '../../components/estaticos/sidebar/SideBar';
 

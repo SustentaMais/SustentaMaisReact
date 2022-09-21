@@ -6,7 +6,7 @@ import FeedIcon from '@mui/icons-material/Feed';
 import EventAvailableIcon from '@mui/icons-material/EventAvailable';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
-
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 import LogoutIcon from '@mui/icons-material/Logout';
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -17,6 +17,7 @@ import { buscaId } from '../../../services/Service';
 import { useEffect, useState } from 'react';
 import { addToken } from '../../../store/tokens/actions';
 import { toast } from 'react-toastify';
+import Toggle from '../../../pages/Toggle';
 
 function SideBar() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -149,6 +150,27 @@ function SideBar() {
 
 
                             </li>
+
+                             <li className='listedItem' onClick={goLogout}>
+
+                                <Box className='iconsUl' >
+                                    <LogoutIcon className='iconsUl' />
+                                    Sair
+                                </Box>
+
+
+                            </li>
+                            
+                            {/* Dark Mode */}
+                            <li className='caixa-dark' onClick={Toggle}  id='darkModeBox'>
+                            
+                                <p className='texto-dark'>Dark Mode</p>
+                                <Brightness4Icon className="dark-icon" />
+
+
+                            </li>                            
+                        
+                            
                         </ul>
                     </Box>
 

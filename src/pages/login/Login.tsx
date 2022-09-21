@@ -127,8 +127,8 @@ function Login() {
                     <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" className='logo' />
                     <Box className='forms'>
                         <form onSubmit={onSubmit}>
-                            <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail ou nome de usuário' variant='outlined' name='usuario' />
-                            <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' />
+                            <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' placeholder='E-mail ou nome de usuário' type='email' variant='outlined' name='usuario' />
+                            <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' placeholder='Senha' variant='outlined' name='senha' margin='normal' type='password' />
                             <Box marginTop={2}>
                                 <Button type='submit' id='entrarButton'>
                                     Entrar

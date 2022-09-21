@@ -11,7 +11,7 @@
     color: rgb(0, 56, 0)!important;
 }
 .MuiButtonBase-root:hover{
-    color: rgb(0, 101, 0)!important;
+    color: rgb(255, 255, 255)!important;
 }
 .renderPost{
     border-top: 1px;
@@ -34,9 +34,11 @@
 }
 #navbarFeed{
     background-color: var(--navbarFeed);
+    justify-content: center;
     color: var(--bodyColor);
     position: fixed;
-    width: 47.4vw;
+    text-align: center;
+    width: 49vw;
     display: flex;
     align-items: center;
     padding-left: 10px;

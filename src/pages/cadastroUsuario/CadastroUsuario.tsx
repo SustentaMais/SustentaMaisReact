@@ -133,11 +133,11 @@ function CadastrarUsuario() {
                         <img src="https://i.imgur.com/12aTZJR.png" alt="logoSustentaMais" id='logoCadastro' />
                         <Box id='boxFormCadastro'>
                             <form onSubmit={onSubmit}>
-                                <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Nome' variant='outlined' name='nome' />
-                                <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='E-mail' variant='outlined' name='usuario' margin='normal' />
-                                {/* <TextField value={usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Foto (Opcional)' variant='outlined' name='foto' margin='normal' /> */}
-                                <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' label='Senha' variant='outlined' name='senha' type='password' />
-                                <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' />
+                                <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Nome' variant='outlined' name='nome' />
+                                <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='E-mail' variant='outlined' name='usuario' margin='normal' />
+                                {/* <TextField value={usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Foto (Opcional)' variant='outlined' name='foto' margin='normal' /> */}
+                                <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Senha' variant='outlined' name='senha' type='password' />
+                                <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' placeholder='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' />
                                 <Box marginTop={2}>
                                     <Button type='submit' id='cadastrarButton'>
                                         Cadastrar

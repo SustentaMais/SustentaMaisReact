@@ -1,9 +1,7 @@
 import React from 'react';
-import {Button} from '@material-ui/core'
 import {makeStyles, Theme, createStyles} from '@material-ui/core/styles'
-import Modal from '@material-ui/core/Modal'
 import CloseIcon from '@material-ui/icons/Close'
-import { Box } from '@mui/material';
+import { Box, Modal } from '@mui/material';
 import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import CadastroPost from './cadastroPost/CadastroPost';
