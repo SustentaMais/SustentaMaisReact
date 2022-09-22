@@ -33,6 +33,12 @@
 
 }
 
+.jss5{
+    background-color:var(--subTomBg)!important;
+    color: var(--bodyColor); 
+    border-radius: 15px;
+}
+
 .makeStyles-paper-5{
     background-color:var(--subTomBg)!important;
     color: var(--bodyColor); 

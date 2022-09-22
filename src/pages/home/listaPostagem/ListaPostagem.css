@@ -7,10 +7,10 @@
     font-family: 'Courier New', Courier, monospace;
     font-style: normal;
 }
-.MuiButtonBase-root {
+/* .MuiButtonBase-root {
     color: rgb(0, 56, 0)!important;
-}
-.MuiButtonBase-root:hover{
+} */
+.MuiButtonBase-root{
     color: rgb(255, 255, 255)!important;
 }
 .renderPost{
