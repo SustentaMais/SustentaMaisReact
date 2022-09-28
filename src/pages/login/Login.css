@@ -124,7 +124,7 @@ margin: 0;
 #google{
  border-radius: 40px;
  width: 13rem;
- background: rgba(255, 255, 255, 1) !important;
+ background: rgba(44, 44, 44, 0.481) !important;
  text-align:center;
  font-family: 'Alef';
  font-size: 0.8rem ;

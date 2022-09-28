@@ -24,7 +24,7 @@ function Visitante() {
                         <Typography variant='h4'>Construa uma <strong>comunidade</strong> e torne o mundo melhor.</Typography>
                         </Box>
                             
-                        <Box marginTop='1rem' textAlign='center'>
+                        <Box marginTop='1rem' >
                             <Link to='/cadastro' className='linkVisitante'>
                                 <Button type='submit' size='large' variant='contained' color='success' id='botaoVerde'>
                                     Faça parte dessa rede!

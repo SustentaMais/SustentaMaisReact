@@ -151,15 +151,6 @@ function SideBar() {
 
                             </li>
 
-                             <li className='listedItem' onClick={goLogout}>
-
-                                <Box className='iconsUl' >
-                                    <LogoutIcon className='iconsUl' />
-                                    Sair
-                                </Box>
-
-
-                            </li>
                             
                             {/* Dark Mode */}
                             <li className='caixa-dark' onClick={Toggle}  id='darkModeBox'>

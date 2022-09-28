@@ -13,7 +13,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
-import Upload from "./Upload";
 import Usuario from "../../models/UsuarioModel";
 import { buscaId, put } from "../../services/Service";
 import UserLogin from "../../models/UserLogin";
@@ -122,28 +121,13 @@ function Config() {
     navigate("/configuracoes");
   }
 
-  // function implementacoes() {
-
-  //     toast.info('Função em Andamento', {
-  //         position: "top-right",
-  //         autoClose: 2000,
-  //         hideProgressBar: false,
-  //         closeOnClick: true,
-  //         pauseOnHover: false,
-  //         draggable: true,
-  //         theme: "colored",
-  //         progress: undefined,
-  //     });
-
-  // }
-
   return (
     <>
-      <Grid >
+      <Grid>
         <SideBar />
       </Grid>
       <Grid container className="grid-maior">
-        <Grid  >
+        <Grid>
           <form className="form-perfil">
             <Box className="caixa-foto" width={280} height={300}>
               <img
@@ -155,9 +139,6 @@ function Config() {
               />
             </Box>
 
-            {/* <label htmlFor="wwitch">
-                        <input type="checkbox" id='switch' /> Dark Mode
-                    </label> */}
             <Grid xs={1} justifyContent="center" alignItems="center">
               <Box id="caixaDados">
                 <Typography className="user-titulo">
@@ -182,10 +163,6 @@ function Config() {
                 <Typography className="user-texto" paddingX={4}>
                   {users.localidade}
                 </Typography>
-                {/*<Box paddingX={4} className='atributos-user'>
-                       <p>Senha</p>
-                    </Box>
-                    <Typography className="user-texto" paddingX={4}>***************</Typography>*/}
                 <Box display="flex" justifyContent="center" marginTop="19px">
                   <ModalAtualizaUsuario />
                 </Box>
