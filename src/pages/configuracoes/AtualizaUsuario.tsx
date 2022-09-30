@@ -95,7 +95,24 @@ function AtualizarUsuario() {
                 progress: undefined,
                 theme: 'colored',
             });
+
+            
         }
+        window.location.reload();
+    }
+
+    function credenciais() {
+
+        toast.warn('Ao atulizar suas credenciais de acesso, será necessário logar novamente com suas novas credenciais', {
+            position: "top-right",
+            autoClose: 7000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
     }
 
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>) {
@@ -109,20 +126,7 @@ function AtualizarUsuario() {
         })
     }
 
-    function goLogout() {
-        dispatch(addToken(''));
-        toast.info('Usuário atualizado, por favor use suas credenciais atualizadas', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
-        });
-        navigate('/login')
-    }
+
 
     return (
         <>
@@ -138,9 +142,9 @@ function AtualizarUsuario() {
 
                         <TextField value={user.localidade} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id="local" name="local" variant="outlined" margin="normal" placeholder='Insira a sua localidade' fullWidth />
 
-                        {/*    <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />*/}
+                        <TextField value={user.usuario} onClick={credenciais} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
 
-                        <TextField value={user.senha} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' variant='outlined' placeholder='insirir senha' name='senha' margin='normal' type='password' fullWidth />
+                        <TextField value={user.senha} onClick={credenciais} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' variant='outlined' placeholder='insirir senha' name='senha' margin='normal' type='password' fullWidth />
 
                         <TextField value={confirmarSenha} className='inputAtualiza' onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' placeholder='confirmar senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
 

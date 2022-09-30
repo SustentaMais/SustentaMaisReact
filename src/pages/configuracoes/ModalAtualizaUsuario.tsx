@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import EditIcon from '@material-ui/icons/Edit';
 import AtualizaUsuario from "./AtualizaUsuario";
 import './Config.css'
+import { toast } from "react-toastify";
 
 function getModalStyle(){
 
@@ -50,8 +51,8 @@ function ModalAtualizaUsuario(){
     }
 
     const body=(
-        <div >
-            <Box display='flex' justifyContent='flex-end' className='cursor'>
+        <div  className="containerModal">
+            <Box className='cursor'>
                 <CloseIcon onClick={handleClose}/>
             </Box>
             <AtualizaUsuario />
@@ -59,9 +60,9 @@ function ModalAtualizaUsuario(){
     );
 
     return(
-    <div>
+    <div >
         <Box display="flex" flexDirection="row" justifyContent="space-between" alignItems="center" onClick={handleOpen} className='btnEdit'>
-            <Typography >Editar Usuário</Typography>
+            <Typography>Editar Usuário</Typography>
             <EditIcon />
         </Box>
         
