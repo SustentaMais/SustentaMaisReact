@@ -14,14 +14,21 @@
     color: rgb(255, 255, 255)!important;
 }
 .renderPost{
-    border-top: 1px;
-    border-right: 0px;
-    border-bottom: 1px;
-    border-left:  0px;
-    border-style: solid;
-    border-color: var(--linhasColor);
-    padding-left: 2.8%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1.0rem;
+    
 }
+
+.makeStyles-root-1{
+    background-color: var(--backgroundCards)!important;
+}
+
+.makeStyles-root-8{
+    background-color: var(--backgroundCards)!important;
+
+}
+
 .time-post {
     margin-left: 20px!important;
     color:var(--bodyColor) !important;
