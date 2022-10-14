@@ -1,6 +1,7 @@
-/* p, h3 li{
+*{
+    max-width:100% ;
     
-} */
+}
 
 .MuiButtonBase-root {
     color: white !important;
@@ -15,7 +16,6 @@
 }
 
 #liEstrelinhas ul li {
-    /* margin-top: 47px; */
     list-style: none;
     margin: auto;
     margin-left: 25%;
@@ -25,7 +25,6 @@
 }
 
 #liEstrelinhas {
-    width: 99vw;
     height: fit-content;
     background-image: url(https://i.imgur.com/WJMDTiu.jpg);
     background-size: cover;
@@ -116,17 +115,9 @@ hr {
     padding: 0 !important;
 }
 
-/* h4{
-    color: white;
-} */
 
 /*Cards Das Pessoas Desenvolvedoras */
 
-.container {
-    display: flex;
-    justify-content: space-between;
-
-}
 
 .cards {
     display: flex;
@@ -277,11 +268,9 @@ button {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    width: 99vw;
-    height: auto;
-    overflow-x: auto;
-    overflow-y: auto;
+    justify-content:space-around;
+    
+    
 
 }
 

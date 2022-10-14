@@ -1,20 +1,4 @@
 :root{
-    --bodyBg: black;
-    --bodyColor: white;
-    --bodyLink: white;
-    --subTomBg:rgb(15, 15, 15);
-    --subTomColor: rgb(228, 228, 228);
-    --subTomBg2:rgb(126, 125, 125);
-    --linhasColor: rgb(93, 93, 93);
-    --navbarFeed: rgba(0, 0, 0, 0.588);
-    --bgHover: rgb(8, 8, 8);
-    --backgroundCards: rgb(68, 68, 68);
-
-}
-#nomeUsuario{
-    padding-left: 10px;
-}
-.darkMode:root{
     --bodyBg: rgb(253, 253, 253);
     --bodyColor: black;
     --bodyLink: black;
@@ -25,6 +9,22 @@
     --navbarFeed: rgba(153, 153, 153, 0.588);
     --bgHover: rgb(240, 240, 240);
     --backgroundCards: rgb(255, 255, 255);
+
+}
+#nomeUsuario{
+    padding-left: 10px;
+}
+.darkMode:root{
+    --bodyBg: black;
+    --bodyColor: white;
+    --bodyLink: white;
+    --subTomBg:rgb(15, 15, 15);
+    --subTomColor: rgb(228, 228, 228);
+    --subTomBg2:rgb(126, 125, 125);
+    --linhasColor: rgb(93, 93, 93);
+    --navbarFeed: rgba(0, 0, 0, 0.588);
+    --bgHover: rgb(8, 8, 8);
+    --backgroundCards: rgb(68, 68, 68);
 }
 
 #sidebarContainer{

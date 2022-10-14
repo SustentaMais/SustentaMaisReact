@@ -19,7 +19,7 @@ import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Grid, Menu, MenuItem } from '@mui/material';
 import UsuarioModel from '../../../models/UsuarioModel';
-import '../listaPostagem/ListaPostagem.css';
+
 
 const useStyles = makeStyles((theme: Theme) =>
 createStyles({
@@ -27,8 +27,7 @@ createStyles({
     maxWidth: 450,
     color: 'var(--bodyColor) !important',
     background: 'transparent'
-    // marginLeft: "250px",
-    // marginBottom: "30px"
+
   },
   media: {
     height: '190px' // 16:9
@@ -47,12 +46,12 @@ createStyles({
     backgroundColor: green[500],
   },
   cardHeader: {
-    // color: 'var(--bodyColor) !important'
+
   },
 }),
 );
 
-const ITEM_HEIGHT = 48;
+
 
 function MeusPosts() {
   
@@ -123,12 +122,10 @@ function MeusPosts() {
   return (
     <>
 
-      {/* <div style={{ height: "50px" }}></div> */}
-
       <Grid className='caixa' >
       {
         user.postagem?.map((post: any) => (post.anexos != null ? (
-          <Box className='renderPost'>
+          <Box className='renderPostProfile'>
 
             <Card className={classes.root}>
               <CardHeader
@@ -156,7 +153,6 @@ function MeusPosts() {
                 onClose={handleClose}
                 PaperProps={{
                   style: {
-                    maxHeight: ITEM_HEIGHT * 4.5,
                     width: '10ch',
                     color: '#000000',
                     textAlign: 'center'
@@ -195,7 +191,7 @@ function MeusPosts() {
             </Card>
           </Box>
         ) : (
-          <Box className='renderPost'>
+          <Box >
             <Card className={classes.root}>
               <CardHeader
                 avatar={
@@ -222,7 +218,6 @@ function MeusPosts() {
                 onClose={handleClose}
                 PaperProps={{
                   style: {
-                    maxHeight: ITEM_HEIGHT * 4.5,
                     width: '10ch',
                     color: '#000000',
                     textAlign: 'center'

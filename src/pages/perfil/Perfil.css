@@ -1,13 +1,26 @@
-.profileImageContainer {
+body{
+    background-color: var(--bodyBg)!important;
+
+}
+
+/* card de dados do usuario */
+.css-bhp9pd-MuiPaper-root-MuiCard-root{
+    width: 50%!important;
+    margin-left: 38%;
+    margin-top: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+/* capa do card de dados do usuario */
+.css-o69gx8-MuiCardMedia-root{
+    height: 15rem!important;
+}
+
+.card-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 25vw;
-    background-color: var(--bodyBg);
-    color: var(--bodyColor);
-    padding-top: 50px;
+    
 }
+
 .profileImage {
     object-fit: cover;
     width: 150px;
@@ -15,11 +28,11 @@
     position: relative;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid #FFFFFF;
+    margin-top: -10%;
+    margin-left: 1rem;
 }
 #renderPerfil{
     background-color: var(--bodyBg);
-    height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -38,13 +51,6 @@
     font-size: 15px!important;
     font-weight: 200;
 }
-.linha-perfil {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width:100px;
-}
-
-
 
 .titulo-tema {
     margin-left: 15px;
@@ -58,37 +64,26 @@
 .MuiButtonBase-root {
     color: #1C1C1C!important;
 }
-.time-post {
-    margin-left: 20px!important;
-}
-
-.caixa{
-    justify-content: space-between;
-    background-color: var(--bodyBg);
-    margin: 0px !important;
-}
-
-.caixa h3{
-    text-align: center;
-    margin: 0px;
-    color: var(--bodyColor);
-    padding-bottom: 25px;
-    padding-left: 25vw;
-}
-#minhasPostagens{
-    /* padding-left: 20vw; */
-    width: 99.3vw;
-    display: flex;
-    justify-content: center;
-    align-items:center ;
-}
 
 #containerProfile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15vw;
     background-color: var(--bodyBg);
-    height: 100vh;
+    color: var(--bodyColor);
+    padding-top: 50px;
+    background-color: var(--bodyBg);
+
 }
-#renderMeusPosts{
-    /* display: flex;
-    justify-content:space-between; */
-    padding-left: 25vw;
+
+.hover{
+    margin-left: 22%!important;
+
+}
+
+.hover:hover{
+    background-color: var(--bgHover);
+    
 }

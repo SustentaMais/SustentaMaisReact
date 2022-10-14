@@ -1,6 +1,8 @@
 .titulo-tema {
     margin-left: 15px;
     margin-bottom: 5px;
+    color:var(--bodyColor) !important; 
+    
 }
 .btnModal {
     font-size: 20px;
@@ -9,15 +11,41 @@
 }
 .MuiButtonBase-root {
     color: whitesmoke!important;
+
 }
 .time-post {
     margin-left: 20px!important;
 }
 
-.caixa{
-    justify-content: space-between;
-    margin-left: 12vw;
+.time-post {
+    margin-left: 20px!important;
+    color:var(--bodyColor) !important;
+}
+.textosCard{
+    color:var(--bodyColor) !important;   
+}
+.textosCard span{
+    color:var(--bodyColor) !important;     
+}
+#navbarFeed{
+    background-color: var(--navbarFeed);
+    justify-content: center;
+    color: var(--bodyColor);
+    position: fixed;
+    text-align: center;
+    width: 49vw;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    z-index: 9988;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+}
+.renderPost:hover{
+    background-color: var(--bgHover);
+}
 
-
-
+.makeStyles-root-20{
+    background-color: var(--backgroundCards)!important
 }

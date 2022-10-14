@@ -7,16 +7,12 @@
     font-family: 'Courier New', Courier, monospace;
     font-style: normal;
 }
-/* .MuiButtonBase-root {
-    color: rgb(0, 56, 0)!important;
-} */
+
 .MuiButtonBase-root{
     color: rgb(255, 255, 255)!important;
 }
 .renderPost{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1.0rem;
+    padding-right: 17%;
     
 }
 .jss8{
@@ -24,14 +20,15 @@
 
 }
 
-/* .makeStyles-root-1{
+.makeStyles-root-1{
     background-color: var(--backgroundCards)!important;
+
 }
 
 .makeStyles-root-8{
     background-color: var(--backgroundCards)!important;
 
-} */
+}
 
 .time-post {
     margin-left: 20px!important;
@@ -57,12 +54,4 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     -moz-backdrop-filter: blur(5px);
-}
-.renderPost:hover{
-    background-color: var(--bgHover);
-}
-@media (max-width:600px){
-    #navbarFeed{
-        width: 100vw;
-    }
 }

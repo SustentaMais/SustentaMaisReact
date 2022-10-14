@@ -135,7 +135,7 @@ function CadastrarUsuario() {
                             <form onSubmit={onSubmit}>
                                 <TextField value={usuario.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Nome' variant='outlined' name='nome' />
                                 <TextField value={usuario.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='E-mail' variant='outlined' name='usuario' margin='normal' />
-                                {/* <TextField value={usuario.foto} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Foto (Opcional)' variant='outlined' name='foto' margin='normal' /> */}
+                                <TextField value={usuario.localidade} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Localidade' variant='outlined' name='localidade' margin='normal' />
                                 <TextField value={usuario.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} className='inputForm' placeholder='Senha' variant='outlined' name='senha' type='password' />
                                 <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} className='inputForm' placeholder='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' />
                                 <Box marginTop={2}>
@@ -147,11 +147,6 @@ function CadastrarUsuario() {
                         </Box>
                         <Box display='flex' justifyContent='center'>
                             <Box textAlign='center'>
-                                {/* <Box className='box1'>
-                                    <hr style={{ width: "5.5rem" }} />
-                                    <Typography id='ouCad'>  ou</Typography>
-                                    <hr style={{ width: "5.5rem" }} />
-                                </Box> */}
                                 <Button id='googleCad' onClick={implementacoes}>
                                     <img className='googleIcon' src={require("../../assets/img/Google.png")} />
                                     Entrar com o Google

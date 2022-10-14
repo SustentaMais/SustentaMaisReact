@@ -26,7 +26,7 @@ function App() {
     <Provider store={store}>
       <ToastContainer />
       <Router>
-        <div id='renderAll' style={{ minHeight:'100vh', minWidth:'100vw' }}>
+        <div id='renderAll' >
           <MenuMobile/>
           {/* <SideBar/> */}
           <Routes>

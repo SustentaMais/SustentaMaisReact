@@ -16,7 +16,6 @@ import IconButton from '@material-ui/core/IconButton';
 import { green } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import { Menu, MenuItem } from '@mui/material';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -25,8 +24,7 @@ const useStyles = makeStyles((theme: Theme) =>
       maxWidth: 450,
       color: 'var(--bodyColor) !important',
       background: 'transparent'
-      // marginLeft: "250px",
-      // marginBottom: "30px"
+     
     },
     media: {
       height: '190px' // 16:9
@@ -45,12 +43,12 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundColor: green[500],
     },
     cardHeader: {
-      // color: 'var(--bodyColor) !important'
+      
     },
   }),
 );
 
-const ITEM_HEIGHT = 48;
+
 
 function ListaPostagem() {
 
@@ -123,7 +121,8 @@ function ListaPostagem() {
                 title={post.usuario?.nome}
                 subheader={new Date(post.data).toLocaleDateString()}
                 time={new Date(post.data).toLocaleTimeString([], { timeStyle: 'short' })}
-                className='textosCard' />
+                className='
+                ' />
               <Menu
                 id="long-menu"
                 anchorEl={anchorEl}
@@ -132,7 +131,6 @@ function ListaPostagem() {
                 onClose={handleClose}
                 PaperProps={{
                   style: {
-                    maxHeight: ITEM_HEIGHT * 4.5,
                     width: '10ch',
                     color: '#000000',
                     textAlign: 'center'
@@ -190,7 +188,6 @@ function ListaPostagem() {
                 onClose={handleClose}
                 PaperProps={{
                   style: {
-                    maxHeight: ITEM_HEIGHT * 4.5,
                     width: '10ch',
                     color: '#000000',
                     textAlign: 'center'
